@@ -16,12 +16,35 @@ library(here)
 library(neonUtilities)
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
+## EXAMPLE SCRIPT!!!
 ```{r pressure, echo=FALSE}
-plot(pressure)
+# Mosquitoes sampled from CO2 traps
+#mosquito <- "DP1.10043.001"
+
+# Precipitation - weighing gauge
+#precipitation <- "DP1.00044.001"
+
+# Select two focal sites for now
+#my_sites <- c("BART", "WOOD")
+
+# Start date (as YYYY-MM)
+#start_date <- "2020-01"
+
+# End date (as YYYY-MM)
+#end_date <- "2022-12"
+
+#list2env((loadByProduct(dpID = mosquito, 
+ #                       site = my_sites, 
+  #                      include.provisional = FALSE,
+   #                     startdate = start_date,
+    #                    enddate = end_date)),
+     #    .GlobalEnv)
+
+# Variable names and units: mosquitoes
+#variables_10043 %>% 
+#  write_csv(here("data", "raw", "variables_10043.csv"))
+
+#rm(list = ls())
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
