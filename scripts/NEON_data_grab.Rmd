@@ -69,6 +69,17 @@ list2env((loadByProduct(dpID = discharge,
 ```
 
 ```{r}
+#Save raw data
+variables_00130 %>% 
+  write_csv(here("data", "raw", "variables_00130.csv"))
+
+csd_continuousDischarge %>% 
+  write_csv(here("data", "raw", "discharge_raw.csv"))
+
+```
+
+
+```{r}
 #Pull data from	"Fish electrofishing, gill netting, and fyke netting counts"
 fish <- "DP1.20107.001"
 
