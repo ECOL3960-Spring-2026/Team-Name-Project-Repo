@@ -8,17 +8,60 @@ date: "2026-02-19"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Load in Tidyverse and Here library
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```{r}
+library(tidyverse)
+library(here)
+```
+## read in the raw data for discharge and check structure 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```{r}
+discharge_raw <- read_csv(here("data", "raw", "csd_15_min.csv"))
 
-```{r cars}
-summary(cars)
+head(discharge_raw)
+str(discharge_raw)
+view(discharge_raw)
 ```
 
-## Including Plots
+## select variables 
+
+```{r}
+discharge <- discharge_raw %>% 
+  select(domainID,
+         siteID,
+         startDateTime,
+         endDateTime,
+         stageContinuous,
+         stageTotalUncert,
+         dischargeContinuous,
+         dischargeUpperParamUncert,
+         dischargeLowerParamUncert,
+         dischargeUpperRemnUncert,
+         dischargeLowerRemnUncert,
+         dischargeCorrectionApplied,
+         dischargeFinalQF,
+         dischargeFinalQFSciRvw)
+```
+
+```{r}
+
+discharge %>% 
+  write_csv(here("data", "processed", "discharge_processed.csv"))
+
+```
+
+
+## Preliminary Plot
+```{r}
+ggplot(data = discharge,
+       aes(x = startDateTime, 
+           y = dischargeContinuous,
+           col = siteID)) +
+  geom_point(cex = 1) +
+  stat_smooth()
+```
+
 
 You can also embed plots, for example:
 
