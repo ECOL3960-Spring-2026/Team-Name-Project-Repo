@@ -4,7 +4,10 @@
 We want to test if there is a correlation between discharge, and aquatic plant 
 and fish abundance within two sites located at NEON data sites BIGC and TECR. We 
 hypothesize that the fish abundance will be lower in times of lower discharge
-due to need to find refuge from predators and seek stable temperatures  
+due to need to find refuge from predators and seek stable temperatures
+
+###Data Describtion
+
 
 ###Data Project Citations:
 -NEON (National Ecological Observatory Network). Fish electrofishing, gill 
