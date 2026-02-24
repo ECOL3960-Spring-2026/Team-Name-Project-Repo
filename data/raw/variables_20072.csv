@@ -1,0 +1,293 @@
+table,fieldName,description,dataType,units,downloadPkg,pubFormat,primaryKey,categoricalCodeName
+apc_identificationHistory,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,N,NA
+apc_identificationHistory,identificationTable,The table(s) containing the record to which this identification history applies,string,NA,expanded,asIs,N,NA
+apc_identificationHistory,sampleID,Identifier for sample,string,NA,expanded,asIs,N,NA
+apc_identificationHistory,sampleCode,Barcode of a sample,string,NA,expanded,asIs,N,NA
+apc_identificationHistory,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,N,NA
+apc_identificationHistory,siteID,NEON site code,string,NA,expanded,asIs,N,NA
+apc_identificationHistory,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,N,NA
+apc_identificationHistory,identificationHistoryID,Identifier for linking records related to this identification history,string,NA,expanded,asIs,Y,NA
+apc_identificationHistory,identifiedDate,"Date on which the sample, individual, or specimen was identified",dateTime,NA,expanded,yyyy-MM-dd(floor),Y,NA
+apc_identificationHistory,endDate,The end date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd(floor),N,NA
+apc_identificationHistory,taxonID,"Species code, based on one or more sources",string,NA,expanded,asIs,N,NA
+apc_identificationHistory,acceptedTaxonID,"Accepted species code, based on one or more sources",string,NA,expanded,asIs,N,NA
+apc_identificationHistory,scientificName,"Scientific name, associated with the taxonID. This is the name of the lowest level taxonomic rank that can be determined",string,NA,expanded,asIs,N,NA
+apc_identificationHistory,identificationQualifier,A standard term to express the determiner's doubts about the Identification,string,NA,expanded,LOV,N,identificationQualifiersExpert
+apc_identificationHistory,identificationReferences,"A list of sources (concatenated and semicolon separated) used to derive the specific taxon concept; including field guide editions, books, or versions of NEON keys used",string,NA,expanded,asIs,N,NA
+apc_identificationHistory,identificationRemarks,Comments or notes about the identification,string,NA,expanded,LOV,N,identificationRemarks
+apc_identificationHistory,remarks,Technician notes; free text comments accompanying the record,string,NA,expanded,asIs,N,NA
+apc_identificationHistory,identifiedBy,An identifier for the technician who identified the specimen,string,NA,expanded,asIs,N,NA
+apc_identificationHistory,laboratoryName,Name of the laboratory or facility that is processing the sample,string,NA,expanded,asIs,N,NA
+apc_identificationHistory,dataQF,Data quality flag,string,NA,expanded,asIs,N,NA
+apc_morphospecies,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,N,NA
+apc_morphospecies,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,N,NA
+apc_morphospecies,siteID,NEON site code,string,NA,expanded,asIs,N,NA
+apc_morphospecies,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,Y,NA
+apc_morphospecies,morphospeciesCreatedDate,Date and time of morphospecies record creation,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_morphospecies,morphospeciesResolvedDate,Date and time of resolving the morphospecies identification,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_morphospecies,taxonID,"Species code, based on one or more sources",string,NA,expanded,asIs,Y,NA
+apc_morphospecies,scientificName,"Scientific name, associated with the taxonID. This is the name of the lowest level taxonomic rank that can be determined",string,NA,expanded,asIs,N,NA
+apc_morphospecies,morphospeciesID,Identifier for morphospecies,string,NA,expanded,asIs,Y,NA
+apc_morphospecies,morphospeciesIDRemarks,Technician notes about the morphospecies; free text comments accompanying the record,string,NA,expanded,asIs,N,NA
+apc_morphospecies,phylum,The scientific name of the phylum or division in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_morphospecies,division,The scientific name of the division in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_morphospecies,class,The scientific name of the class in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_morphospecies,order,The scientific name of the order in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_morphospecies,family,The scientific name of the family in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_morphospecies,genus,The scientific name of the genus in which the organism is classified,string,NA,expanded,asIs,N,NA
+apc_morphospecies,section,The scientific name of the section in which the organism is classified,string,NA,expanded,asIs,N,NA
+apc_morphospecies,specificEpithet,The specific epithet (second part of the species name) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_morphospecies,infraspecificEpithet,The infraspecific epithet (scientific name below the rank of species) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_morphospecies,variety,The variety (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_morphospecies,form,The form (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_morphospecies,scientificNameAuthorship,Name of the individual(s) who designated the scientific name of the taxon,string,NA,expanded,asIs,N,NA
+apc_morphospecies,identificationQualifier,A standard term to express the determiner's doubts about the Identification,string,NA,expanded,LOV,N,Identification Qualifiers
+apc_morphospecies,identificationReferences,"A list of sources (concatenated and semicolon separated) used to derive the specific taxon concept; including field guide editions, books, or versions of NEON keys used",string,NA,expanded,asIs,N,NA
+apc_morphospecies,taxonRank,The lowest level taxonomic rank that can be determined for the individual or specimen,string,NA,expanded,asIs,N,NA
+apc_morphospecies,recordedBy,An identifier for the technician who recorded the data,string,NA,expanded,asIs,N,NA
+apc_morphospecies,identifiedBy,An identifier for the technician who identified the specimen,string,NA,expanded,asIs,N,NA
+apc_morphospecies,identificationHistoryID,Identifier for linking records related to this identification history,string,NA,expanded,asIs,N,NA
+apc_morphospecies,dataQF,Data quality flag,string,NA,expanded,asIs,N,NA
+apc_perTaxon,uid,Unique ID within NEON database; an identifier for the record,string,NA,basic,asIs,N,NA
+apc_perTaxon,domainID,Unique identifier of the NEON domain,string,NA,basic,asIs,N,NA
+apc_perTaxon,siteID,NEON site code,string,NA,basic,asIs,N,NA
+apc_perTaxon,namedLocation,Name of the measurement location in the NEON database,string,NA,basic,asIs,Y,NA
+apc_perTaxon,pointNumber,Number of the point sampled for a given location,unsigned integer,number,basic,integer,Y,NA
+apc_perTaxon,collectDate,Date of the collection event,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_perTaxon,eventID,"An identifier for the set of information associated with the event, which includes information about the place and time of the event",string,NA,basic,asIs,Y,NA
+apc_perTaxon,sampleID,Identifier for sample,string,NA,basic,asIs,N,NA
+apc_perTaxon,sampleCode,Barcode of a sample,string,NA,basic,asIs,N,NA
+apc_perTaxon,sampleCondition,Condition of a sample,string,NA,basic,LOV,N,sampleCondition
+apc_perTaxon,herbariumSampleID,Unique identifier associated with domain herbarium subsample,string,NA,basic,asIs,N,NA
+apc_perTaxon,herbariumSampleCode,Barcode of the domain herbarium subsample,string,NA,basic,asIs,N,NA
+apc_perTaxon,herbariumSampleCondition,Condition of the domain herbarium subsample,string,NA,basic,LOV,N,sampleCondition
+apc_perTaxon,expertIdentificationRequired,Indication of whether a subsample needs expert identification,string,NA,basic,LOV,N,Yes or No choice
+apc_perTaxon,aquaticPlantType,Indicator of the type of aquatic plant in the sample,string,NA,basic,LOV,N,apl.aquaticPlantType
+apc_perTaxon,growthForm,The growth form classification,string,NA,basic,LOV,N,apl.growthForm
+apc_perTaxon,taxonID,"Species code, based on one or more sources",string,NA,basic,asIs,Y,NA
+apc_perTaxon,scientificName,"Scientific name, associated with the taxonID. This is the name of the lowest level taxonomic rank that can be determined",string,NA,basic,asIs,N,NA
+apc_perTaxon,morphospeciesID,Identifier for morphospecies,string,NA,basic,asIs,Y,NA
+apc_perTaxon,morphospeciesIDRemarks,Technician notes about the morphospecies; free text comments accompanying the record,string,NA,basic,asIs,N,NA
+apc_perTaxon,phylum,The scientific name of the phylum or division in which the taxon is classified,string,NA,basic,asIs,N,NA
+apc_perTaxon,division,The scientific name of the division in which the taxon is classified,string,NA,basic,asIs,N,NA
+apc_perTaxon,class,The scientific name of the class in which the taxon is classified,string,NA,basic,asIs,N,NA
+apc_perTaxon,order,The scientific name of the order in which the taxon is classified,string,NA,basic,asIs,N,NA
+apc_perTaxon,family,The scientific name of the family in which the taxon is classified,string,NA,basic,asIs,N,NA
+apc_perTaxon,genus,The scientific name of the genus in which the organism is classified,string,NA,basic,asIs,N,NA
+apc_perTaxon,section,The scientific name of the section in which the organism is classified,string,NA,basic,asIs,N,NA
+apc_perTaxon,specificEpithet,The specific epithet (second part of the species name) of the scientific name applied to the taxon,string,NA,basic,asIs,N,NA
+apc_perTaxon,infraspecificEpithet,The infraspecific epithet (scientific name below the rank of species) of the scientific name applied to the taxon,string,NA,basic,asIs,N,NA
+apc_perTaxon,variety,The variety (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,basic,asIs,N,NA
+apc_perTaxon,form,The form (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,basic,asIs,N,NA
+apc_perTaxon,scientificNameAuthorship,Name of the individual(s) who designated the scientific name of the taxon,string,NA,basic,asIs,N,NA
+apc_perTaxon,identificationQualifier,A standard term to express the determiner's doubts about the Identification,string,NA,basic,LOV,N,Identification Qualifiers
+apc_perTaxon,identificationReferences,"A list of sources (concatenated and semicolon separated) used to derive the specific taxon concept; including field guide editions, books, or versions of NEON keys used",string,NA,basic,asIs,N,NA
+apc_perTaxon,taxonRank,The lowest level taxonomic rank that can be determined for the individual or specimen,string,NA,basic,asIs,N,NA
+apc_perTaxon,remarks,Technician notes; free text comments accompanying the record,string,NA,basic,asIs,N,NA
+apc_perTaxon,identifiedBy,An identifier for the technician who identified the specimen,string,NA,basic,asIs,N,NA
+apc_perTaxon,identifiedDate,"Date on which the sample, individual, or specimen was identified",dateTime,NA,basic,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_perTaxon,identificationHistoryID,Identifier for linking records related to this identification history,string,NA,basic,asIs,N,NA
+apc_perTaxon,dataQF,Data quality flag,string,NA,basic,asIs,N,NA
+apc_perTaxon,publicationDate,Date of data publication on the NEON data portal,dateTime,NA,appended by stackByTable,NA,N,
+apc_perTaxon,release,Identifier for data release,string,NA,appended by stackByTable,NA,N,
+apc_pointTransect,uid,Unique ID within NEON database; an identifier for the record,string,NA,basic,asIs,N,NA
+apc_pointTransect,domainID,Unique identifier of the NEON domain,string,NA,basic,asIs,N,NA
+apc_pointTransect,siteID,NEON site code,string,NA,basic,asIs,N,NA
+apc_pointTransect,namedLocation,Name of the measurement location in the NEON database,string,NA,basic,asIs,Y,NA
+apc_pointTransect,pointNumber,Number of the point sampled for a given location,unsigned integer,number,basic,integer,Y,NA
+apc_pointTransect,transectDistance,Distance along the transect,real,meter,basic,*.##(round),N,NA
+apc_pointTransect,decimalLatitude,"The geographic latitude (in decimal degrees, WGS84) of the geographic center of the reference area",real,decimalDegree,basic,*.######(round),N,NA
+apc_pointTransect,decimalLongitude,"The geographic longitude (in decimal degrees, WGS84) of the geographic center of the reference area",real,decimalDegree,basic,*.######(round),N,NA
+apc_pointTransect,coordinateUncertainty,The horizontal distance (in meters) from the given decimalLatitude and decimalLongitude describing the smallest circle containing the whole of the Location. Zero is not a valid value for this term,real,meter,basic,*.#(round),N,NA
+apc_pointTransect,geodeticDatum,Model used to measure horizontal position on the earth,string,NA,basic,asIs,N,NA
+apc_pointTransect,elevation,Elevation (in meters) above sea level,real,meter,basic,*.#(round),N,NA
+apc_pointTransect,elevationUncertainty,Uncertainty in elevation values (in meters),real,meter,basic,*.#(round),N,NA
+apc_pointTransect,collectDate,Date of the collection event,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_pointTransect,eventID,"An identifier for the set of information associated with the event, which includes information about the place and time of the event",string,NA,basic,asIs,Y,NA
+apc_pointTransect,boutNumber,"Number of the sampling bout within a calendar year, beginning with 1",unsigned integer,number,basic,integer,N,NA
+apc_pointTransect,samplingProtocolVersion,The NEON document number and version where detailed information regarding the sampling method used is available; format NEON.DOC.######vX,string,NA,basic,LOV,N,apl.samplingProtocolVersion
+apc_pointTransect,samplingImpractical,Samples and/or measurements were not collected due to the indicated circumstance,string,NA,basic,LOV,N,samplingImpractical
+apc_pointTransect,biophysicalCriteria,An indicator of whether sampling coincided with the intended biophysical conditions,string,NA,basic,LOV,N,biophysicalCriteria
+apc_pointTransect,targetTaxaPresent,Indicator of whether the sample contained individuals of the target taxa,string,NA,basic,LOV,N,"Yes, No, or Unknown choice"
+apc_pointTransect,habitatType,Habitat type sampled,string,NA,basic,LOV,N,apl.habitatType
+apc_pointTransect,substrate,Organic or inorganic surface material at the location,string,NA,basic,LOV,N,apc.substrate
+apc_pointTransect,remarks,Technician notes; free text comments accompanying the record,string,NA,basic,asIs,N,NA
+apc_pointTransect,recordedBy,An identifier for the technician who recorded the data,string,NA,basic,asIs,N,NA
+apc_pointTransect,collectedBy,An identifier for the technician who collected the sample or specimen,string,NA,basic,asIs,N,NA
+apc_pointTransect,dataQF,Data quality flag,string,NA,basic,asIs,N,NA
+apc_pointTransect,publicationDate,Date of data publication on the NEON data portal,dateTime,NA,appended by stackByTable,NA,N,
+apc_pointTransect,release,Identifier for data release,string,NA,appended by stackByTable,NA,N,
+apc_taxonomyProcessed,uid,Unique ID within NEON database; an identifier for the record,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,domainID,Unique identifier of the NEON domain,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,siteID,NEON site code,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,namedLocation,Name of the measurement location in the NEON database,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,collectDate,Date of the collection event,dateTime,NA,basic,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_taxonomyProcessed,sampleID,Identifier for sample,string,NA,basic,asIs,Y,NA
+apc_taxonomyProcessed,laboratoryName,Name of the laboratory or facility that is processing the sample,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,identifiedBy,An identifier for the technician who identified the specimen,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,qcTaxonomyStatus,Sample chosen as part of 10% of samples for quality control (QC),string,NA,basic,LOV,N,apl.qcTaxonomyStatus
+apc_taxonomyProcessed,identifiedDate,"Date on which the sample, individual, or specimen was identified",dateTime,NA,basic,yyyy-MM-dd(floor),N,NA
+apc_taxonomyProcessed,algalParameter,Parameter used for analysis of algal assemblages,string,NA,basic,LOV,N,apl.algalParameter
+apc_taxonomyProcessed,algalParameterValue,Value of the algalParameter,real,NA,basic,integer,N,NA
+apc_taxonomyProcessed,targetTaxaPresent,Indicator of whether the sample contained individuals of the target taxa,string,NA,basic,LOV,N,Yes or No choice
+apc_taxonomyProcessed,scientificName,"Scientific name, associated with the taxonID. This is the name of the lowest level taxonomic rank that can be determined",string,NA,basic,asIs,Y,NA
+apc_taxonomyProcessed,acceptedTaxonID,"Accepted species code, based on one or more sources",string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,morphospeciesID,Identifier for morphospecies,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,phylum,The scientific name of the phylum or division in which the taxon is classified,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,division,The scientific name of the division in which the taxon is classified,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,class,The scientific name of the class in which the taxon is classified,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,order,The scientific name of the order in which the taxon is classified,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,family,The scientific name of the family in which the taxon is classified,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,genus,The scientific name of the genus in which the organism is classified,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,section,The scientific name of the section in which the organism is classified,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,specificEpithet,The specific epithet (second part of the species name) of the scientific name applied to the taxon,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,infraspecificEpithet,The infraspecific epithet (scientific name below the rank of species) of the scientific name applied to the taxon,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,variety,The variety (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,form,The form (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,scientificNameAuthorship,Name of the individual(s) who designated the scientific name of the taxon,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,taxonDatabaseName,Name of the taxonomic database,string,NA,basic,LOV,N,apl.taxonDatabaseName
+apc_taxonomyProcessed,taxonDatabaseID,Unique identifier for the taxon within the database,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,identificationQualifier,A standard term to express the determiner's doubts about the Identification,string,NA,basic,LOV,N,apl.IDQualifiersAllRanks
+apc_taxonomyProcessed,identificationReferences,"A list of sources (concatenated and semicolon separated) used to derive the specific taxon concept; including field guide editions, books, or versions of NEON keys used",string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,taxonRank,The lowest level taxonomic rank that can be determined for the individual or specimen,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,sampleCondition,Condition of a sample,string,NA,basic,LOV,N,apl.sampleCondition
+apc_taxonomyProcessed,testMethod,Method used to conduct test,string,NA,basic,LOV,N,apl.testMethod
+apc_taxonomyProcessed,method,Published method used for analysis,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,identificationHistoryID,Identifier for linking records related to this identification history,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,dataQF,Data quality flag,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,remarks,Technician notes; free text comments accompanying the record,string,NA,basic,asIs,N,NA
+apc_taxonomyProcessed,publicationDate,Date of data publication on the NEON data portal,dateTime,NA,appended by stackByTable,NA,N,
+apc_taxonomyProcessed,release,Identifier for data release,string,NA,appended by stackByTable,NA,N,
+apc_taxonomyRaw,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,siteID,NEON site code,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,collectDate,Date of the collection event,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_taxonomyRaw,sampleID,Identifier for sample,string,NA,expanded,asIs,Y,NA
+apc_taxonomyRaw,laboratoryName,Name of the laboratory or facility that is processing the sample,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,identifiedBy,An identifier for the technician who identified the specimen,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,qcTaxonomyStatus,Sample chosen as part of 10% of samples for quality control (QC),string,NA,expanded,LOV,N,apl.qcTaxonomyStatus
+apc_taxonomyRaw,identifiedDate,"Date on which the sample, individual, or specimen was identified",dateTime,NA,expanded,yyyy-MM-dd(floor),N,NA
+apc_taxonomyRaw,algalParameter,Parameter used for analysis of algal assemblages,string,NA,expanded,LOV,N,apl.algalParameter
+apc_taxonomyRaw,algalParameterValue,Value of the algalParameter,real,NA,expanded,integer,N,NA
+apc_taxonomyRaw,targetTaxaPresent,Indicator of whether the sample contained individuals of the target taxa,string,NA,expanded,LOV,N,Yes or No choice
+apc_taxonomyRaw,scientificName,"Scientific name, associated with the taxonID. This is the name of the lowest level taxonomic rank that can be determined",string,NA,expanded,asIs,Y,NA
+apc_taxonomyRaw,taxonID,"Species code, based on one or more sources",string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,morphospeciesID,Identifier for morphospecies,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,phylum,The scientific name of the phylum or division in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,division,The scientific name of the division in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,class,The scientific name of the class in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,order,The scientific name of the order in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,family,The scientific name of the family in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,genus,The scientific name of the genus in which the organism is classified,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,section,The scientific name of the section in which the organism is classified,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,specificEpithet,The specific epithet (second part of the species name) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,infraspecificEpithet,The infraspecific epithet (scientific name below the rank of species) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,variety,The variety (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,form,The form (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,scientificNameAuthorship,Name of the individual(s) who designated the scientific name of the taxon,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,taxonDatabaseName,Name of the taxonomic database,string,NA,expanded,LOV,N,apl.taxonDatabaseName
+apc_taxonomyRaw,taxonDatabaseID,Unique identifier for the taxon within the database,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,identificationQualifier,A standard term to express the determiner's doubts about the Identification,string,NA,expanded,LOV,N,apl.IDQualifiersAllRanks
+apc_taxonomyRaw,identificationReferences,"A list of sources (concatenated and semicolon separated) used to derive the specific taxon concept; including field guide editions, books, or versions of NEON keys used",string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,sampleCondition,Condition of a sample,string,NA,expanded,LOV,N,apl.sampleCondition
+apc_taxonomyRaw,testMethod,Method used to conduct test,string,NA,expanded,LOV,N,apl.testMethod
+apc_taxonomyRaw,method,Published method used for analysis,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,identificationHistoryID,Identifier for linking records related to this identification history,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,dataQF,Data quality flag,string,NA,expanded,asIs,N,NA
+apc_taxonomyRaw,remarks,Technician notes; free text comments accompanying the record,string,NA,expanded,asIs,N,NA
+apc_voucher,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,N,NA
+apc_voucher,siteID,NEON site code,string,NA,expanded,asIs,N,NA
+apc_voucher,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,N,NA
+apc_voucher,startDate,The start date-time or interval during which an event occurred,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_voucher,collectDate,Date of the collection event,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_voucher,scientificName,"Scientific name, associated with the taxonID. This is the name of the lowest level taxonomic rank that can be determined",string,NA,expanded,asIs,N,NA
+apc_voucher,taxonID,"Species code, based on one or more sources",string,NA,expanded,asIs,N,NA
+apc_voucher,morphospeciesID,Identifier for morphospecies,string,NA,expanded,asIs,N,NA
+apc_voucher,sampleID,Identifier for sample,string,NA,expanded,asIs,Y,NA
+apc_voucher,sampleCode,Barcode of a sample,string,NA,expanded,asIs,Y,NA
+apc_voucher,herbariumSampleID,Unique identifier associated with domain herbarium subsample,string,NA,expanded,asIs,N,NA
+apc_voucher,herbariumSampleCode,Barcode of the domain herbarium subsample,string,NA,expanded,asIs,N,NA
+apc_voucher,herbariumSampleCondition,Condition of the domain herbarium subsample,string,NA,expanded,LOV,N,sampleCondition
+apc_voucher,expertIdentificationRequired,Indication of whether a subsample needs expert identification,string,NA,expanded,LOV,N,Yes or No choice
+apc_voucher,aquaticPlantType,Indicator of the type of aquatic plant in the sample,string,NA,expanded,LOV,N,apl.aquaticPlantType
+apc_voucher,recordedBy,An identifier for the technician who recorded the data,string,NA,expanded,asIs,N,NA
+apc_voucher,collectedBy,An identifier for the technician who collected the sample or specimen,string,NA,expanded,asIs,N,NA
+apc_voucher,identificationHistoryID,Identifier for linking records related to this identification history,string,NA,expanded,asIs,N,NA
+apc_voucher,dataQF,Data quality flag,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,siteID,NEON site code,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,collectDate,Date of the collection event,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_voucherTaxonomyProcessed,sampleID,Identifier for sample,string,NA,expanded,asIs,Y,NA
+apc_voucherTaxonomyProcessed,laboratoryName,Name of the laboratory or facility that is processing the sample,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,identifiedBy,An identifier for the technician who identified the specimen,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,qcTaxonomyStatus,Sample chosen as part of 10% of samples for quality control (QC),string,NA,expanded,LOV,N,apl.qcTaxonomyStatus
+apc_voucherTaxonomyProcessed,identifiedDate,"Date on which the sample, individual, or specimen was identified",dateTime,NA,expanded,yyyy-MM-dd(floor),N,NA
+apc_voucherTaxonomyProcessed,algalParameter,Parameter used for analysis of algal assemblages,string,NA,expanded,LOV,N,apl.algalParameter
+apc_voucherTaxonomyProcessed,algalParameterValue,Value of the algalParameter,real,NA,expanded,integer,N,NA
+apc_voucherTaxonomyProcessed,scientificName,"Scientific name, associated with the taxonID. This is the name of the lowest level taxonomic rank that can be determined",string,NA,expanded,asIs,Y,NA
+apc_voucherTaxonomyProcessed,acceptedTaxonID,"Accepted species code, based on one or more sources",string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,morphospeciesID,Identifier for morphospecies,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,phylum,The scientific name of the phylum or division in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,division,The scientific name of the division in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,class,The scientific name of the class in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,order,The scientific name of the order in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,family,The scientific name of the family in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,genus,The scientific name of the genus in which the organism is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,section,The scientific name of the section in which the organism is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,specificEpithet,The specific epithet (second part of the species name) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,infraspecificEpithet,The infraspecific epithet (scientific name below the rank of species) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,variety,The variety (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,form,The form (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,scientificNameAuthorship,Name of the individual(s) who designated the scientific name of the taxon,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,taxonDatabaseName,Name of the taxonomic database,string,NA,expanded,LOV,N,apl.taxonDatabaseName
+apc_voucherTaxonomyProcessed,taxonDatabaseID,Unique identifier for the taxon within the database,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,identificationQualifier,A standard term to express the determiner's doubts about the Identification,string,NA,expanded,LOV,N,apl.IDQualifiersAllRanks
+apc_voucherTaxonomyProcessed,identificationReferences,"A list of sources (concatenated and semicolon separated) used to derive the specific taxon concept; including field guide editions, books, or versions of NEON keys used",string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,taxonRank,The lowest level taxonomic rank that can be determined for the individual or specimen,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,sampleCondition,Condition of a sample,string,NA,expanded,LOV,N,apl.sampleCondition
+apc_voucherTaxonomyProcessed,testMethod,Method used to conduct test,string,NA,expanded,LOV,N,apl.testMethod
+apc_voucherTaxonomyProcessed,method,Published method used for analysis,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,identificationHistoryID,Identifier for linking records related to this identification history,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,dataQF,Data quality flag,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyProcessed,remarks,Technician notes; free text comments accompanying the record,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,uid,Unique ID within NEON database; an identifier for the record,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,domainID,Unique identifier of the NEON domain,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,siteID,NEON site code,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,namedLocation,Name of the measurement location in the NEON database,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,collectDate,Date of the collection event,dateTime,NA,expanded,yyyy-MM-dd'T'HH:mm'Z'(floor),N,NA
+apc_voucherTaxonomyRaw,sampleID,Identifier for sample,string,NA,expanded,asIs,Y,NA
+apc_voucherTaxonomyRaw,laboratoryName,Name of the laboratory or facility that is processing the sample,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,identifiedBy,An identifier for the technician who identified the specimen,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,qcTaxonomyStatus,Sample chosen as part of 10% of samples for quality control (QC),string,NA,expanded,LOV,N,apl.qcTaxonomyStatus
+apc_voucherTaxonomyRaw,identifiedDate,"Date on which the sample, individual, or specimen was identified",dateTime,NA,expanded,yyyy-MM-dd(floor),N,NA
+apc_voucherTaxonomyRaw,algalParameter,Parameter used for analysis of algal assemblages,string,NA,expanded,LOV,N,apl.algalParameter
+apc_voucherTaxonomyRaw,algalParameterValue,Value of the algalParameter,real,NA,expanded,integer,N,NA
+apc_voucherTaxonomyRaw,scientificName,"Scientific name, associated with the taxonID. This is the name of the lowest level taxonomic rank that can be determined",string,NA,expanded,asIs,Y,NA
+apc_voucherTaxonomyRaw,taxonID,"Species code, based on one or more sources",string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,morphospeciesID,Identifier for morphospecies,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,phylum,The scientific name of the phylum or division in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,division,The scientific name of the division in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,class,The scientific name of the class in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,order,The scientific name of the order in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,family,The scientific name of the family in which the taxon is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,genus,The scientific name of the genus in which the organism is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,section,The scientific name of the section in which the organism is classified,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,specificEpithet,The specific epithet (second part of the species name) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,infraspecificEpithet,The infraspecific epithet (scientific name below the rank of species) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,variety,The variety (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,form,The form (infraspecific name below the rank of infraspecific epithet) of the scientific name applied to the taxon,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,scientificNameAuthorship,Name of the individual(s) who designated the scientific name of the taxon,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,taxonDatabaseName,Name of the taxonomic database,string,NA,expanded,LOV,N,apl.taxonDatabaseName
+apc_voucherTaxonomyRaw,taxonDatabaseID,Unique identifier for the taxon within the database,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,identificationQualifier,A standard term to express the determiner's doubts about the Identification,string,NA,expanded,LOV,N,apl.IDQualifiersAllRanks
+apc_voucherTaxonomyRaw,identificationReferences,"A list of sources (concatenated and semicolon separated) used to derive the specific taxon concept; including field guide editions, books, or versions of NEON keys used",string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,taxonRank,The lowest level taxonomic rank that can be determined for the individual or specimen,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,sampleCondition,Condition of a sample,string,NA,expanded,LOV,N,apl.sampleCondition
+apc_voucherTaxonomyRaw,testMethod,Method used to conduct test,string,NA,expanded,LOV,N,apl.testMethod
+apc_voucherTaxonomyRaw,method,Published method used for analysis,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,identificationHistoryID,Identifier for linking records related to this identification history,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,dataQF,Data quality flag,string,NA,expanded,asIs,N,NA
+apc_voucherTaxonomyRaw,remarks,Technician notes; free text comments accompanying the record,string,NA,expanded,asIs,N,NA

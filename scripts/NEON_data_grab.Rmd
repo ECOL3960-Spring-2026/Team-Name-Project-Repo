@@ -69,7 +69,7 @@ list2env((loadByProduct(dpID = discharge,
 ```
 
 ```{r}
-#Save raw data
+#Save raw data DONE
 variables_00130 %>% 
   write_csv(here("data", "raw", "variables_00130.csv"))
 
@@ -98,6 +98,16 @@ list2env((loadByProduct(dpID = fish,
 ```
 
 ```{r}
+#Save raw data DONE
+variables_20107 %>% 
+  write_csv(here("data", "raw", "variables_20107.csv"))
+
+fsh_perFish %>% 
+  write_csv(here("data", "raw", "fsh_perFish.csv"))
+
+```
+
+```{r}
 #Pull data from "Aquatic plants"
 plants <- "DP1.20072.001"
 
@@ -115,8 +125,19 @@ list2env((loadByProduct(dpID = plants,
 ```
 
 ```{r}
+#Save raw data DONE
+variables_20072 %>% 
+  write_csv(here("data", "raw", "variables_20072.csv"))
+
+apc_perTaxon %>% 
+  write_csv(here("data", "raw", "apc_perTaxon.csv"))
+
+```
+
+```{r}
+#Not using44
 #Benthic microbe community composition, DP1.20086.001
-benthic <- "DP1.20086.001"
+benthic <- "DP1.20086.002"
 
 #Select sites and dates
 my_sites <- c("BIGC", "TECR")
@@ -131,3 +152,12 @@ list2env((loadByProduct(dpID = benthic,
          .GlobalEnv)
 ```
 
+```{r}
+#Save raw data
+variables_20086 %>% 
+  write_csv(here("data", "raw", "variables_20086.csv"))
+
+csd_15_min %>% 
+  write_csv(here("data", "raw", "csd_15_min.csv"))
+
+```
