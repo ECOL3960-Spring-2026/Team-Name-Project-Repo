@@ -25,22 +25,15 @@ view(discharge_raw)
 ```
 
 Begin wrangling our data by selecting different variables that could be important for future analysis across our different data tables. We also made sure to try and select variables that would be easy to refine and also variables that may be in common with the variables in different data sets. 
+
+Add year and month for discharge from startDateTime; retain continuous stage and discharge data.
 ```{r}
-discharge_streamlined <- discharge_raw %>% 
-  select(domainID,
-         siteID,
-         startDateTime,
-         endDateTime,
-         stageContinuous,
-         stageTotalUncert,
-         dischargeContinuous,
-         dischargeUpperParamUncert,
-         dischargeLowerParamUncert,
-         dischargeUpperRemnUncert,
-         dischargeLowerRemnUncert,
-         dischargeCorrectionApplied,
-         dischargeFinalQF,
-         dischargeFinalQFSciRvw)
+
+discharge <- discharge_raw %>% 
+  mutate(year = year(startDateTime),
+         month = month(startDateTime)) %>% 
+  select(domainID, siteID, year, month, stageContinuous, dischargeContinuous)
+
 ```
 
 Here we begun processing the fish data. First we needed to add in the raw data.
@@ -88,6 +81,8 @@ view(plant_raw)
 ```
 ```{r}
 plant <- plant_raw %>% 
+  mutate(year = year(collectDate),
+         month = month(collectDate)) %>% 
   select(domainID,
          siteID,
          namedLocation,
@@ -112,18 +107,9 @@ plant <- plant_raw %>%
          taxonRank,
          identifiedDate,
          dataQF)
+  
 ```
 
-Create columns for year and month in each of three data files
-```{r}
-
-discharge <- discharge_streamlined %>% 
-  select(domainID, siteID) %>% 
-  mutate(year = year(startDateTime),
-         month = month(startDateTime))
-
-
-```
 
 Write a csv files for each processed data file: 
 ```{r}
@@ -143,7 +129,7 @@ fish %>%
 ## Preliminary Plot
 ```{r}
 
-ggplot(data = discharge_streamlined,
+ggplot(data = discharge_raw,
        aes(x = startDateTime, 
            y = dischargeContinuous,
            col = siteID)) +
