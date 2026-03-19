@@ -39,9 +39,9 @@ discharge <- discharge %>%
 
 ```
 
-You can also embed plots, for example:
+```{r}
+fish_plant <- left_join(fish, plant, by = c("domainID", "siteID", "month", "year"))
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+discharge_fish_plant <- left_join(discharge, fish_plant, by = c("domainID", "siteID", "month", "year"))
 ```
 
