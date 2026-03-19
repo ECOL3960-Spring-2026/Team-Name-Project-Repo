@@ -20,6 +20,14 @@ library(tidyverse)
 library(here)
 ```
 
+Read in processed data
+```{r}
+discharge <- read_csv(here("data", "processed", "discharge_processed.csv"))
+fish <- read_csv(here("data", "processed", "fish_processed.csv"))
+plant <- read_csv(here("data", "processed", "plant_processed.csv"))
+```
+
+
 Create new columns for monthly measurements
 ```{r}
 fish <- fish %>% 
