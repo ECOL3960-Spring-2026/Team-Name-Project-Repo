@@ -14,14 +14,16 @@ library(tidyverse)
 library(here)
 ```
 
+## Discharge data 
+
 Read in the raw data for discharge and check structures of the variables. 
-We also want to see the general layout of the data.  
 ```{r}
 discharge_raw <- read_csv(here("data", "raw", "csd_15_min.csv"))
 
 head(discharge_raw)
 str(discharge_raw)
-view(discharge_raw)
+#view(discharge_raw)
+
 ```
 
 Begin wrangling our data by selecting different variables that could be important for future analysis across our different data tables. We also made sure to try and select variables that would be easy to refine and also variables that may be in common with the variables in different data sets. 
@@ -36,38 +38,33 @@ discharge <- discharge_raw %>%
 
 ```
 
+## Fish data 
 Here we begun processing the fish data. First we needed to add in the raw data.
-
 ```{r}
+
 fish_raw <- read_csv(here("data", "raw", "fsh_perFish.csv"))
 
 head(fish_raw)
 str(fish_raw)
-view(fish_raw)
+#view(fish_raw)
+
 ```
+
+Add year and month columns based on passStartTime.
+Retain only adult lifestage; all samples retained are from electrofisher
+Retain observations that have total length or weight
+
 ```{r}
+
 fish <- fish_raw %>% 
-  select(domainID,
-         siteID,
-         namedLocation,
-         passStartTime,
-         passEndTime,
-         passNumber,
-         boutEndDate,
-         eventID,
-         taxonID,
-         taxonRank,
-         scientificName,
-         morphospeciesID,
-         identificationQualifier,
-         dataQF,
-         specimenNumber,
-         fishTotalLength,
-         fishWeight,
-         samplerType,
-         efMortality,
-         efInjury,
-         fishLifeStage)
+  mutate(year = year(passStartTime),
+         month = month(passStartTime)) %>% 
+  filter(fishLifeStage == "adult") %>% 
+  select(domainID, siteID, year, month,
+         taxonID, taxonRank, scientificName,
+         fishTotalLength, fishWeight) %>% 
+  filter(!is.na(fishTotalLength) | !is.na(fishWeight))
+
 ```
 
 
@@ -77,7 +74,8 @@ plant_raw <- read_csv(here("data", "raw", "apc_perTaxon.csv"))
 
 head(plant_raw)
 str(plant_raw)
-view(plant_raw)
+#view(plant_raw)
+
 ```
 ```{r}
 plant <- plant_raw %>% 
