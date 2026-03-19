@@ -18,30 +18,40 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r}
 library(tidyverse)
 library(here)
-
 ```
 
+Create new columns for monthly measurements
 ```{r}
 fish <- fish %>% 
-  drop_na(specimenNumber) %>% 
-  group_by(domainID, siteID, month, year) %>% 
-  summarise(fish_month = sum(specimenNumber))
+  group_by(domainID, siteID, year, month) %>% 
+  summarise(fish_month_tally = n())
 
 plant <- plant %>% 
   drop_na(aquaticPlantType) %>% 
-  group_by(domainID, siteID, month, year) %>% 
+  group_by(domainID, siteID, year, month) %>% 
   summarise(plant_month = count(aquaticPlantType))
 
 discharge <- discharge %>% 
   drop_na(dischargeContinuous) %>% 
-  group_by(domainID, siteID, month, year) %>% 
+  group_by(domainID, siteID, year, month) %>% 
   summarise(discharge_month = sum(dischargeContinuous))
 
 ```
 
+Join datasets together
 ```{r}
 fish_plant <- left_join(fish, plant, by = c("domainID", "siteID", "month", "year"))
 
 discharge_fish_plant <- left_join(discharge, fish_plant, by = c("domainID", "siteID", "month", "year"))
+```
+
+Create a test plot before analysis
+```{r}
+discharge_fish_plant %>% 
+  ggplot(aes(x = fish_month, y = plant_month)) + 
+  geom_point() + 
+  scale_x_continuous("Total Fish per Month") +
+  scale_y_continuous("Total Plant per Month") +
+  personal_theme
 ```
 
