@@ -32,17 +32,20 @@ Create new columns for monthly measurements
 ```{r}
 fish <- fish %>% 
   group_by(domainID, siteID, year, month) %>% 
-  summarise(fish_month_tally = n())
+  summarise(fish_month_tally = n(),
+            fish_mass = sum(fishWeight, na.rm = TRUE))
 
 plant <- plant %>% 
   drop_na(aquaticPlantType) %>% 
   group_by(domainID, siteID, year, month) %>% 
-  summarise(plant_month = count(aquaticPlantType))
+  summarise(plant_month_tally = n())
 
 discharge <- discharge %>% 
   drop_na(dischargeContinuous) %>% 
   group_by(domainID, siteID, year, month) %>% 
-  summarise(discharge_month = sum(dischargeContinuous))
+  summarise(discharge_month_L_sec = mean(dischargeContinuous),
+            discharge_month_max = max(dischargeContinuous),
+            discharge_month_min = min(dischargeContinuous))
 
 ```
 
