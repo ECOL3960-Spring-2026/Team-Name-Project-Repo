@@ -62,7 +62,6 @@ discharge_fish_plant %>%
   ggplot(aes(x = fish_month, y = plant_month)) + 
   geom_point() + 
   scale_x_continuous("Total Fish per Month") +
-  scale_y_continuous("Total Plant per Month") +
-  personal_theme
+  scale_y_continuous("Total Plant per Month") 
 ```
 
