@@ -15,11 +15,29 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+```{r}
+library(tidyverse)
+library(here)
+
 ```
 
-## Including Plots
+```{r}
+fish <- fish %>% 
+  drop_na(specimenNumber) %>% 
+  group_by(domainID, siteID, month, year) %>% 
+  summarise(fish_month = sum(specimenNumber))
+
+plant <- plant %>% 
+  drop_na(aquaticPlantType) %>% 
+  group_by(domainID, siteID, month, year) %>% 
+  summarise(plant_month = count(aquaticPlantType))
+
+discharge <- discharge %>% 
+  drop_na(dischargeContinuous) %>% 
+  group_by(domainID, siteID, month, year) %>% 
+  summarise(discharge_month = sum(dischargeContinuous))
+
+```
 
 You can also embed plots, for example:
 
@@ -27,4 +45,3 @@ You can also embed plots, for example:
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
