@@ -8,15 +8,17 @@ date: "2026-02-19"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
- Load in Tidyverse and Here packages
+Load in Tidyverse and Here packages
+
 ```{r}
 library(tidyverse)
 library(here)
 ```
 
-## Discharge data 
+## Discharge data
 
-Read in the raw data for discharge and check structures of the variables. 
+Read in the raw data for discharge and check structures of the variables.
+
 ```{r}
 discharge_raw <- read_csv(here("data", "raw", "csd_15_min.csv"))
 
@@ -26,9 +28,10 @@ str(discharge_raw)
 
 ```
 
-Begin wrangling our data by selecting different variables that could be important for future analysis across our different data tables. We also made sure to try and select variables that would be easy to refine and also variables that may be in common with the variables in different data sets. 
+Begin wrangling our data by selecting different variables that could be important for future analysis across our different data tables. We also made sure to try and select variables that would be easy to refine and also variables that may be in common with the variables in different data sets.
 
 Add year and month for discharge from startDateTime; retain continuous stage and discharge data.
+
 ```{r}
 
 discharge <- discharge_raw %>% 
@@ -38,8 +41,10 @@ discharge <- discharge_raw %>%
 
 ```
 
-## Fish data 
+## Fish data
+
 Here we begun processing the fish data. First we needed to add in the raw data.
+
 ```{r}
 
 fish_raw <- read_csv(here("data", "raw", "fsh_perFish.csv"))
@@ -50,9 +55,9 @@ str(fish_raw)
 
 ```
 
-Add year and month columns based on passStartTime.
-Retain only adult lifestage; all samples retained are from electrofisher
-Retain observations that have total length or weight
+Add year and month columns based on passStartTime. Retain only adult lifestage; all samples retained are from electrofisher Retain observations that have total length or weight
+
+**If eventually aiming for counts of total fish caught per month and total mass, may want to consider whether the filter for life stage is appropriate...?**
 
 ```{r}
 
@@ -67,9 +72,14 @@ fish <- fish_raw %>%
 
 ```
 
+## Aquatic plants
 
 here we read in the plant_raw data, and narrowed downt he plant variables we will be using to plot.
+
+**These data are messy!** May want to think about filtering criteria?
+
 ```{r}
+
 plant_raw <- read_csv(here("data", "raw", "apc_perTaxon.csv"))
 
 head(plant_raw)
@@ -77,14 +87,13 @@ str(plant_raw)
 #view(plant_raw)
 
 ```
+
 ```{r}
 plant <- plant_raw %>% 
   mutate(year = year(collectDate),
          month = month(collectDate)) %>% 
-  select(domainID,
-         siteID,
+  select(domainID, siteID, year, month,
          namedLocation,
-         collectDate,
          sampleCondition,
          aquaticPlantType,
          growthForm,
@@ -108,8 +117,8 @@ plant <- plant_raw %>%
   
 ```
 
+Write a csv files for each processed data file:
 
-Write a csv files for each processed data file: 
 ```{r}
 
 discharge %>% 
@@ -123,8 +132,8 @@ fish %>%
 
 ```
 
-
 ## Preliminary Plot
+
 ```{r}
 
 ggplot(data = discharge_raw,
