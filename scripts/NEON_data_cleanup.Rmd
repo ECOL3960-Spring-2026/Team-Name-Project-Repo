@@ -26,7 +26,7 @@ view(discharge_raw)
 
 Begin wrangling our data by selecting different variables that could be important for future analysis across our different data tables. We also made sure to try and select variables that would be easy to refine and also variables that may be in common with the variables in different data sets. 
 ```{r}
-discharge <- discharge_raw %>% 
+discharge_streamlined <- discharge_raw %>% 
   select(domainID,
          siteID,
          startDateTime,
@@ -42,15 +42,6 @@ discharge <- discharge_raw %>%
          dischargeFinalQF,
          dischargeFinalQFSciRvw)
 ```
-
-Write a new csv file for the new data selections we made. Also saved this in the processed data folder. 
-```{r}
-
-discharge %>% 
-  write_csv(here("data", "processed", "discharge_processed.csv"))
-
-```
-
 
 Here we begun processing the fish data. First we needed to add in the raw data.
 
@@ -86,13 +77,6 @@ fish <- fish_raw %>%
          fishLifeStage)
 ```
 
-here we placed fish_processed in the processed data file 
-```{r}
-
-fish %>% 
-  write_csv(here("data", "processed", "fish_processed.csv"))
-
-```
 
 here we read in the plant_raw data, and narrowed downt he plant variables we will be using to plot.
 ```{r}
@@ -130,22 +114,42 @@ plant <- plant_raw %>%
          dataQF)
 ```
 
-here we placed plant_processed in the processed data file 
+Create columns for year and month in each of three data files
 ```{r}
+
+discharge <- discharge_streamlined %>% 
+  select(domainID, siteID) %>% 
+  mutate(year = year(startDateTime),
+         month = month(startDateTime))
+
+
+```
+
+Write a csv files for each processed data file: 
+```{r}
+
+discharge %>% 
+  write_csv(here("data", "processed", "discharge_processed.csv"))
 
 plant %>% 
   write_csv(here("data", "processed", "plant_processed.csv"))
 
+fish %>% 
+  write_csv(here("data", "processed", "fish_processed.csv"))
+
 ```
+
 
 ## Preliminary Plot
 ```{r}
-ggplot(data = discharge,
+
+ggplot(data = discharge_streamlined,
        aes(x = startDateTime, 
            y = dischargeContinuous,
            col = siteID)) +
   geom_point(cex = 1) +
   stat_smooth()
+
 ```
 
 
