@@ -63,8 +63,7 @@ Add year and month columns based on passStartTime. Retain only adult lifestage; 
 
 fish <- fish_raw %>% 
   mutate(year = year(passStartTime),
-         month = month(passStartTime)) %>% 
-  filter(fishLifeStage == "adult") %>% 
+         month = month(passStartTime)) %>%  
   select(domainID, siteID, year, month,
          taxonID, taxonRank, scientificName,
          fishTotalLength, fishWeight) %>% 
