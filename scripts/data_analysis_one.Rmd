@@ -15,12 +15,14 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
+In this chunk we added and ran any necessary packages that we would need in order to begin our data analysis. These packages include the tidyverse package, the here package, and the car package. Tidyverse is the main package that we used for some of the major work with the data analysis. We used this to wrangle the data in a way that the different variables are able to be compared. The here package was used to simply show R where to find our data within our files. Lastly we have used the car package to further our data analysis and conduct various tests for normality within our data sets and and data analysis. 
 ```{r}
 library(tidyverse)
 library(here)
+library(car)
 ```
 
-Read in processed data
+Once all of our packages were read in, we began the process of our data analysis by reading in the processed data from the data clean up. 
 ```{r}
 discharge <- read_csv(here("data", "processed", "discharge_processed.csv"))
 fish <- read_csv(here("data", "processed", "fish_processed.csv"))
