@@ -51,15 +51,15 @@ discharge <- discharge %>%
 
 Join datasets together
 ```{r}
-fish_plant <- left_join(fish, plant, by = c("domainID", "siteID", "month", "year"))
+discharge_plant <- left_join(discharge, plant, by = c("domainID", "siteID", "month", "year"))
 
-discharge_fish_plant <- left_join(discharge, fish_plant, by = c("domainID", "siteID", "month", "year"))
+discharge_fish_plant <- left_join(discharge_plant, fish, by = c("domainID", "siteID", "month", "year"))
 ```
 
 Create a test plot before analysis
 ```{r}
 discharge_fish_plant %>% 
-  ggplot(aes(x = fish_month, y = plant_month)) + 
+  ggplot(aes(x = fish_month_tally, y = plant_month_tally)) + 
   geom_point() + 
   scale_x_continuous("Total Fish per Month") +
   scale_y_continuous("Total Plant per Month") 
