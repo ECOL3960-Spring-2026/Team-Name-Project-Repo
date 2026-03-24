@@ -51,13 +51,17 @@ discharge <- discharge %>%
 
 Join datasets together
 ```{r}
-discharge_plant <- left_join(discharge, plant, by = c("domainID", "siteID", "month", "year"))
+discharge_plant <- full_join(discharge, plant, by = c("domainID", "siteID", "month", "year"))
 
-discharge_fish_plant <- left_join(discharge_plant, fish, by = c("domainID", "siteID", "month", "year"))
+discharge_fish_plant <- full_join(discharge_plant, fish, by = c("domainID", "siteID", "month", "year"))
 ```
 
 Create a test plot before analysis
 ```{r}
+anova_test <- aov(fish_mass ~ plant_month_tally + discharge_month_L_sec, data = discharge_fish_plant)
+
+summary(anova_test)
+
 discharge_fish_plant %>% 
   ggplot(aes(x = fish_month_tally, y = plant_month_tally)) + 
   geom_point() + 
