@@ -53,9 +53,9 @@ discharge <- discharge %>%
 
 Join datasets together
 ```{r}
-discharge_plant <- full_join(discharge, plant, by = c("domainID", "siteID", "month", "year"))
+discharge_fish <- full_join(discharge, fish, by = c("domainID", "siteID", "month", "year"))
 
-discharge_fish_plant <- full_join(discharge_plant, fish, by = c("domainID", "siteID", "month", "year"))
+discharge_fish_plant <- full_join(discharge_fish, plant, by = c("domainID", "siteID", "month", "year"))
 ```
 
 Create a test plot before analysis
