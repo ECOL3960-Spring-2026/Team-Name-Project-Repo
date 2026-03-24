@@ -9,14 +9,14 @@ date: "2026-02-12"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Library:
+Load packages to run script
 ```{r library}
 library(tidyverse)
 library(here)
 library(neonUtilities)
 ```
 
-## EXAMPLE SCRIPT!!!
+Example Script 
 ```{r pressure, echo=FALSE}
 # Mosquitoes sampled from CO2 traps
 #mosquito <- "DP1.10043.001"
@@ -49,7 +49,7 @@ library(neonUtilities)
 
 Hey this is a test on 2/17/2026!
 
-First attempt at pulling NEON Data: 2/17
+Pulling NEON Data 'Discharge' from BIGC, TECR 2/17
 ```{r}
 #Pull data
 discharge <- "DP4.00130.001"
@@ -67,7 +67,7 @@ list2env((loadByProduct(dpID = discharge,
                         enddate = end_date)),
          .GlobalEnv)
 ```
-
+Saving raw data variables 
 ```{r}
 #Save raw data DONE
 variables_00130 %>% 
@@ -77,8 +77,7 @@ csd_15_min %>%
   write_csv(here("data", "raw", "csd_15_min.csv"))
 
 ```
-
-
+Pulling NEON Data 'Fish electrofishing, gill netting, and fyke netting counts' from BIGC, TECR.
 ```{r}
 #Pull data from	"Fish electrofishing, gill netting, and fyke netting counts"
 fish <- "DP1.20107.001"
@@ -96,7 +95,7 @@ list2env((loadByProduct(dpID = fish,
                         enddate = end_date)),
          .GlobalEnv)
 ```
-
+Saving raw data variables 
 ```{r}
 #Save raw data DONE
 variables_20107 %>% 
@@ -106,7 +105,7 @@ fsh_perFish %>%
   write_csv(here("data", "raw", "fsh_perFish.csv"))
 
 ```
-
+Pulling NEON Data 'Aquatic plants' from from BIGC, TECR.
 ```{r}
 #Pull data from "Aquatic plants"
 plants <- "DP1.20072.001"
@@ -123,7 +122,7 @@ list2env((loadByProduct(dpID = plants,
                         enddate = end_date)),
          .GlobalEnv)   
 ```
-
+Save raw variables 
 ```{r}
 #Save raw data DONE
 variables_20072 %>% 
