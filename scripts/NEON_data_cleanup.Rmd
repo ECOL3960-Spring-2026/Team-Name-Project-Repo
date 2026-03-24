@@ -65,7 +65,7 @@ fish <- fish_raw %>%
   mutate(year = year(passStartTime),
          month = month(passStartTime)) %>%  
   select(domainID, siteID, year, month,
-         taxonID, taxonRank, scientificName,
+         taxonID, taxonRank, fishLifeStage, scientificName,
          fishTotalLength, fishWeight) %>% 
   filter(!is.na(fishTotalLength) | !is.na(fishWeight))
 
