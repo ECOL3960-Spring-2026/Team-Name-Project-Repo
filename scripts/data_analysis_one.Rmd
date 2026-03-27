@@ -60,12 +60,48 @@ discharge_fish_plant <- full_join(discharge_fish, plant, by = c("domainID", "sit
 
 Create a test plot before analysis
 ```{r}
-anova_test <- aov(fish_mass ~ plant_month_tally + discharge_month_L_sec, data = discharge_fish_plant)
+#This is Kade just piddling around
+disfish_site <- discharge_fish %>% 
+  group_by(siteID) %>% 
+  mutate(dis_mean = mean(discharge_month_L_sec, na.rm = T),
+         fish_g_mean = mean(fish_mass, na.rm = T))
 
+disfish_site %>% 
+  ggplot(aes(x = dis_mean, y = fish_g_mean, color = siteID)) + 
+  geom_point() + 
+  scale_x_continuous("Average Discharge") +
+  scale_y_continuous("Average Fish Mass") 
+
+discharge_fish_na_rm <- discharge_fish %>% 
+  drop_na(fish_mass, discharge_month_L_sec)
+
+#discharge_fish_na_rm <- discharge_fish_na_rm %>% 
+  #mutate(siteID = as.character(siteID))
+
+#Working
+glm_test <- glm(fish_mass ~ discharge_month_L_sec, data = discharge_fish)
+summary(glm_test)
+
+#Kinda Working, not for the full model tho
+anova_test <- aov(fish_mass ~ siteID, 
+                  data = discharge_fish_na_rm)
 summary(anova_test)
+TukeyHSD(anova_test)
+
+anova_test2 <- aov(discharge_month_L_sec ~ siteID, 
+                  data = discharge_fish_na_rm)
+summary(anova_test2)
+
+TukeyHSD(anova_test2)
+
+
+str(discharge_fish)
+discharge_fish <- discharge_fish %>% 
+  mutate(siteID = as.character(siteID))
+
 
 discharge_fish_plant %>% 
-  ggplot(aes(x = fish_month_tally, y = plant_month_tally)) + 
+  ggplot(aes(x = fish_month_tally, y = plant_month_tally, color = siteID)) + 
   geom_point() + 
   scale_x_continuous("Total Fish per Month") +
   scale_y_continuous("Total Plant per Month") 
