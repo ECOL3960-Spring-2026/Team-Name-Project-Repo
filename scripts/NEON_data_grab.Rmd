@@ -9,7 +9,7 @@ date: "2026-02-12"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Load packages to run script
+In this chunk, we loaded the scripts 'tidyverse', 'here', and 'neonUtilities'. Tidyverse will be used to clean our data products, and the here package will be used to direct our markdown files to the proper working directory. NeonUtilities will be used to download and acess the NEON data that we will be using as the basis of our project. 
 ```{r library}
 library(tidyverse)
 library(here)
@@ -18,7 +18,7 @@ library(neonUtilities)
 
 Hey this is a test on 2/17/2026!
 
-Pulling NEON Data 'Discharge' from BIGC, TECR 2/17
+We then pulled data from the NEON data product entitled 'Continuous Discharge' at all 7 sites we have selected to use in our analysis. With this data product, we plan to compare discharge between the west and east coast of the United States to see if there is a correlation between flow and fish abundance at each site.   
 ```{r}
 #Pull data
 discharge <- "DP4.00130.001"
@@ -36,7 +36,7 @@ list2env((loadByProduct(dpID = discharge,
                         enddate = end_date)),
          .GlobalEnv)
 ```
-Saving raw data variables 
+Here, we wrote in our the variables that we will be using  
 ```{r}
 
 #Save raw data DONE
@@ -47,7 +47,7 @@ csd_15_min %>%
   write_csv(here("data", "raw", "csd_15_min.csv"))
 
 ```
-Pulling NEON Data 'Fish electrofishing, gill netting, and fyke netting counts' from BIGC, TECR.
+We pulled the NEON data product entitled "Fish electrofishing, gill netting, and fyke netting counts" at all 7 sites in order to get our 
 ```{r}
 #Pull data from	"Fish electrofishing, gill netting, and fyke netting counts"
 fish <- "DP1.20107.001"
