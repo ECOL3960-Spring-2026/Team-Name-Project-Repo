@@ -119,7 +119,17 @@ plot(anova_discharge_site, which = 1:3)
 leveneTest(anova_discharge_site)
 ```
 
-For our statistical analysis we conducted both a linear regression test as well as two different ANOVA tests in order to gain an in depth analysis on how these variables were interacting with each other as well as how they differed among the different sites. For our first test we used the linear regression to test for the correlation of fish mass with montly discharge. For the linear regression we tested our residuals for normalcy with the shapiro test as well as tested our residuals vs fitted, Q-Q plot, and scale location. These graphs demonstated that our data was not normal. Next, we conducted two ANOVA test one testing monthly discharge across the various sites and the other to test for differences in fish mass across the various sites. We also conducted various test for these to test for normalcy such as the Levene's test, while also testing our assumptions using the residuals vs fitted, Q-Q, and scale-location plots. These graphs showed that again our data was not normal. However for the sake of gaining a general understanding of the data we proceeded with testing before greatly modifying our data. According to model one, only two sites showed a statistically significant correlation between fish mass and the monthly discharge site IDSYCA and site IDWALK with p-values of 0.007 and 0.006 respectively. For the first ANOVA test it can be seen that there is not statistically significant difference between fish mass at the various sites. However, in the second it could be seen that there was a statistically significant difference between MAYF-BIGC, TECR-MAYF, WALK-MAYF. The values portrayed by the tukey test show us that MAYF had the larger amount of monthly discharge among BIGC, TECR, and WALK. the p-values were as follow: 0.004, 0.004, 0.002 respectively.
+For our statistical analysis we conducted both a linear regression test as well as two different ANOVA tests in order to gain an in depth analysis on how these variables were interacting with each other as well as how they differed among the different sites. 
+
+For our first test we used the linear regression to test for the correlation of fish mass with montly discharge. For the linear regression we tested our residuals for normalcy with the shapiro test as well as tested our residuals vs fitted, Q-Q plot, and scale location. These graphs demonstated that our data was not normal. 
+
+Next, we conducted two ANOVA test one testing monthly discharge across the various sites and the other to test for differences in fish mass across the various sites. We also conducted various test for these to test for normalcy such as the Levene's test, while also testing our assumptions using the residuals vs fitted, Q-Q, and scale-location plots. These graphs showed that again our data was not normal. 
+
+However for the sake of gaining a general understanding of the data we proceeded with testing before greatly modifying our data. According to model one, only two sites showed a statistically significant correlation between fish mass and the monthly discharge site IDSYCA and site IDWALK with p-values of 0.007 and 0.006 respectively. 
+
+For the first ANOVA test it can be seen that there is not statistically significant difference between fish mass at the various sites. 
+
+However, in the second it could be seen that there was a statistically significant difference between MAYF-BIGC, TECR-MAYF, WALK-MAYF. The values portrayed by the tukey test show us that MAYF had the larger amount of monthly discharge among BIGC, TECR, and WALK. the p-values were as follow: 0.004, 0.004, 0.002 respectively.
 
 Fish mass vs Discharge
 
