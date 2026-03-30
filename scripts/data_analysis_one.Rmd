@@ -20,25 +20,25 @@ library(car)
 Once all of our packages were read in, we began the process of our data analysis by reading in the processed data from the data clean up. This was conducted through the "here" command. This command allowed R to more easily and accurately identify and load in our data.
 
 ```{r}
-discharge <- read_csv(here("data", "processed", "discharge_processed.csv"))
-fish <- read_csv(here("data", "processed", "fish_processed.csv"))
-plant <- read_csv(here("data", "processed", "plant_processed.csv"))
+discharge_processed <- read_csv(here("data", "processed", "discharge_processed.csv"))
+fish_processed <- read_csv(here("data", "processed", "fish_processed.csv"))
+plant_processed <- read_csv(here("data", "processed", "plant_processed.csv"))
 ```
 
 In this chunk we further cleaned our data to group the data points into various groups such as domain ID, the site ID, the year and month, as well as the fishes life stage within our fish data set. We also created new columns for monthly measurements. This further cleaning of our data allows for a smoother join of the three data sets for analysis.
 
 ```{r}
-fish <- fish %>% 
+fish <- fish_processed %>% 
   group_by(domainID, siteID, year, month, fishLifeStage) %>% 
   summarise(fish_month_tally = n(),
             fish_mass = sum(fishWeight, na.rm = TRUE))
 
-plant <- plant %>% 
+plant <- plant_processed %>% 
   drop_na(aquaticPlantType) %>% 
   group_by(domainID, siteID, year, month) %>% 
   summarise(plant_month_tally = n())
 
-discharge <- discharge %>% 
+discharge <- discharge_processed %>% 
   drop_na(dischargeContinuous) %>% 
   group_by(domainID, siteID, year, month) %>% 
   summarise(discharge_month_mean_L_sec = mean(dischargeContinuous),
