@@ -66,6 +66,7 @@ In this chunk we added in code in order to create a new object with new columns 
 ```{r}
 disfish_site_means <- discharge_fish %>% 
   group_by(siteID) %>% 
+  drop_na(discharge_month_L_sec, fish_mass) %>% 
   mutate(dis_mean = mean(discharge_month_L_sec, na.rm = T),
          dis_sd = sd(discharge_month_L_sec),
          fish_g_mean = mean(fish_mass, na.rm = T),
@@ -119,6 +120,7 @@ discharge_fish_na_rm %>%
   scale_y_continuous("Fish Mass (g)") +
   scale_x_continuous("Discharge (L/sec/month)")
 ```
+The figure above shows the sum of all fish mass caught in a particular month at a particular NEON site (y-axis) compared to average monthly discharge at the same site and month (x-axis). Each color represents a different NEON site, and the lines that connect them are trendlines. 
 
 Mean fish mass across sites
 
@@ -135,6 +137,8 @@ disfish_site_means %>%
   ylab("Average Fish Mass per Month (g)") +
   theme_bw() 
 ```
+The figure above shows the average fish mass per month at an individual site. The x-axis shows the NEON sites that are being examined, while the y-axis is the average fish mass in grams. Errors bars are calculated using the mean plus and minus standard deviation.
+
 
 Mean discharge across sites
 
@@ -151,3 +155,4 @@ disfish_site_means %>%
   ylab("Average Discharge per Month (L/sec)") +
   theme_bw() 
 ```
+The figure above shows the average discharge per month at an individual site. The x-axis shows the NEON sites that are being examined, while the y-axis is the average stream discharge in L/sec per month. Errors bars are calculated using the mean plus and minus standard deviation.
