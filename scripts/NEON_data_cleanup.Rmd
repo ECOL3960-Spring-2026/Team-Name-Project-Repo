@@ -1,5 +1,6 @@
 ---
 title: "NEON_data_cleanup"
+Authors: Olivia Cowen, Kaitlyn Klein, Kade Stewart
 output: html_document
 date: "2026-02-19"
 ---
@@ -8,7 +9,7 @@ date: "2026-02-19"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Load in Tidyverse and Here packages
+In this chunk we loaded in the Tidyverse and Here packages in order to begin wrangling our data. The "here" package allows us to communicate to the computer where our exact files are located, resulting in a more efficient load in of our data. The Tidyverse package allows us to modify the data we have received from NEON in a meaningful way and in a way so that it can be compared across various metrics and data sets.
 
 ```{r}
 library(tidyverse)
@@ -17,7 +18,7 @@ library(here)
 
 ## Discharge data
 
-Read in the raw data for discharge and check structures of the variables.
+Here, the raw data that was collected from our original data grab is read in in order to begin the wrangling process. In this chunk it is also assigned a new name and the structures of the various variables in this data set are able to be inspected. This allows for a precursory glance at possible meaningful metrics for analysis.
 
 ```{r}
 discharge_raw <- read_csv(here("data", "raw", "csd_15_min.csv"))
@@ -28,9 +29,7 @@ str(discharge_raw)
 
 ```
 
-Begin wrangling our data by selecting different variables that could be important for future analysis across our different data tables. We also made sure to try and select variables that would be easy to refine and also variables that may be in common with the variables in different data sets.
-
-Add year and month for discharge from startDateTime; retain continuous stage and discharge data.
+In this next section we began wrangling our data by selecting different variables that could be important for future analysis across our different data tables. We also made sure to attempt and select variables that would be easy to refine and also variables that were expected to hold the same matrics as the variables in different data sets. This allows for an easier merge of the data. In this specific chunk we also added in new columns for year and month for the data.
 
 ```{r}
 
@@ -43,7 +42,7 @@ discharge <- discharge_raw %>%
 
 ## Fish data
 
-Here we begun processing the fish data. First we needed to add in the raw data.
+Similar to our discharge data, in this chunk we began the data wrangling process by reading in the raw data regarding the fishing data using the "here" command. Then we viewed the structures of the data in order to view the raw structure and begin the process of selecting variable to either weed out or keep.
 
 ```{r}
 
@@ -55,11 +54,10 @@ str(fish_raw)
 
 ```
 
-Add year and month columns based on passStartTime. Retain only adult lifestage; all samples retained are from electrofisher Retain observations that have total length or weight
-
-**If eventually aiming for counts of total fish caught per month and total mass, may want to consider whether the filter for life stage is appropriate...?**
+In this chunk, we began to select for the variables that we identified may be useful for analysis. We added in two new columns for month and year for an easier comparison of time among the various data sets. We also selected for variables such as length of the fish, their weight, as well as there life stage. These are crucial in order to answer our question and to analyze and correlation of these variables to discharge in the different sites.
 
 ```{r}
+#If eventually aiming for counts of total fish caught per month and total mass, may want to consider whether the filter for life stage is appropriate...?
 
 fish <- fish_raw %>% 
   mutate(year = year(passStartTime),
@@ -73,9 +71,7 @@ fish <- fish_raw %>%
 
 ## Aquatic plants
 
-here we read in the plant_raw data, and narrowed downt he plant variables we will be using to plot.
-
-**These data are messy!** May want to think about filtering criteria?
+Next, we read in the data regarding the aquatic plants. While we are most likely not using this data set in our future analysis we are keeping it in order to potentially include later on. However, similar to above we began the data wrangling process by reading in the raw data set using the "here" command. Then, we viewed the structure of the data set to begin selecting for useful variables and metrics.
 
 ```{r}
 
@@ -86,6 +82,8 @@ str(plant_raw)
 #view(plant_raw)
 
 ```
+
+With this raw data set we began reforming it by once again selecting variables that are found across our three different data sets as well as variables that had the potential to improve our analysis in relation to our hypothesis. We also included the mutate command to form two new columns correlating to time: year and month.
 
 ```{r}
 plant <- plant_raw %>% 
@@ -116,7 +114,7 @@ plant <- plant_raw %>%
   
 ```
 
-Write a csv files for each processed data file:
+Lastly we exported our data by including a command to write a csv file for each processed data file; and then having each data file saved into the processed sub folder within our data folder.
 
 ```{r}
 
@@ -132,6 +130,8 @@ fish %>%
 ```
 
 ## Preliminary Plot
+
+Here we included a preliminary plot to receive a better understanding of how some of our data would look like in graph form. This also allows us to begin making predictions on some of the effects the discharge will have on the other variables within our data.
 
 ```{r}
 
