@@ -161,6 +161,18 @@ ggplot(data = disfish_site_means,
   xlab("NEON Site") +
   ylab("Average Fish Mass per Month (g)") +
   theme_bw() 
+
+ggplot(data = discharge_fish_na_rm,
+       aes(x = siteID, 
+           y = sum_fish_mass, 
+           colour = siteID)) +
+  geom_jitter(alpha = 0.8, width = 0.1, height = 0) +
+  geom_boxplot(fill = NA, color = "black") +
+  xlab("NEON site") +
+  ylab("Sum of sampled monthly fish mass (g)") +
+  theme_bw() + 
+  theme(legend.position = "none")
+
 ```
 
 The figure above shows the average fish mass per month at an individual site. The x-axis shows the NEON sites that are being examined, while the y-axis is the average fish mass in grams. Errors bars are calculated using the mean plus and minus standard deviation. As all error bars overlap can be seen that there is not a statistically significant difference between them. However, it would appear that SYCA and WALK have a lower general fish mass.
@@ -168,6 +180,9 @@ The figure above shows the average fish mass per month at an individual site. Th
 Mean discharge across sites
 
 ```{r}
+
+# KF: I recommend updating this plot to use jitter + boxplot structure I added above
+
 disfish_site_means %>% 
   ggplot(aes(x = siteID, y = dis_mean, colour = siteID)) +
   geom_bar(stat = "identity", 
