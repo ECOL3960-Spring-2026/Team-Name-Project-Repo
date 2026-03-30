@@ -53,7 +53,7 @@ discharge <- discharge %>%
 
 ```
 
-Join datasets together
+The next important step for our data analysis was to be able to add the different data points from the different data sets together into one object so we could analyze the variables as functions of one another. In this section we also made the decision to abstain from using the plant data. This is due to the fact that the data set did not include as much information as orginally anticipated. However we have decided to keep it within our code in order to potentially revist at a later date. As for the Discharge and Fish data sets we joined them together by merging the columns domain ID, site ID, month, and year, as well as keeping the individual columns that were located in each data file.
 
 ```{r}
 discharge_fish <- full_join(discharge, fish, by = c("domainID", "siteID", "month", "year"))
@@ -61,7 +61,7 @@ discharge_fish <- full_join(discharge, fish, by = c("domainID", "siteID", "month
 discharge_fish_plant <- full_join(discharge_fish, plant, by = c("domainID", "siteID", "month", "year"))
 ```
 
-Create new dataset with means
+In this chunk we added in code in order to create a new object with new columns for the means of various metrics within our new data set. We also added in code to calculate the standard deviaton for the columns discharge_month_L_sec and fish_mass. These will both be important for the creation of error bars within the graphs created after the data analysis.
 
 ```{r}
 disfish_site_means <- discharge_fish %>% 
@@ -72,7 +72,7 @@ disfish_site_means <- discharge_fish %>%
          fish_g_sd = sd(fish_mass))
 ```
 
-Create new dataset that removes any NA values
+One last piece of wrangling that was done to finalize our data for analysis was the removal of any NA values within our data set. After this, only numbers remain and should allow us to run the data analysis without running into issues due to the NA values.
 
 ```{r}
 discharge_fish_na_rm <- discharge_fish %>% 
