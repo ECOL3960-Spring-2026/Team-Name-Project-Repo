@@ -79,6 +79,7 @@ summary(glm_fish_g_discharge)
 
 #There is a significant relationship, but it is important to note that this model does not incorporate site-level differences. 
 ```
+
 Run model #2 that compares fish mass across sites
 ```{r}
 anova_fish_g_site <- aov(fish_mass ~ siteID, 
@@ -101,6 +102,41 @@ TukeyHSD(anova_discharge_site)
 
 Fish mass vs Discharge
 ```{r}
+discharge_fish_na_rm %>% 
+  ggplot(aes(x = discharge_month_L_sec, y = fish_mass, color = siteID)) + 
+  geom_point() + 
+  stat_smooth(method = "lm") +
+  scale_y_continuous("Fish Mass (g)") +
+  scale_x_continuous("Discharge (L/sec/month)")
+```
 
+Mean fish mass across sites
+```{r}
+disfish_site_means %>% 
+  ggplot(aes(x = siteID, y = fish_g_mean, colour = siteID)) +
+  geom_bar(stat = "identity", 
+           position = position_dodge2(preserve = "single")) +
+  geom_errorbar(aes(ymin = fish_g_mean - fish_g_sd,
+                    ymax = fish_g_mean + fish_g_sd),
+                    position=position_dodge(.9),
+                    width=.3, color = "black") +
+  xlab("NEON Site") +
+  ylab("Average Fish Mass per Month (g)") +
+  theme_bw() 
+```
+
+Mean discharge across sites
+```{r}
+disfish_site_means %>% 
+  ggplot(aes(x = siteID, y = dis_mean, colour = siteID)) +
+  geom_bar(stat = "identity", 
+           position = position_dodge2(preserve = "single")) +
+  geom_errorbar(aes(ymin = dis_mean - dis_sd,
+                    ymax = dis_mean + dis_sd),
+                    position=position_dodge(.9),
+                    width=.3, color = "black") +
+  xlab("NEON Site") +
+  ylab("Average Discharge per Month (L/sec)") +
+  theme_bw() 
 ```
 
