@@ -79,27 +79,28 @@ summary(glm_fish_g_discharge)
 
 #There is a significant relationship, but it is important to note that this model does not incorporate site-level differences. 
 ```
-
+Run model #2 that compares fish mass across sites
 ```{r}
-anova_test <- aov(fish_mass ~ siteID, 
+anova_fish_g_site <- aov(fish_mass ~ siteID, 
                   data = discharge_fish_na_rm)
-summary(anova_test)
-TukeyHSD(anova_test)
+summary(anova_fish_g_site)
+TukeyHSD(anova_fish_g_site)
+#No significance
+```
 
-anova_test2 <- aov(discharge_month_L_sec ~ siteID, 
+Run model #3 that compares monthly discharge across sites
+```{r}
+anova_discharge_site <- aov(discharge_month_L_sec ~ siteID, 
                   data = discharge_fish_na_rm)
-summary(anova_test2)
+summary(anova_discharge_site)
+TukeyHSD(anova_discharge_site)
 
-TukeyHSD(anova_test2)
+#Some significance, only between MAYF and BIGC, TECR, and WALK
 ```
 
 
-Create a test plot before analysis
+Fish mass vs Discharge
 ```{r}
-discharge_fish_plant %>% 
-  ggplot(aes(x = fish_month_tally, y = plant_month_tally, color = siteID)) + 
-  geom_point() + 
-  scale_x_continuous("Total Fish per Month") +
-  scale_y_continuous("Total Plant per Month") 
+
 ```
 
