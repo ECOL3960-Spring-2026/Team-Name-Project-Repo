@@ -1,6 +1,6 @@
 ---
 title: "data_analysis_one"
-author: "Kade Stewart"
+author: "Kade Stewart, Olivia Cowen, Kaitlyn Klein"
 date: "2026-03-19"
 output: html_document
 ---
