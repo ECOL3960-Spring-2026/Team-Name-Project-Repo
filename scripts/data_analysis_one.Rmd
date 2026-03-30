@@ -31,7 +31,7 @@ In this chunk we further cleaned our data to group the data points into various 
 fish <- fish_processed %>% 
   group_by(domainID, siteID, year, month, fishLifeStage) %>% 
   summarise(fish_month_tally = n(),
-            fish_mass = sum(fishWeight, na.rm = TRUE))
+            sum_fish_mass = sum(fishWeight, na.rm = TRUE))
 
 plant <- plant_processed %>% 
   drop_na(aquaticPlantType) %>% 
@@ -55,29 +55,29 @@ discharge_fish <- full_join(discharge, fish, by = c("domainID", "siteID", "month
 discharge_fish_plant <- full_join(discharge_fish, plant, by = c("domainID", "siteID", "month", "year"))
 ```
 
-In this chunk we added in code in order to create a new object with new columns for the means of various metrics within our new data set. We also added in code to calculate the standard deviaton for the columns discharge_month_mean_L_sec and fish_mass. These will both be important for the creation of error bars within the graphs created after the data analysis.
+In this chunk we added in code in order to create a new object with new columns for the means of various metrics within our new data set. We also added in code to calculate the standard deviaton for the columns discharge_month_mean_L_sec and sum_fish_mass. These will both be important for the creation of error bars within the graphs created after the data analysis.
 
 ```{r}
 disfish_site_means <- discharge_fish %>% 
   group_by(siteID) %>% 
-  drop_na(discharge_month_mean_L_sec, fish_mass) %>% 
+  drop_na(discharge_month_mean_L_sec, sum_fish_mass) %>% 
   mutate(dis_mean = mean(discharge_month_mean_L_sec, na.rm = T),
          dis_sd = sd(discharge_month_mean_L_sec),
-         fish_g_mean = mean(fish_mass, na.rm = T),
-         fish_g_sd = sd(fish_mass))
+         fish_g_mean = mean(sum_fish_mass, na.rm = T),
+         fish_g_sd = sd(sum_fish_mass))
 ```
 
 One last piece of wrangling that was done to finalize our data for analysis was the removal of any NA values within our data set. After this, only numbers remain and should allow us to run the data analysis without running into issues due to the NA values.
 
 ```{r}
 discharge_fish_na_rm <- discharge_fish %>% 
-  drop_na(fish_mass, discharge_month_mean_L_sec)
+  drop_na(sum_fish_mass, discharge_month_mean_L_sec)
 ```
 
 Create model #1 that compares average monthly fish mass to monthly discharge
 
 ```{r}
-glm_fish_g_discharge <- glm(fish_mass ~ discharge_month_mean_L_sec + siteID, data = discharge_fish)
+glm_fish_g_discharge <- glm(sum_fish_mass ~ discharge_month_mean_L_sec + siteID, data = discharge_fish)
 summary(glm_fish_g_discharge)
 
 #We need to ask how to do a Tukey on a glm because we cant see exactly what is significant...
@@ -91,7 +91,7 @@ shapiro.test(glm_fish_g_discharge$residuals)
 Run model #2 that compares fish mass across sites
 
 ```{r}
-anova_fish_g_site <- aov(fish_mass ~ siteID, 
+anova_fish_g_site <- aov(sum_fish_mass ~ siteID, 
                   data = discharge_fish_na_rm)
 summary(anova_fish_g_site)
 TukeyHSD(anova_fish_g_site)
@@ -125,7 +125,7 @@ Fish mass vs Discharge
 
 ```{r}
 discharge_fish_na_rm %>% 
-  ggplot(aes(x = discharge_month_mean_L_sec, y = fish_mass, color = siteID)) + 
+  ggplot(aes(x = discharge_month_mean_L_sec, y = sum_fish_mass, color = siteID)) + 
   geom_point() + 
   stat_smooth(method = "lm") +
   scale_y_continuous("Fish Mass (g)") +
