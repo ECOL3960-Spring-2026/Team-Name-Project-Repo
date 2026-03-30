@@ -95,7 +95,7 @@ apc_perTaxon %>%
   write_csv(here("data", "raw", "apc_perTaxon.csv"))
 
 ```
-Here we saved the raw data variables we will be using from the 'Discharge' product.The first csv is the metadata table which contains useful descriptions of the variables NEON provides in the data product.The second csv file contains the continuous dishcharge data we will be using in our data analysis. 
+Here we saved the raw data variables we will be using from the 'Discharge' product.The first csv is the metadata table which contains useful descriptions of the variables NEON provides in the data product.The second csv file contains the continuous discharge data we will be using in our data analysis. 
 ```{r}
 variables_20086 %>% 
   write_csv(here("data", "raw", "variables_20086.csv"))
