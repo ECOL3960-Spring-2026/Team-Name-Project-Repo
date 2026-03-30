@@ -15,22 +15,24 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-In this chunk we added and ran any necessary packages that we would need in order to begin our data analysis. These packages include the tidyverse package, the here package, and the car package. Tidyverse is the main package that we used for some of the major work with the data analysis. We used this to wrangle the data in a way that the different variables are able to be compared. The here package was used to simply show R where to find our data within our files. Lastly we have used the car package to further our data analysis and conduct various tests for normality within our data sets and and data analysis. 
+In this chunk we added and ran any necessary packages that we would need in order to begin our data analysis. These packages include the tidyverse package, the here package, and the car package. Tidyverse is the main package that we used for some of the major work with the data analysis. We used this to wrangle the data in a way that the different variables are able to be compared. The here package was used to simply show R where to find our data within our files. Lastly we have used the car package to further our data analysis and conduct various tests for normality within our data sets and and data analysis.
+
 ```{r}
 library(tidyverse)
 library(here)
 library(car)
 ```
 
-Once all of our packages were read in, we began the process of our data analysis by reading in the processed data from the data clean up. 
+Once all of our packages were read in, we began the process of our data analysis by reading in the processed data from the data clean up. This was conducted through the "here" command. This command allowed R to more easily and accurately identify and load in our data.
+
 ```{r}
 discharge <- read_csv(here("data", "processed", "discharge_processed.csv"))
 fish <- read_csv(here("data", "processed", "fish_processed.csv"))
 plant <- read_csv(here("data", "processed", "plant_processed.csv"))
 ```
 
+In this chunk we further cleaned our data to group the data points into various groups such as domain ID, the site ID, the year and month, as well as the fishes life stage within our fish data set. We also created new columns for monthly measurements. This further cleaning of our data allows for a smoother join of the three data sets for analysis.
 
-Create new columns for monthly measurements
 ```{r}
 fish <- fish %>% 
   group_by(domainID, siteID, year, month, fishLifeStage) %>% 
@@ -52,6 +54,7 @@ discharge <- discharge %>%
 ```
 
 Join datasets together
+
 ```{r}
 discharge_fish <- full_join(discharge, fish, by = c("domainID", "siteID", "month", "year"))
 
@@ -59,6 +62,7 @@ discharge_fish_plant <- full_join(discharge_fish, plant, by = c("domainID", "sit
 ```
 
 Create new dataset with means
+
 ```{r}
 disfish_site_means <- discharge_fish %>% 
   group_by(siteID) %>% 
@@ -68,13 +72,15 @@ disfish_site_means <- discharge_fish %>%
          fish_g_sd = sd(fish_mass))
 ```
 
-Create new dataset that removes any NA values 
+Create new dataset that removes any NA values
+
 ```{r}
 discharge_fish_na_rm <- discharge_fish %>% 
   drop_na(fish_mass, discharge_month_L_sec)
 ```
 
 Create model #1 that compares average monthly fish mass to monthly discharge
+
 ```{r}
 glm_fish_g_discharge <- glm(fish_mass ~ discharge_month_L_sec + siteID, data = discharge_fish)
 summary(glm_fish_g_discharge)
@@ -83,6 +89,7 @@ summary(glm_fish_g_discharge)
 ```
 
 Run model #2 that compares fish mass across sites
+
 ```{r}
 anova_fish_g_site <- aov(fish_mass ~ siteID, 
                   data = discharge_fish_na_rm)
@@ -92,6 +99,7 @@ TukeyHSD(anova_fish_g_site)
 ```
 
 Run model #3 that compares monthly discharge across sites
+
 ```{r}
 anova_discharge_site <- aov(discharge_month_L_sec ~ siteID, 
                   data = discharge_fish_na_rm)
@@ -101,8 +109,8 @@ TukeyHSD(anova_discharge_site)
 #Some significance, only between MAYF and BIGC, TECR, and WALK
 ```
 
-
 Fish mass vs Discharge
+
 ```{r}
 discharge_fish_na_rm %>% 
   ggplot(aes(x = discharge_month_L_sec, y = fish_mass, color = siteID)) + 
@@ -113,6 +121,7 @@ discharge_fish_na_rm %>%
 ```
 
 Mean fish mass across sites
+
 ```{r}
 disfish_site_means %>% 
   ggplot(aes(x = siteID, y = fish_g_mean, colour = siteID)) +
@@ -128,6 +137,7 @@ disfish_site_means %>%
 ```
 
 Mean discharge across sites
+
 ```{r}
 disfish_site_means %>% 
   ggplot(aes(x = siteID, y = dis_mean, colour = siteID)) +
@@ -141,4 +151,3 @@ disfish_site_means %>%
   ylab("Average Discharge per Month (L/sec)") +
   theme_bw() 
 ```
-
