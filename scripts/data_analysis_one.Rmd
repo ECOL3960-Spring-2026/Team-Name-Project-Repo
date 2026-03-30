@@ -76,10 +76,10 @@ discharge_fish_na_rm <- discharge_fish %>%
 
 Create model #1 that compares average monthly fish mass to monthly discharge
 ```{r}
-glm_fish_g_discharge <- glm(fish_mass ~ discharge_month_L_sec, data = discharge_fish)
+glm_fish_g_discharge <- glm(fish_mass ~ discharge_month_L_sec + siteID, data = discharge_fish)
 summary(glm_fish_g_discharge)
 
-#There is a significant relationship, but it is important to note that this model does not incorporate site-level differences. 
+#We need to ask how to do a Tukey on a glm because we cant see exactly what is significant...
 ```
 
 Run model #2 that compares fish mass across sites
