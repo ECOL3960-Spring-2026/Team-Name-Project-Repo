@@ -58,31 +58,29 @@ discharge_fish <- full_join(discharge, fish, by = c("domainID", "siteID", "month
 discharge_fish_plant <- full_join(discharge_fish, plant, by = c("domainID", "siteID", "month", "year"))
 ```
 
-Create a test plot before analysis
+Create new dataset with means
 ```{r}
-#This is Kade just piddling around
-disfish_site <- discharge_fish %>% 
+disfish_site_means <- discharge_fish %>% 
   group_by(siteID) %>% 
   mutate(dis_mean = mean(discharge_month_L_sec, na.rm = T),
          fish_g_mean = mean(fish_mass, na.rm = T))
+```
 
-disfish_site %>% 
-  ggplot(aes(x = dis_mean, y = fish_g_mean, color = siteID)) + 
-  geom_point() + 
-  scale_x_continuous("Average Discharge") +
-  scale_y_continuous("Average Fish Mass") 
-
+Create new dataset that removes any NA values 
+```{r}
 discharge_fish_na_rm <- discharge_fish %>% 
   drop_na(fish_mass, discharge_month_L_sec)
+```
 
-#discharge_fish_na_rm <- discharge_fish_na_rm %>% 
-  #mutate(siteID = as.character(siteID))
+Create model #1 that compares average monthly fish mass to monthly discharge
+```{r}
+glm_fish_g_discharge <- glm(fish_mass ~ discharge_month_L_sec, data = discharge_fish)
+summary(glm_fish_g_discharge)
 
-#Working
-glm_test <- glm(fish_mass ~ discharge_month_L_sec, data = discharge_fish)
-summary(glm_test)
+#There is a significant relationship, but it is important to note that this model does not incorporate site-level differences. 
+```
 
-#Kinda Working, not for the full model tho
+```{r}
 anova_test <- aov(fish_mass ~ siteID, 
                   data = discharge_fish_na_rm)
 summary(anova_test)
@@ -93,13 +91,11 @@ anova_test2 <- aov(discharge_month_L_sec ~ siteID,
 summary(anova_test2)
 
 TukeyHSD(anova_test2)
+```
 
 
-str(discharge_fish)
-discharge_fish <- discharge_fish %>% 
-  mutate(siteID = as.character(siteID))
-
-
+Create a test plot before analysis
+```{r}
 discharge_fish_plant %>% 
   ggplot(aes(x = fish_month_tally, y = plant_month_tally, color = siteID)) + 
   geom_point() + 
