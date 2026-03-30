@@ -139,6 +139,8 @@ discharge_fish_na_rm %>%
   geom_point() + 
   stat_smooth(method = "lm") +
   scale_y_continuous("Fish Mass (g)") +
+  scale_x_continuous("Discharge (L/sec/month)") +
+  theme_bw()
 ```
 
 The figure above shows the sum of all fish mass caught in a particular month at a particular NEON site (y-axis) compared to average monthly discharge at the same site and month (x-axis). Each color represents a different NEON site, and the lines that connect them are trendlines. There appears to be relatively positive correlation with WALK however the rest seem to appear relatively flat.
@@ -146,8 +148,10 @@ The figure above shows the sum of all fish mass caught in a particular month at 
 Mean fish mass across sites
 
 ```{r}
-disfish_site_means %>% 
-  ggplot(aes(x = siteID, y = fish_g_mean, colour = siteID)) +
+ggplot(data = disfish_site_means,
+       aes(x = siteID, 
+           y = fish_g_mean, 
+           colour = siteID)) +
   geom_bar(stat = "identity", 
            position = position_dodge2(preserve = "single")) +
   geom_errorbar(aes(ymin = fish_g_mean - fish_g_sd,
