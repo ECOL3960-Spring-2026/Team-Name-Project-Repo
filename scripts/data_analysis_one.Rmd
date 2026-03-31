@@ -86,6 +86,14 @@ Run diagnostic plots for model 1
 ```{r}
 plot(glm_fish_g_discharge, which = 1:3)
 shapiro.test(glm_fish_g_discharge$residuals)
+
+plot(glm_fish_g_discharge, which = 4)
+```
+```{r}
+discharge_fish_norm1 <- discharge_fish_na_rm[-c(115, 128, 149),]
+
+glm_fish_g_discharge <- glm(sum_fish_mass ~ discharge_month_mean_L_sec, data = discharge_fish_norm1)
+summary(glm_fish_g_discharge)
 ```
 
 Run model #2 that compares fish mass across sites
@@ -101,6 +109,17 @@ Run diagnostic plots for model 2
 ```{r}
 plot(anova_fish_g_site, which = 1:3)
 leveneTest(anova_fish_g_site)
+
+plot(anova_fish_g_site, which = 4)
+```
+
+```{r}
+discharge_fish_norm2 <- discharge_fish_na_rm[-c(48, 50, 57),]
+
+anova_fish_g_site <- aov(sum_fish_mass ~ siteID, 
+                  data = discharge_fish_norm2)
+summary(anova_fish_g_site)
+TukeyHSD(anova_fish_g_site)
 ```
 
 Run model #3 that compares monthly discharge across sites
@@ -117,7 +136,19 @@ Run diagnostic plots for model 3
 ```{r}
 plot(anova_discharge_site, which = 1:3)
 leveneTest(anova_discharge_site)
+
+plot(anova_discharge_site, which = 5)
 ```
+
+```{r}
+discharge_fish_norm3 <- discharge_fish_na_rm[-37,]
+
+anova_discharge_site <- aov(discharge_month_mean_L_sec ~ siteID, 
+                  data = discharge_fish_norm3)
+summary(anova_discharge_site)
+TukeyHSD(anova_discharge_site)
+```
+
 
 For our statistical analysis we conducted both a linear regression test as well as two different ANOVA tests in order to gain an in depth analysis on how these variables were interacting with each other as well as how they differed among the different sites. 
 
