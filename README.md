@@ -10,7 +10,7 @@ These variables will be analyzed over a ten year period from 2012 to 2022, testi
 
 ## Data Description:
 
-We plan on using the following datasets from the NEON data portal: Fish electrofishing, gill netting, and fyke netting counts (DP1.20107.001), Discharge field collection (DP1.20048.001), and Aquatic plant, bryophyte, lichen, and macroalgae point counts in wadeable streams (DP1.20072.001). All three of the datasets we are using have data found at the Upper Big Creek (BIGC) and Teakettle Creek (TECR) NEON sites.
+We plan on using the following datasets from the NEON data portal: Fish electrofishing, gill netting, and fyke netting counts (DP1.20107.001), Discharge field collection (DP1.20048.001), and Aquatic plant, bryophyte, lichen, and macroalgae point counts in wadeable streams (DP1.20072.001). All three of the datasets we are using have data found at the Upper Big Creek (BIGC), Teakettle Creek (TECR), Red Butte Creek (REDB), Sycamore Creek (SYCA), LeConte Creek (LECO), Walker Branch (WALK), and Mayfield Creek (MAYF) NEON sites.
 
 -   The “Fish electrofishing, gill netting, and fyke netting counts” dataset has information on fish species count from three different methods of collection, which will allow us to make a new dataset on fish abundance over time.
 
