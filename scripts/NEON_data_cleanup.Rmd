@@ -114,6 +114,35 @@ plant <- plant_raw %>%
   
 ```
 
+In this chunk we further cleaned our data to group the data points into various groups such as domain ID, the site ID, the year and month, as well as the fishes life stage within our fish data set. We also created new columns for monthly measurements. This further cleaning of our data allows for a smoother join of the three data sets for analysis.
+```{r}
+fish <- fish %>% 
+  group_by(domainID, siteID, year, month, fishLifeStage) %>% 
+  summarise(fish_month_tally = n(),
+            sum_fish_mass = sum(fishWeight, na.rm = TRUE))
+
+plant <- plant %>% 
+  drop_na(aquaticPlantType) %>% 
+  group_by(domainID, siteID, year, month) %>% 
+  summarise(plant_month_tally = n())
+
+discharge <- discharge %>% 
+  drop_na(dischargeContinuous) %>% 
+  group_by(domainID, siteID, year, month) %>% 
+  summarise(discharge_month_mean_L_sec = mean(dischargeContinuous),
+            discharge_month_max = max(dischargeContinuous),
+            discharge_month_min = min(dischargeContinuous))
+
+```
+
+The next important step for our data analysis was to be able to add the different data points from the different data sets together into one object so we could analyze the variables as functions of one another. In this section we also made the decision to abstain from using the plant data. This is due to the fact that the data set did not include as much information as orginally anticipated. However we have decided to keep it within our code in order to potentially revist at a later date. As for the Discharge and Fish data sets we joined them together by merging the columns domain ID, site ID, month, and year, as well as keeping the individual columns that were located in each data file.
+
+```{r}
+discharge_fish <- full_join(discharge, fish, by = c("domainID", "siteID", "month", "year"))
+
+discharge_fish_plant <- full_join(discharge_fish, plant, by = c("domainID", "siteID", "month", "year"))
+```
+
 Lastly we exported our data by including a command to write a csv file for each processed data file; and then having each data file saved into the processed sub folder within our data folder.
 
 ```{r}
@@ -126,6 +155,9 @@ plant %>%
 
 fish %>% 
   write_csv(here("data", "processed", "fish_processed.csv"))
+
+discharge_fish %>% 
+  write_csv(here("data", "processed", "discharge_fish_join_processed.csv"))
 
 ```
 
