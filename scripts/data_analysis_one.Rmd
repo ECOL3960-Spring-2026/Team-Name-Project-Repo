@@ -20,14 +20,26 @@ library(car)
 Once all of our packages were read in, we began the process of our data analysis by reading in the processed data from the data clean up. This was conducted through the "here" command. This command allowed R to more easily and accurately identify and load in our data.
 
 ```{r}
-fish_count_inter <- fish_processed %>% 
-  mutate(scientificName_2 = (scientificName))
-
-fish_counts <- fish_count_inter %>% 
-  group_by(siteID, scientificName) %>% 
-  summarise(scientificName_2 = n())
+fish_processed <- read_csv(here("data", "processed", "fish_processed.csv"))
 ```
 
+```{r}
+fish_counts <- fish_processed %>% 
+  group_by(siteID, scientificName) %>% 
+  summarise(observations = n())
+```
+
+### Calculate richness of fish (distinct taxa) per month/year and site
+
+```{r}
+
+# Filter to only include species IDed to species
+fish_richness <- fish_processed %>% 
+  filter(taxonRank == "species") %>% 
+  group_by(siteID, year, month) %>% 
+  summarize(richness = n_distinct(taxonID))
+
+```
 
 ```{r}
 discharge_processed <- read_csv(here("data", "processed", "discharge_processed.csv"))

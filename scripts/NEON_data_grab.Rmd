@@ -103,3 +103,23 @@ variables_20086 %>%
 csd_15_min %>% 
   write_csv(here("data", "raw", "csd_15_min.csv"))
 ```
+
+## Water temperature 
+
+```{r}
+water_temp <- "DP1.20288.001"
+
+#Select sites and dates
+my_sites <- c("BIGC", "TECR", "REDB", "SYCA", "LECO", "WALK", "MAYF")
+
+start_date <- "2012-01"
+end_date <- "2022-12"
+
+list2env((loadByProduct(dpID = water_temp, 
+                        site = my_sites, 
+                        include.provisional = FALSE,
+                        startdate = start_date,
+                        enddate = end_date)),
+         .GlobalEnv)   
+```
+
