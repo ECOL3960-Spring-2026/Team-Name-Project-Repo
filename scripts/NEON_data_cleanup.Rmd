@@ -117,7 +117,7 @@ plant <- plant_raw %>%
 In this chunk we further cleaned our data to group the data points into various groups such as domain ID, the site ID, the year and month, as well as the fishes life stage within our fish data set. We also created new columns for monthly measurements. This further cleaning of our data allows for a smoother join of the three data sets for analysis.
 ```{r}
 fish <- fish %>% 
-  group_by(domainID, siteID, year, month, fishLifeStage) %>% 
+  group_by(domainID, siteID, year, month, fishLifeStage, scientificName) %>% 
   summarise(fish_month_tally = n(),
             sum_fish_mass = sum(fishWeight, na.rm = TRUE))
 
