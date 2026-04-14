@@ -68,6 +68,11 @@ discharge_fish_na_rm <- discharge_fish %>%
   drop_na(sum_fish_mass, discharge_month_mean_L_sec)
 ```
 
+```{r}
+
+```
+
+
 ##Data with Outliers Removed
 
 Create model #1 that compares average monthly fish mass to monthly discharge
