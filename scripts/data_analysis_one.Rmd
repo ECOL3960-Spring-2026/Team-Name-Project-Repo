@@ -23,33 +23,6 @@ Once all of our packages were read in, we began the process of our data analysis
 fish_processed <- read_csv(here("data", "processed", "fish_processed.csv"))
 ```
 
-Discharge monthly averages are significantly different among individual sites. Specific sites with differences are as follows:
-
--   LECO-BIGC
-
--   MAYF-BIGC
-
--   REDB-LECO
-
--   TECR-LECO
-
--   WALK-LECO
-
--   REDB-MAYF
-
--   TECR-MAYF
-
--   WALK-MAYF
-
-```{r}
-  monthly_dish_site <- aov(discharge_month_mean_L_sec ~ siteID, 
-                  data = discharge)
-
-summary(monthly_dish_site)
-TukeyHSD(monthly_dish_site)
-
-```
-
 ```{r}
 fish_counts <- fish_processed %>% 
   group_by(siteID, scientificName) %>% 
@@ -76,7 +49,7 @@ discharge_fish <- read_csv(here("data", "processed",
                                 "discharge_fish_join_processed.csv"))
 ```
 
-In this chunk we added in code in order to create a new object with new columns for the means of various metrics within our new data set. We also added in code to calculate the standard deviaton for the columns discharge_month_mean_L_sec and sum_fish_mass. These will both be important for the creation of error bars within the graphs created after the data analysis.
+In this chunk we added in code in order to create a new object with new columns for the means of various metrics within our new data set. We also added in code to calculate the standard deviation for the columns discharge_month_mean_L_sec and sum_fish_mass. These will both be important for the creation of error bars within the graphs created after the data analysis.
 
 ```{r}
 disfish_site_means <- discharge_fish %>% 
@@ -120,6 +93,31 @@ discharge_fish_norm1 <- discharge_fish_na_rm[-c(115, 128, 149),]
 
 glm_fish_g_discharge <- glm(sum_fish_mass ~ discharge_month_mean_L_sec, data = discharge_fish_norm1)
 summary(glm_fish_g_discharge)
+```
+
+Discharge monthly averages are significantly different among individual sites. Specific sites with differences are as follows:
+
+-   LECO-BIGC
+
+-   MAYF-BIGC
+
+-   REDB-LECO
+
+-   TECR-LECO
+
+-   WALK-LECO
+
+-   REDB-MAYF
+
+-   TECR-MAYF
+
+-   WALK-MAYF
+
+```{r}
+monthly_dish_site <- aov(discharge_month_mean_L_sec ~ siteID,
+                         data= discharge)
+summary(monthly_dish_site) 
+TukeyHSD(monthly_dish_site) 
 ```
 
 Run model #2 that compares fish mass across sites
