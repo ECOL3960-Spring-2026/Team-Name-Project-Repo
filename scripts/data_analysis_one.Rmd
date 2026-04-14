@@ -72,7 +72,6 @@ discharge_fish_na_rm <- discharge_fish %>%
 
 ```
 
-
 ##Data with Outliers Removed
 
 Create model #1 that compares average monthly fish mass to monthly discharge
@@ -125,6 +124,68 @@ summary(monthly_dish_site)
 TukeyHSD(monthly_dish_site) 
 ```
 
+Created individual objects for each site in order to compare their monthly discharge.
+
+LECO
+
+```{r}
+discharge_leco <- discharge_processed %>% 
+  filter(siteID == "LECO") %>% 
+  mutate (month = as.factor (month))
+
+str(discharge_leco)
+```
+
+WALK
+
+```{r}
+discharge_walk <- discharge_processed %>% 
+  filter(siteID == "WALK") %>% 
+  mutate (month = as.factor (month))
+
+str(discharge_walk)
+```
+
+MAYF
+
+```{r}
+discharge_mayf <- discharge_processed %>% 
+  filter(siteID == "MAYF") %>% 
+  mutate (month = as.factor (month))
+```
+
+BIGC
+
+```{r}
+discharge_bigc <- discharge_processed %>% 
+  filter(siteID == "BIGC") %>% 
+  mutate (month = as.factor (month))
+```
+
+SYCA
+
+```{r}
+discharge_syca <- discharge_processed %>% 
+  filter(siteID == "SYCA") %>% 
+  mutate (month = as.factor (month))
+```
+
+TECR
+
+```{r}
+discharge_tecr <- discharge_processed %>% 
+  filter(siteID == "TECR") %>% 
+  mutate (month = as.factor (month))
+```
+
+REDB
+
+```{r}
+discharge_redb <- discharge_processed %>% 
+  filter(siteID == "REDB") %>% 
+  mutate (month = as.factor (month))
+```
+
 Run model #2 that compares fish mass across sites
 
 ```{r}
@@ -133,6 +194,78 @@ anova_fish_g_site <- aov(sum_fish_mass ~ siteID,
 summary(anova_fish_g_site)
 TukeyHSD(anova_fish_g_site)
 #No significance
+```
+
+ANOVA tests for different sites and their monthly discharge across the different months
+
+LECO = non significant
+
+```{r}
+monthly_avg_leco <- aov(discharge_month_mean_L_sec ~ month,
+                         data= discharge_leco)
+summary(monthly_avg_leco) 
+
+TukeyHSD(monthly_avg_leco) 
+```
+
+WALK = non sigficant
+
+```{r}
+monthly_avg_walk <- aov(discharge_month_mean_L_sec ~ month,
+                         data= discharge_walk)
+summary(monthly_avg_walk) 
+
+TukeyHSD(monthly_avg_walk) 
+```
+
+MAYF = significant
+
+```{r}
+monthly_avg_mayf <- aov(discharge_month_mean_L_sec ~ month,
+                         data= discharge_mayf)
+summary(monthly_avg_mayf) 
+
+TukeyHSD(monthly_avg_mayf) 
+```
+
+BIGC = significant
+
+```{r}
+monthly_avg_bigc <- aov(discharge_month_mean_L_sec ~ month,
+                         data= discharge_bigc)
+summary(monthly_avg_bigc) 
+
+TukeyHSD(monthly_avg_bigc) 
+```
+
+SYCA = non significant
+
+```{r}
+monthly_avg_syca <- aov(discharge_month_mean_L_sec ~ month,
+                         data= discharge_syca)
+summary(monthly_avg_syca) 
+
+TukeyHSD(monthly_avg_syca) 
+```
+
+TECR = non significant
+
+```{r}
+monthly_avg_tecr <- aov(discharge_month_mean_L_sec ~ month,
+                         data= discharge_tecr)
+summary(monthly_avg_tecr) 
+
+TukeyHSD(monthly_avg_tecr) 
+```
+
+REDB = significant
+
+```{r}
+monthly_avg_redb <- aov(discharge_month_mean_L_sec ~ month,
+                         data= discharge_redb)
+summary(monthly_avg_redb) 
+
+TukeyHSD(monthly_avg_redb) 
 ```
 
 Run diagnostic plots for model 2
