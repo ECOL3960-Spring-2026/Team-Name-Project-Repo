@@ -2,15 +2,15 @@
 
 ## Project Description:
 
-We intend to test for any correlations between discharge, fish abundance, and aquatic plant abundance at the Upper Big Creek (BIGC) and Teakettle Creek (TECR) NEON sites.
+We intend to test for any correlations between discharge, fish abundance at sites BIGC (CA), TECR (CA), WALK (TN), SYCA (AZ), and MAYF (AL) NEON sites.
 
-We hypothesize that both fish abundance and plant abundance will be lower at times of lower average stream discharge or immediately following times of lower average stream discharge due to a decrease in resources and space. Additionally, due to the refugia from predators that aquatic plants provide to fish, we hypothesize that lower plant abundance will result in lower fish abundance, regardless of average stream discharge.
+We hypothesize that fish abundance will be lower at times of lower average stream discharge or immediately following times of lower average stream discharge due to a decrease in resources and space. Additionally, we predict that species richness will be lower in times of abnormal discharge rates (extremely high or extremely low). 
 
-These variables will be analyzed over a ten year period from 2012 to 2022, testing our two hypotheses individually. For our first hypothesis, we will examine the relationship between stream discharge and fish abundance, then the relationship between stream discharge and plant abundance. For our second hypothesis, we will examine the relationship between plant abundance and fish abundance.
+These variables will be analyzed over a ten year period from 2012 to 2022, testing our two hypotheses individually. For our first hypothesis, we will examine the relationship between stream discharge and fish abundance, and then we will examine the relationship between species richness, and how it may be affected stream discharge variability. 
 
 ## Data Description:
 
-We plan on using the following datasets from the NEON data portal: Fish electrofishing, gill netting, and fyke netting counts (DP1.20107.001), Discharge field collection (DP1.20048.001), and Aquatic plant, bryophyte, lichen, and macroalgae point counts in wadeable streams (DP1.20072.001). All three of the datasets we are using have data found at the Upper Big Creek (BIGC), Teakettle Creek (TECR), Red Butte Creek (REDB), Sycamore Creek (SYCA), LeConte Creek (LECO), Walker Branch (WALK), and Mayfield Creek (MAYF) NEON sites.
+We plan on using the following datasets from the NEON data portal: Fish electrofishing, gill netting, and fyke netting counts (DP1.20107.001 and Discharge field collection (DP1.20048.001). All three of the datasets we are using have data found at the Upper Big Creek (BIGC), Teakettle Creek (TECR), Red Butte Creek (REDB), Sycamore Creek (SYCA), LeConte Creek (LECO), Walker Branch (WALK), and Mayfield Creek (MAYF) NEON sites.
 
 -   The “Fish electrofishing, gill netting, and fyke netting counts” dataset has information on fish species count from three different methods of collection, which will allow us to make a new dataset on fish abundance over time.
 
