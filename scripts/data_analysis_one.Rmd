@@ -69,7 +69,38 @@ discharge_fish_na_rm <- discharge_fish %>%
 ```
 
 ```{r}
+discharge_richness <- full_join(discharge, fish_richness, 
+                                by = c("siteID", "month", "year"))
+discharge_richness <- discharge_richness %>% 
+  drop_na("richness", "discharge_month_min") %>% 
+  mutate(siteID = as.factor(siteID),
+         richness = as.integer(richness))
 
+glm_richness <- glm(richness ~ discharge_month_mean_L_sec + siteID, family = poisson,
+                      data = discharge_richness)
+summary(glm_richness)
+
+str(discharge_richness)
+```
+
+```{r}
+# Filter to only include species IDed to Genus or lower
+fish_richness_genera <- fish_processed %>% 
+  filter(taxonRank == c("species", "subspecies", "genus")) %>% 
+  group_by(siteID, year, month) %>% 
+  summarize(richness = n_distinct(taxonID))
+
+discharge_genera <- full_join(discharge, fish_richness_genera, 
+                                by = c("siteID", "month", "year"))
+
+discharge_genera <- discharge_genera %>% 
+  drop_na("richness", "discharge_month_min") %>% 
+  mutate(siteID = as.factor(siteID),
+         richness = as.integer(richness))
+
+glm_richness_genera <- glm(richness ~ discharge_month_mean_L_sec + siteID,
+                      data = discharge_genera, family = poisson)
+summary(glm_richness_genera)
 ```
 
 
@@ -92,6 +123,7 @@ shapiro.test(glm_fish_g_discharge$residuals)
 
 plot(glm_fish_g_discharge, which = 4)
 ```
+
 
 ```{r}
 discharge_fish_norm1 <- discharge_fish_na_rm[-c(115, 128, 149),]
@@ -329,3 +361,16 @@ disfish_site_means %>%
 ```
 
 The figure above shows the average discharge per month at an individual site. The x-axis shows the NEON sites that are being examined, while the y-axis is the average stream discharge in L/sec per month. Errors bars are calculated using the mean plus and minus standard deviation. Can be seen the TECR, WALK, and and BIGC have significantly lower average discharge than MAYF. Although not statistically significant, it would appear that discharge varies among the different sites.
+
+```{r}
+discharge_richness %>% 
+  ggplot(aes(x = discharge_month_mean_L_sec, y = richness, color = siteID)) + 
+  geom_point() + 
+  stat_smooth(method = "lm") +
+  scale_y_continuous("Fish Richness") +
+  scale_x_continuous("Discharge (L/sec/month)") +
+  theme_bw()
+
+#Need to find a way to include time
+```
+
