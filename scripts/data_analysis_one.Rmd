@@ -143,11 +143,11 @@ Discharge across sites
 ```{r}
 str(discharge_processed)
 
-discharge_month <- discharge_processed %>% 
-  group_by(domainID, siteID, year, month) %>% 
-  summarise(discharge_month = mean(dischargeContinuous))
+#discharge_month <- discharge_month %>% 
+#  group_by(domainID, siteID, year, month) %>% 
+#  summarise(discharge_month = mean(dischargeContinuous))
 
-discharge_aov <- aov(discharge_month ~ siteID, data = discharge_month)
+discharge_aov <- aov(discharge_month_mean_L_sec ~ siteID, data = discharge_processed)
 summary(discharge_aov)
 TukeyHSD(discharge_aov)
 tukey2 <- TukeyHSD(discharge_aov)
@@ -155,19 +155,19 @@ tukey2 <- TukeyHSD(discharge_aov)
 cld2 <- multcompLetters4(discharge_aov, tukey2)
 print(cld2)
 
-Tk2 <- discharge_month %>% 
+Tk2 <- discharge_processed %>% 
   group_by(siteID) %>% 
-  drop_na(discharge_month) %>% 
-  summarize(mean = mean(discharge_month), 
-            quant = quantile(discharge_month, probs = 0.75)) %>%
+  drop_na(discharge_month_mean_L_sec) %>% 
+  summarize(mean = mean(discharge_month_mean_L_sec), 
+            quant = quantile(discharge_month_mean_L_sec, probs = 0.75)) %>%
   arrange(desc(mean))
 
 cld2 <- as.data.frame.list(cld2$siteID)
 Tk2$cld2 <- cld2$Letters
 print(Tk2)
 
-discharge_month %>% 
-  ggplot(aes(x = siteID, y = discharge_month, colour = siteID)) +
+discharge_processed %>% 
+  ggplot(aes(x = siteID, y = discharge_month_mean_L_sec, colour = siteID)) +
   geom_boxplot(position = position_dodge2(preserve = "single"),
                show.legend = FALSE) +
   geom_jitter(shape=16, position=position_jitter(0.1), aes(colour = siteID), 
