@@ -12,9 +12,12 @@ knitr::opts_chunk$set(echo = TRUE)
 In this chunk we added and ran any necessary packages that we would need in order to begin our data analysis. These packages include the tidyverse package, the here package, and the car package. Tidyverse is the main package that we used for some of the major work with the data analysis. We used this to wrangle the data in a way that the different variables are able to be compared. The here package was used to simply show R where to find our data within our files. Lastly we have used the car package to further our data analysis and conduct various tests for normality within our data sets and and data analysis.
 
 ```{r}
+#install.packages("multcompView")
+
 library(tidyverse)
 library(here)
 library(car)
+library(multcompView)
 ```
 
 Once all of our packages were read in, we began the process of our data analysis by reading in the processed data from the data clean up. This was conducted through the "here" command. This command allowed R to more easily and accurately identify and load in our data.
@@ -90,6 +93,10 @@ fish_richness_genera <- fish_processed %>%
   group_by(siteID, year, month) %>% 
   summarize(richness = n_distinct(taxonID))
 
+richness_aov <- aov(richness ~ siteID, data = fish_richness_genera)
+summary(richness_aov)
+tukey1 <- TukeyHSD(richness_aov)
+
 discharge_genera <- full_join(discharge, fish_richness_genera, 
                                 by = c("siteID", "month", "year"))
 
@@ -101,6 +108,107 @@ discharge_genera <- discharge_genera %>%
 glm_richness_genera <- glm(richness ~ discharge_month_mean_L_sec + siteID,
                       data = discharge_genera, family = poisson)
 summary(glm_richness_genera)
+
+
+```
+
+#This is Kade- I am using the plots in lines 110-x for my assignment. Y'all are welcome to do the same or make your own. You'll have to download the new package at the top if you use these. The letters on the graphs are significance codes, so if two sites have the same letter then they aren't significantly different
+
+Richness across sites
+```{r}
+cld <- multcompLetters4(richness_aov, tukey1)
+print(cld)
+
+Tk <- fish_richness_genera %>% 
+  group_by(siteID) %>% 
+  summarize(mean = mean(richness), quant = quantile(richness, probs = 0.75)) %>%
+  arrange(desc(mean))
+
+cld <- as.data.frame.list(cld$siteID)
+Tk$cld <- cld$Letters
+print(Tk)
+
+fish_richness_genera %>% 
+  ggplot(aes(x = siteID, y = richness, colour = siteID)) +
+  geom_boxplot(position = position_dodge2(preserve = "single"),
+               show.legend = FALSE) +
+  geom_jitter(shape=16, position=position_jitter(0.2), aes(colour = siteID), 
+              show.legend = FALSE, alpha = 0.5, ) +
+  labs(x = "NEON Site", y = "Species Richness") + 
+  geom_text(data = Tk, aes(label = cld, x = siteID, y = quant), color = "black",
+            vjust = -2, hjust = 2, size = 4, show.legend = FALSE) +
+  theme_bw()
+```
+Discharge across sites
+```{r}
+str(discharge_processed)
+
+discharge_month <- discharge_processed %>% 
+  group_by(domainID, siteID, year, month) %>% 
+  summarise(discharge_month = mean(dischargeContinuous))
+
+discharge_aov <- aov(discharge_month ~ siteID, data = discharge_month)
+summary(discharge_aov)
+TukeyHSD(discharge_aov)
+tukey2 <- TukeyHSD(discharge_aov)
+
+cld2 <- multcompLetters4(discharge_aov, tukey2)
+print(cld2)
+
+Tk2 <- discharge_month %>% 
+  group_by(siteID) %>% 
+  drop_na(discharge_month) %>% 
+  summarize(mean = mean(discharge_month), 
+            quant = quantile(discharge_month, probs = 0.75)) %>%
+  arrange(desc(mean))
+
+cld2 <- as.data.frame.list(cld2$siteID)
+Tk2$cld2 <- cld2$Letters
+print(Tk2)
+
+discharge_month %>% 
+  ggplot(aes(x = siteID, y = discharge_month, colour = siteID)) +
+  geom_boxplot(position = position_dodge2(preserve = "single"),
+               show.legend = FALSE) +
+  geom_jitter(shape=16, position=position_jitter(0.1), aes(colour = siteID), 
+              show.legend = FALSE, alpha = 0.5, ) +
+  labs(x = "NEON Site", y = "Discharge (L/sec)") + 
+  geom_text(data = Tk2, aes(label = cld2, x = siteID, y = quant), color = "black",
+            vjust = -2, hjust = 2.5, size = 4, show.legend = FALSE) +
+  theme_bw()
+```
+
+Fish mass across sites
+```{r}
+fishweight_aov <- aov(fishWeight ~ siteID, data = fish_processed)
+summary(fishweight_aov)
+TukeyHSD(fishweight_aov)
+tukey3 <- TukeyHSD(fishweight_aov)
+
+cld3 <- multcompLetters4(fishweight_aov, tukey3)
+print(cld3)
+
+Tk3 <- fish_processed %>% 
+  group_by(siteID) %>% 
+  drop_na(fishWeight) %>% 
+  summarize(mean = mean(fishWeight), 
+            quant = quantile(fishWeight, probs = 0.75)) %>%
+  arrange(desc(mean))
+
+cld3 <- as.data.frame.list(cld3$siteID)
+Tk3$cld3 <- cld3$Letters
+print(Tk3)
+
+fish_processed %>% 
+  ggplot(aes(x = siteID, y = fishWeight, colour = siteID)) +
+  geom_boxplot(position = position_dodge2(preserve = "single"),
+               show.legend = FALSE) +
+  geom_jitter(shape=16, position=position_jitter(0.1), aes(colour = siteID), 
+              show.legend = FALSE, alpha = 0.5, ) +
+  labs(x = "NEON Site", y = "Fish mass (g)") + 
+  geom_text(data = Tk3, aes(label = cld3, x = siteID, y = quant), color = "black",
+            vjust = -2, hjust = 3, size = 4, show.legend = FALSE) +
+  theme_bw()
 ```
 
 ##Data with Outliers Removed
