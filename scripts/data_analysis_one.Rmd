@@ -38,7 +38,7 @@ fish_counts <- fish_processed %>%
 
 # Filter to only include species IDed to species
 fish_richness <- fish_processed %>% 
-  #filter(taxonRank == "species") %>% 
+  filter(taxonRank == "species") %>% 
   group_by(siteID, year, month) %>% 
   summarize(richness = n_distinct(scientificName))
 
