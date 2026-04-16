@@ -1,0 +1,694 @@
+domainID,siteID,year,month,fishLifeStage,scientificName,taxonRank,taxonID,fish_month_tally,sum_fish_mass
+D07,LECO,2016,10,NA,Oncorhynchus mykiss,species,ONCMYK,287,2907.2999999999993
+D07,LECO,2016,10,NA,Rhinichthys atratulus,species,RHIATR,295,1098.799999999999
+D07,LECO,2016,10,NA,Rhinichthys cataractae,species,RHICAT,101,579.5999999999999
+D07,LECO,2016,10,NA,Salvelinus fontinalis,species,SALFON,5,57.400000000000006
+D07,LECO,2017,11,adult,Oncorhynchus mykiss,species,ONCMYK,39,1358.7000000000003
+D07,LECO,2017,11,adult,Rhinichthys atratulus,species,RHIATR,140,647.2000000000004
+D07,LECO,2017,11,adult,Rhinichthys cataractae,species,RHICAT,80,536.8000000000001
+D07,LECO,2017,11,juvenile,Oncorhynchus mykiss,species,ONCMYK,57,509.89999999999986
+D07,LECO,2017,11,juvenile,Rhinichthys atratulus,species,RHIATR,36,36.1
+D07,LECO,2017,11,juvenile,Rhinichthys cataractae,species,RHICAT,39,46.59999999999998
+D07,LECO,2017,11,young of year,Rhinichthys atratulus,species,RHIATR,99,35.300000000000004
+D07,LECO,2017,11,young of year,Rhinichthys cataractae,species,RHICAT,16,5.199999999999998
+D07,LECO,2018,6,adult,Oncorhynchus mykiss,species,ONCMYK,37,2135.6
+D07,LECO,2018,6,adult,Rhinichthys atratulus,species,RHIATR,89,539.1
+D07,LECO,2018,6,adult,Rhinichthys cataractae,species,RHICAT,32,376.8999999999999
+D07,LECO,2018,6,gravid female,Rhinichthys atratulus,species,RHIATR,6,29.400000000000002
+D07,LECO,2018,6,larval,Oncorhynchus mykiss,species,ONCMYK,1,1.1
+D07,LECO,2018,6,larval,Rhinichthys atratulus,species,RHIATR,1,0.6
+D07,LECO,2018,6,young of year,Oncorhynchus mykiss,species,ONCMYK,30,34.2
+D07,LECO,2018,6,young of year,Rhinichthys atratulus,species,RHIATR,126,138.39999999999998
+D07,LECO,2018,6,young of year,Rhinichthys cataractae,species,RHICAT,39,88.00000000000001
+D07,LECO,2018,6,NA,Oncorhynchus mykiss,species,ONCMYK,1,1.3
+D07,LECO,2018,6,NA,Rhinichthys atratulus,species,RHIATR,54,112.19999999999997
+D07,LECO,2018,6,NA,Rhinichthys cataractae,species,RHICAT,54,269.99999999999994
+D07,LECO,2018,10,adult,Oncorhynchus mykiss,species,ONCMYK,14,1506.8
+D07,LECO,2018,10,adult,Rhinichthys atratulus,species,RHIATR,319,931.7999999999994
+D07,LECO,2018,10,adult,Rhinichthys cataractae,species,RHICAT,88,513.1999999999999
+D07,LECO,2018,10,gravid female,Rhinichthys atratulus,species,RHIATR,1,7.1
+D07,LECO,2018,10,juvenile,Oncorhynchus mykiss,species,ONCMYK,81,1314.8000000000002
+D07,LECO,2018,10,juvenile,Rhinichthys atratulus,species,RHIATR,10,4.1
+D07,LECO,2018,10,young of year,Rhinichthys atratulus,species,RHIATR,2,0.6
+D07,LECO,2019,4,adult,Oncorhynchus mykiss,species,ONCMYK,9,747.1
+D07,LECO,2019,4,adult,Rhinichthys atratulus,species,RHIATR,224,750.1000000000001
+D07,LECO,2019,4,adult,Rhinichthys cataractae,species,RHICAT,55,254.90000000000006
+D07,LECO,2019,4,gravid female,Rhinichthys atratulus,species,RHIATR,14,87.1
+D07,LECO,2019,4,gravid female,Rhinichthys cataractae,species,RHICAT,7,75.4
+D07,LECO,2019,4,juvenile,Oncorhynchus mykiss,species,ONCMYK,15,370.59999999999997
+D07,LECO,2019,4,juvenile,Rhinichthys atratulus,species,RHIATR,8,6.3999999999999995
+D07,LECO,2019,4,young of year,Rhinichthys atratulus,species,RHIATR,2,0.6
+D07,LECO,2019,10,adult,Oncorhynchus mykiss,species,ONCMYK,78,3315.7999999999984
+D07,LECO,2019,10,adult,Rhinichthys atratulus,species,RHIATR,358,1339.3999999999999
+D07,LECO,2019,10,adult,Rhinichthys cataractae,species,RHICAT,151,763.1000000000001
+D07,LECO,2019,10,adult,Salvelinus fontinalis,species,SALFON,1,28.9
+D07,LECO,2019,10,gravid female,Rhinichthys atratulus,species,RHIATR,2,6.800000000000001
+D07,LECO,2019,10,juvenile,Oncorhynchus mykiss,species,ONCMYK,61,475.69999999999993
+D07,LECO,2019,10,juvenile,Rhinichthys atratulus,species,RHIATR,41,27.500000000000007
+D07,LECO,2019,10,juvenile,Rhinichthys cataractae,species,RHICAT,1,0.9
+D07,LECO,2019,10,juvenile,Salvelinus fontinalis,species,SALFON,1,5.3
+D07,LECO,2019,10,young of year,Oncorhynchus mykiss,species,ONCMYK,15,61.8
+D07,LECO,2019,10,young of year,Rhinichthys atratulus,species,RHIATR,34,10.400000000000002
+D07,LECO,2021,5,adult,Oncorhynchus mykiss,species,ONCMYK,33,2023.5
+D07,LECO,2021,5,adult,Rhinichthys atratulus,species,RHIATR,213,1062.9000000000003
+D07,LECO,2021,5,adult,Rhinichthys cataractae,species,RHICAT,103,745.8
+D07,LECO,2021,5,adult,Salvelinus fontinalis,species,SALFON,1,55.3
+D07,LECO,2021,5,gravid female,Rhinichthys atratulus,species,RHIATR,14,64
+D07,LECO,2021,5,gravid female,Rhinichthys cataractae,species,RHICAT,2,20
+D07,LECO,2021,5,juvenile,Oncorhynchus mykiss,species,ONCMYK,3,105.9
+D07,LECO,2021,5,juvenile,Rhinichthys atratulus,species,RHIATR,66,43.5
+D07,LECO,2021,5,juvenile,Rhinichthys cataractae,species,RHICAT,4,5.199999999999999
+D07,LECO,2021,5,juvenile,Salvelinus fontinalis,species,SALFON,1,3.7
+D07,LECO,2021,5,young of year,Oncorhynchus mykiss,species,ONCMYK,33,22.400000000000013
+D07,LECO,2021,5,young of year,Rhinichthys atratulus,species,RHIATR,22,6.599999999999998
+D07,LECO,2021,11,adult,Oncorhynchus mykiss,species,ONCMYK,18,1269.8
+D07,LECO,2021,11,adult,Rhinichthys atratulus,species,RHIATR,277,732.0000000000003
+D07,LECO,2021,11,adult,Rhinichthys cataractae,species,RHICAT,83,673.9
+D07,LECO,2021,11,gravid female,Rhinichthys atratulus,species,RHIATR,42,284.00000000000006
+D07,LECO,2021,11,gravid female,Rhinichthys cataractae,species,RHICAT,4,54.8
+D07,LECO,2021,11,juvenile,Oncorhynchus mykiss,species,ONCMYK,53,459.9
+D07,LECO,2021,11,juvenile,Rhinichthys atratulus,species,RHIATR,55,42.59999999999998
+D07,LECO,2021,11,juvenile,Rhinichthys cataractae,species,RHICAT,20,60.00000000000001
+D07,LECO,2021,11,young of year,Oncorhynchus mykiss,species,ONCMYK,11,45.6
+D07,LECO,2021,11,young of year,Rhinichthys atratulus,species,RHIATR,37,11.100000000000005
+D07,LECO,2022,4,adult,Campostoma anomalum,species,CAMANO,1,21.1
+D07,LECO,2022,4,adult,Oncorhynchus mykiss,species,ONCMYK,5,474.1
+D07,LECO,2022,4,adult,Rhinichthys atratulus,species,RHIATR,69,226.59999999999994
+D07,LECO,2022,4,adult,Rhinichthys cataractae,species,RHICAT,20,174.39999999999998
+D07,LECO,2022,4,gravid female,Rhinichthys atratulus,species,RHIATR,2,9.7
+D07,LECO,2022,4,gravid female,Rhinichthys cataractae,species,RHICAT,2,23.1
+D07,LECO,2022,4,juvenile,Oncorhynchus mykiss,species,ONCMYK,9,178.7
+D07,LECO,2022,4,juvenile,Rhinichthys atratulus,species,RHIATR,19,14
+D07,LECO,2022,4,juvenile,Rhinichthys cataractae,species,RHICAT,5,17.7
+D07,LECO,2022,10,adult,Oncorhynchus mykiss,species,ONCMYK,6,402.20000000000005
+D07,LECO,2022,10,adult,Rhinichthys atratulus,species,RHIATR,46,156.79999999999995
+D07,LECO,2022,10,adult,Rhinichthys cataractae,species,RHICAT,21,179.89999999999998
+D07,LECO,2022,10,gravid female,Rhinichthys atratulus,species,RHIATR,1,9.5
+D07,LECO,2022,10,juvenile,Oncorhynchus mykiss,species,ONCMYK,30,290.5
+D07,LECO,2022,10,juvenile,Rhinichthys atratulus,species,RHIATR,3,2.0999999999999996
+D07,LECO,2022,10,juvenile,Rhinichthys cataractae,species,RHICAT,1,2.9
+D07,LECO,2022,10,young of year,Oncorhynchus mykiss,species,ONCMYK,9,36.6
+D07,LECO,2022,11,adult,Oncorhynchus mykiss,species,ONCMYK,19,1372.8999999999999
+D07,LECO,2022,11,adult,Rhinichthys atratulus,species,RHIATR,208,744.1
+D07,LECO,2022,11,adult,Rhinichthys cataractae,species,RHICAT,85,657.9
+D07,LECO,2022,11,juvenile,Oncorhynchus mykiss,species,ONCMYK,83,1178.1000000000004
+D07,LECO,2022,11,juvenile,Rhinichthys atratulus,species,RHIATR,7,5.3
+D07,LECO,2022,11,juvenile,Rhinichthys cataractae,species,RHICAT,13,38.2
+D07,LECO,2022,11,juvenile,Salvelinus fontinalis,species,SALFON,2,23.2
+D07,LECO,2022,11,young of year,Oncorhynchus mykiss,species,ONCMYK,47,195.09999999999994
+D07,LECO,2022,11,young of year,Rhinichthys atratulus,species,RHIATR,2,0.6
+D07,LECO,2022,11,young of year,Salvelinus fontinalis,species,SALFON,1,4.3
+D07,WALK,2016,3,NA,Cottus carolinae,species,COTCAR,2,10
+D07,WALK,2016,3,NA,Hypentelium nigricans,species,HYPNIG,1,632
+D07,WALK,2016,3,NA,Rhinichthys atratulus,species,RHIATR,113,368.6
+D07,WALK,2016,11,NA,Cottus carolinae,species,COTCAR,3,9.2
+D07,WALK,2016,11,NA,Rhinichthys atratulus,species,RHIATR,151,257.8
+D07,WALK,2017,3,gravid female,Rhinichthys atratulus,species,RHIATR,2,12.3
+D07,WALK,2017,3,young of year,Rhinichthys atratulus,species,RHIATR,5,1.5
+D07,WALK,2017,3,NA,Cottus carolinae,species,COTCAR,55,178.8
+D07,WALK,2017,3,NA,Rhinichthys atratulus,species,RHIATR,252,357.30000000000047
+D07,WALK,2017,10,adult,Cottus carolinae,species,COTCAR,37,147
+D07,WALK,2017,10,adult,Rhinichthys atratulus,species,RHIATR,189,642.5000000000001
+D07,WALK,2017,10,gravid female,Cottus carolinae,species,COTCAR,1,6.9
+D07,WALK,2017,10,gravid female,Rhinichthys atratulus,species,RHIATR,7,43.099999999999994
+D07,WALK,2017,10,juvenile,Cottus carolinae,species,COTCAR,12,12.299999999999999
+D07,WALK,2017,10,juvenile,Rhinichthys atratulus,species,RHIATR,146,108.19999999999989
+D07,WALK,2017,10,young of year,Cottus carolinae,species,COTCAR,6,1.8
+D07,WALK,2017,10,young of year,Rhinichthys atratulus,species,RHIATR,67,20.100000000000026
+D07,WALK,2017,10,NA,Rhinichthys atratulus,species,RHIATR,1,0.3
+D07,WALK,2018,3,adult,Cottus carolinae,species,COTCAR,41,287.19999999999993
+D07,WALK,2018,3,adult,Cyprinella sp.,genus,CYPSP1,1,3
+D07,WALK,2018,3,adult,Cyprinidae sp.,family,CYPSP3,1,3.4
+D07,WALK,2018,3,adult,Perciformes sp.,order,PERSP5,2,4.9
+D07,WALK,2018,3,adult,Rhinichthys atratulus,species,RHIATR,90,455.7999999999999
+D07,WALK,2018,3,gravid female,Cottus carolinae,species,COTCAR,2,13.5
+D07,WALK,2018,3,gravid female,Rhinichthys atratulus,species,RHIATR,44,270.6999999999999
+D07,WALK,2018,3,juvenile,Cottus carolinae,species,COTCAR,13,43.7
+D07,WALK,2018,3,juvenile,Rhinichthys atratulus,species,RHIATR,105,115
+D07,WALK,2018,3,young of year,Cottus carolinae,species,COTCAR,2,3.0999999999999996
+D07,WALK,2018,3,young of year,Rhinichthys atratulus,species,RHIATR,47,16.20000000000001
+D07,WALK,2018,11,adult,Campostoma anomalum,species,CAMANO,1,12
+D07,WALK,2018,11,adult,Cottus carolinae,species,COTCAR,59,393.70000000000005
+D07,WALK,2018,11,adult,Notropis atherinoides,species,NOTATH,1,1.4
+D07,WALK,2018,11,adult,Rhinichthys atratulus,species,RHIATR,286,772.5
+D07,WALK,2018,11,gravid female,Rhinichthys atratulus,species,RHIATR,4,11.600000000000001
+D07,WALK,2018,11,juvenile,Cottus carolinae,species,COTCAR,6,5.8
+D07,WALK,2018,11,juvenile,Rhinichthys atratulus,species,RHIATR,47,19.900000000000002
+D07,WALK,2018,11,young of year,Rhinichthys atratulus,species,RHIATR,18,5.399999999999999
+D07,WALK,2019,3,adult,Cottus carolinae,species,COTCAR,24,209.09999999999994
+D07,WALK,2019,3,adult,Rhinichthys atratulus,species,RHIATR,148,552.2
+D07,WALK,2019,3,gravid female,Rhinichthys atratulus,species,RHIATR,5,36.2
+D07,WALK,2019,3,juvenile,Cottus carolinae,species,COTCAR,1,1
+D07,WALK,2019,3,juvenile,Rhinichthys atratulus,species,RHIATR,36,24.899999999999995
+D07,WALK,2019,3,young of year,Rhinichthys atratulus,species,RHIATR,45,13.70000000000001
+D07,WALK,2019,11,adult,Campostoma anomalum,species,CAMANO,3,33.3
+D07,WALK,2019,11,adult,Cottus carolinae,species,COTCAR,10,88.8
+D07,WALK,2019,11,adult,Rhinichthys atratulus,species,RHIATR,197,523.3
+D07,WALK,2019,11,juvenile,Rhinichthys atratulus,species,RHIATR,72,48.4
+D07,WALK,2019,11,young of year,Rhinichthys atratulus,species,RHIATR,71,21.30000000000003
+D07,WALK,2020,3,adult,Cottus carolinae,species,COTCAR,4,45.4
+D07,WALK,2020,3,adult,Rhinichthys atratulus,species,RHIATR,153,455.4999999999997
+D07,WALK,2020,3,gravid female,Rhinichthys atratulus,species,RHIATR,16,92.80000000000001
+D07,WALK,2020,3,juvenile,Cottus carolinae,species,COTCAR,1,2.7
+D07,WALK,2020,3,juvenile,Rhinichthys atratulus,species,RHIATR,66,43.800000000000004
+D07,WALK,2020,3,young of year,Rhinichthys atratulus,species,RHIATR,47,14.100000000000012
+D07,WALK,2020,3,NA,Rhinichthys atratulus,species,RHIATR,1,4.5
+D07,WALK,2020,11,adult,Cottus carolinae,species,COTCAR,15,136
+D07,WALK,2020,11,adult,Rhinichthys atratulus,species,RHIATR,248,736.4000000000001
+D07,WALK,2020,11,gravid female,Rhinichthys atratulus,species,RHIATR,2,14.399999999999999
+D07,WALK,2020,11,juvenile,Cottus carolinae,species,COTCAR,45,85.39999999999999
+D07,WALK,2020,11,juvenile,Rhinichthys atratulus,species,RHIATR,116,71.60000000000001
+D07,WALK,2020,11,young of year,Cottus carolinae,species,COTCAR,14,9.3
+D07,WALK,2020,11,young of year,Rhinichthys atratulus,species,RHIATR,99,29.70000000000005
+D07,WALK,2021,3,adult,Cottus carolinae,species,COTCAR,26,131.79999999999998
+D07,WALK,2021,3,adult,Rhinichthys atratulus,species,RHIATR,47,111.19999999999999
+D07,WALK,2021,3,gravid female,Rhinichthys atratulus,species,RHIATR,1,6.1
+D07,WALK,2021,3,juvenile,Cottus carolinae,species,COTCAR,4,9.299999999999999
+D07,WALK,2021,3,juvenile,Rhinichthys atratulus,species,RHIATR,20,13.499999999999998
+D07,WALK,2021,3,young of year,Rhinichthys atratulus,species,RHIATR,10,2.9999999999999996
+D07,WALK,2021,11,adult,Cottus carolinae,species,COTCAR,20,126.39999999999998
+D07,WALK,2021,11,adult,Rhinichthys atratulus,species,RHIATR,137,323.30000000000007
+D07,WALK,2021,11,gravid female,Rhinichthys atratulus,species,RHIATR,35,185.90000000000006
+D07,WALK,2021,11,juvenile,Cottus carolinae,species,COTCAR,6,11.2
+D07,WALK,2021,11,juvenile,Rhinichthys atratulus,species,RHIATR,58,39.099999999999994
+D07,WALK,2021,11,young of year,Cottus carolinae,species,COTCAR,3,2
+D07,WALK,2021,11,young of year,Rhinichthys atratulus,species,RHIATR,66,19.800000000000026
+D07,WALK,2022,3,adult,Cottus carolinae,species,COTCAR,34,217.49999999999997
+D07,WALK,2022,3,adult,Rhinichthys atratulus,species,RHIATR,180,580.8999999999999
+D07,WALK,2022,3,gravid female,Rhinichthys atratulus,species,RHIATR,4,30.400000000000002
+D07,WALK,2022,3,juvenile,Cottus carolinae,species,COTCAR,5,11.399999999999999
+D07,WALK,2022,3,juvenile,Rhinichthys atratulus,species,RHIATR,41,28.299999999999997
+D07,WALK,2022,3,young of year,Rhinichthys atratulus,species,RHIATR,36,10.800000000000004
+D07,WALK,2022,11,adult,Cottus carolinae,species,COTCAR,13,80.3
+D07,WALK,2022,11,adult,Rhinichthys atratulus,species,RHIATR,137,338.20000000000016
+D07,WALK,2022,11,juvenile,Cottus carolinae,species,COTCAR,12,12.6
+D07,WALK,2022,11,juvenile,Rhinichthys atratulus,species,RHIATR,65,43.20000000000001
+D07,WALK,2022,11,young of year,Cottus carolinae,species,COTCAR,1,0.3
+D07,WALK,2022,11,young of year,Rhinichthys atratulus,species,RHIATR,96,28.800000000000047
+D08,MAYF,2016,4,NA,Ameiurus natalis,species,AMENAT,2,99
+D08,MAYF,2016,4,NA,Etheostoma lachneri,species,ETHLAC,2,1.8
+D08,MAYF,2016,4,NA,Etheostoma stigmaeum,species,ETHSTI,8,4.8
+D08,MAYF,2016,4,NA,Fundulus olivaceus,species,FUNOLI,5,12.1
+D08,MAYF,2016,4,NA,Hypentelium etowanum,species,HYPETO,4,101.39999999999999
+D08,MAYF,2016,4,NA,Ichthyomyzon gagei,species,ICHGAG,2,5.6
+D08,MAYF,2016,4,NA,Lampetra aepyptera,species,LAMAEP,35,94.59999999999998
+D08,MAYF,2016,4,NA,Lepomis macrochirus,species,LEPMAC,1,17.4
+D08,MAYF,2016,4,NA,Moxostoma carinatum,species,MOXCAR,2,241.7
+D08,MAYF,2016,4,NA,Nocomis leptocephalus,species,NOCLEP,6,60.7
+D08,MAYF,2016,4,NA,Notropis baileyi,species,NOTBAI,267,411.6000000000001
+D08,MAYF,2016,4,NA,Noturus leptacanthus,species,NOTLEP,1,0.9
+D08,MAYF,2016,4,NA,Percina nigrofasciata,species,PERNIG,9,9.3
+D08,MAYF,2016,10,NA,Ameiurus natalis,species,AMENAT,1,44.9
+D08,MAYF,2016,10,NA,Erimyzon oblongus,species,ERIOBL,3,30.7
+D08,MAYF,2016,10,NA,Etheostoma stigmaeum,species,ETHSTI,17,18.700000000000003
+D08,MAYF,2016,10,NA,Etheostoma swaini,species,ETHSWA,3,5.6000000000000005
+D08,MAYF,2016,10,NA,Fundulus olivaceus,species,FUNOLI,8,49.9
+D08,MAYF,2016,10,NA,Ichthyomyzon gagei,species,ICHGAG,32,67.7
+D08,MAYF,2016,10,NA,Lampetra aepyptera,species,LAMAEP,18,60.70000000000001
+D08,MAYF,2016,10,NA,Luxilus chrysocephalus,species,LUXCHR,3,18.1
+D08,MAYF,2016,10,NA,Nocomis leptocephalus,species,NOCLEP,33,254.2
+D08,MAYF,2016,10,NA,Notropis baileyi,species,NOTBAI,53,53.60000000000001
+D08,MAYF,2016,10,NA,Notropis telescopus,species,NOTTEL,5,3.9999999999999996
+D08,MAYF,2016,10,NA,Percina nigrofasciata,species,PERNIG,8,12.399999999999999
+D08,MAYF,2016,10,NA,Semotilus atromaculatus,species,SEMATR,1,31.4
+D08,MAYF,2016,11,NA,Ameiurus natalis,species,AMENAT,6,268.6
+D08,MAYF,2016,11,NA,Esox americanus americanus,subspecies,ESOAME,1,34.3
+D08,MAYF,2016,11,NA,Etheostoma lachneri,species,ETHLAC,6,4.300000000000001
+D08,MAYF,2016,11,NA,Etheostoma stigmaeum,species,ETHSTI,34,17.099999999999998
+D08,MAYF,2016,11,NA,Etheostoma swaini,species,ETHSWA,18,9.3
+D08,MAYF,2016,11,NA,Fundulus olivaceus,species,FUNOLI,23,30.60000000000001
+D08,MAYF,2016,11,NA,Hypentelium etowanum,species,HYPETO,2,28.799999999999997
+D08,MAYF,2016,11,NA,Ichthyomyzon gagei,species,ICHGAG,23,90.59999999999998
+D08,MAYF,2016,11,NA,Lampetra aepyptera,species,LAMAEP,21,71.09999999999998
+D08,MAYF,2016,11,NA,Lepomis macrochirus,species,LEPMAC,2,7
+D08,MAYF,2016,11,NA,Luxilus chrysocephalus,species,LUXCHR,11,72.89999999999999
+D08,MAYF,2016,11,NA,Nocomis leptocephalus,species,NOCLEP,32,140.00000000000003
+D08,MAYF,2016,11,NA,Notropis baileyi,species,NOTBAI,270,271.1000000000003
+D08,MAYF,2016,11,NA,Percina nigrofasciata,species,PERNIG,25,37.7
+D08,MAYF,2016,11,NA,Semotilus thoreauianus,species,SEMTHO,1,2.4
+D08,MAYF,2017,3,NA,Ameiurus natalis,species,AMENAT,1,176.8
+D08,MAYF,2017,3,NA,Esox americanus americanus,subspecies,ESOAME,1,0.3
+D08,MAYF,2017,3,NA,Etheostoma lachneri,species,ETHLAC,4,1.2
+D08,MAYF,2017,3,NA,Etheostoma stigmaeum,species,ETHSTI,9,4.699999999999999
+D08,MAYF,2017,3,NA,Etheostoma swaini,species,ETHSWA,2,1
+D08,MAYF,2017,3,NA,Fundulus olivaceus,species,FUNOLI,30,32.60000000000001
+D08,MAYF,2017,3,NA,Hypentelium etowanum,species,HYPETO,2,123.3
+D08,MAYF,2017,3,NA,Ichthyomyzon gagei,species,ICHGAG,81,245.09999999999997
+D08,MAYF,2017,3,NA,Lampetra aepyptera,species,LAMAEP,4,8.2
+D08,MAYF,2017,3,NA,Lepomis auritus,species,LEPAUR,1,38.7
+D08,MAYF,2017,3,NA,Moxostoma carinatum,species,MOXCAR,1,52.7
+D08,MAYF,2017,3,NA,Nocomis leptocephalus,species,NOCLEP,15,119.59999999999997
+D08,MAYF,2017,3,NA,Notropis baileyi,species,NOTBAI,129,181.69999999999996
+D08,MAYF,2017,3,NA,Noturus funebris,species,NOTFUN,10,239.79999999999995
+D08,MAYF,2017,3,NA,Percina nigrofasciata,species,PERNIG,6,9
+D08,MAYF,2017,3,NA,Semotilus atromaculatus,species,SEMATR,1,1.8
+D08,MAYF,2017,11,NA,Etheostoma stigmaeum,species,ETHSTI,5,2
+D08,MAYF,2017,11,NA,Fundulus olivaceus,species,FUNOLI,8,8.1
+D08,MAYF,2017,11,NA,Ichthyomyzon gagei,species,ICHGAG,13,27.500000000000004
+D08,MAYF,2017,11,NA,Lampetra aepyptera,species,LAMAEP,3,8.799999999999999
+D08,MAYF,2017,11,NA,Luxilus chrysocephalus,species,LUXCHR,7,41.6
+D08,MAYF,2017,11,NA,Notropis baileyi,species,NOTBAI,50,50.19999999999999
+D08,MAYF,2017,11,NA,Percina nigrofasciata,species,PERNIG,2,1.9
+D08,MAYF,2017,11,NA,Semotilus atromaculatus,species,SEMATR,5,3.7
+D08,MAYF,2018,4,adult,Ameiurus natalis,species,AMENAT,1,46.8
+D08,MAYF,2018,4,adult,Etheostoma lachneri,species,ETHLAC,1,0.5
+D08,MAYF,2018,4,adult,Etheostoma stigmaeum,species,ETHSTI,8,5.500000000000001
+D08,MAYF,2018,4,adult,Etheostoma swaini,species,ETHSWA,4,1.5999999999999999
+D08,MAYF,2018,4,adult,Fundulus olivaceus,species,FUNOLI,7,17.700000000000003
+D08,MAYF,2018,4,adult,Hypentelium etowanum,species,HYPETO,3,131.8
+D08,MAYF,2018,4,adult,Ichthyomyzon gagei,species,ICHGAG,13,32.7
+D08,MAYF,2018,4,adult,Lampetra aepyptera,species,LAMAEP,56,195.49999999999994
+D08,MAYF,2018,4,adult,Luxilus chrysocephalus,species,LUXCHR,1,20.9
+D08,MAYF,2018,4,adult,Moxostoma carinatum,species,MOXCAR,2,851.2
+D08,MAYF,2018,4,adult,Nocomis leptocephalus,species,NOCLEP,5,145.6
+D08,MAYF,2018,4,adult,Notropis baileyi,species,NOTBAI,98,166.10000000000002
+D08,MAYF,2018,4,adult,Noturus funebris,species,NOTFUN,12,373.8
+D08,MAYF,2018,4,adult,Percina nigrofasciata,species,PERNIG,5,12.3
+D08,MAYF,2018,4,gravid female,Notropis baileyi,species,NOTBAI,15,33.8
+D08,MAYF,2018,4,gravid female,Noturus funebris,species,NOTFUN,2,72.7
+D08,MAYF,2018,4,juvenile,Esox americanus,species,ESOAME2,1,0.8
+D08,MAYF,2018,4,juvenile,Etheostoma stigmaeum,species,ETHSTI,5,1.5
+D08,MAYF,2018,4,juvenile,Etheostoma swaini,species,ETHSWA,2,0.6
+D08,MAYF,2018,4,juvenile,Fundulus olivaceus,species,FUNOLI,8,4.8999999999999995
+D08,MAYF,2018,4,juvenile,Ichthyomyzon gagei,species,ICHGAG,2,3.3
+D08,MAYF,2018,4,juvenile,Lampetra aepyptera,species,LAMAEP,31,41.7
+D08,MAYF,2018,4,juvenile,Nocomis leptocephalus,species,NOCLEP,7,16.6
+D08,MAYF,2018,4,juvenile,Notropis baileyi,species,NOTBAI,53,28.600000000000012
+D08,MAYF,2018,4,juvenile,Noturus funebris,species,NOTFUN,6,34.599999999999994
+D08,MAYF,2018,4,juvenile,Noturus leptacanthus,species,NOTLEP,1,0.8
+D08,MAYF,2018,4,juvenile,Percina nigrofasciata,species,PERNIG,6,4.6
+D08,MAYF,2018,11,adult,Ambloplites sp.,genus,AMBSP,1,51.9
+D08,MAYF,2018,11,adult,Ameiurus natalis,species,AMENAT,4,114.69999999999999
+D08,MAYF,2018,11,adult,Esox americanus,species,ESOAME2,1,13.8
+D08,MAYF,2018,11,adult,Etheostoma lachneri,species,ETHLAC,4,5.3
+D08,MAYF,2018,11,adult,Etheostoma stigmaeum,species,ETHSTI,2,2.3
+D08,MAYF,2018,11,adult,Etheostoma swaini,species,ETHSWA,1,1.6
+D08,MAYF,2018,11,adult,Fundulus olivaceus,species,FUNOLI,7,15.1
+D08,MAYF,2018,11,adult,Hypentelium etowanum,species,HYPETO,4,190.29999999999998
+D08,MAYF,2018,11,adult,Ichthyomyzon gagei,species,ICHGAG,16,59.79999999999999
+D08,MAYF,2018,11,adult,Lampetra aepyptera,species,LAMAEP,38,129.00000000000003
+D08,MAYF,2018,11,adult,Lepomis sp.,genus,LEPSP4,5,123.4
+D08,MAYF,2018,11,adult,Luxilus chrysocephalus,species,LUXCHR,4,38.1
+D08,MAYF,2018,11,adult,Micropterus sp.,genus,MICSP1,1,124.5
+D08,MAYF,2018,11,adult,Nocomis leptocephalus,species,NOCLEP,7,93.19999999999999
+D08,MAYF,2018,11,adult,Notropis baileyi,species,NOTBAI,113,181.69999999999996
+D08,MAYF,2018,11,adult,Noturus leptacanthus,species,NOTLEP,6,182.8
+D08,MAYF,2018,11,adult,Percina nigrofasciata,species,PERNIG,10,16.400000000000002
+D08,MAYF,2018,11,gravid female,Noturus funebris,species,NOTFUN,1,4
+D08,MAYF,2018,11,juvenile,Ameiurus natalis,species,AMENAT,5,53.9
+D08,MAYF,2018,11,juvenile,Esox americanus,species,ESOAME2,1,21.3
+D08,MAYF,2018,11,juvenile,Etheostoma lachneri,species,ETHLAC,18,13.000000000000002
+D08,MAYF,2018,11,juvenile,Etheostoma stigmaeum,species,ETHSTI,9,5.8999999999999995
+D08,MAYF,2018,11,juvenile,Etheostoma swaini,species,ETHSWA,2,1
+D08,MAYF,2018,11,juvenile,Fundulus olivaceus,species,FUNOLI,7,6.999999999999999
+D08,MAYF,2018,11,juvenile,Ichthyomyzon gagei,species,ICHGAG,15,32.9
+D08,MAYF,2018,11,juvenile,Lampetra aepyptera,species,LAMAEP,13,31.6
+D08,MAYF,2018,11,juvenile,Lepomis sp.,genus,LEPSP4,3,46
+D08,MAYF,2018,11,juvenile,Nocomis leptocephalus,species,NOCLEP,4,19.9
+D08,MAYF,2018,11,juvenile,Notropis baileyi,species,NOTBAI,53,43.59999999999999
+D08,MAYF,2018,11,juvenile,Noturus funebris,species,NOTFUN,2,7.4
+D08,MAYF,2018,11,juvenile,Noturus leptacanthus,species,NOTLEP,14,111.7
+D08,MAYF,2018,11,juvenile,Percina nigrofasciata,species,PERNIG,10,7.699999999999999
+D08,MAYF,2018,11,young of year,Fundulus olivaceus,species,FUNOLI,6,1.8
+D08,MAYF,2018,11,young of year,Ichthyomyzon gagei,species,ICHGAG,1,1.7
+D08,MAYF,2018,11,young of year,Notropis baileyi,species,NOTBAI,20,6.6999999999999975
+D08,MAYF,2018,11,young of year,Noturus funebris,species,NOTFUN,3,2.5999999999999996
+D08,MAYF,2018,11,young of year,Noturus leptacanthus,species,NOTLEP,8,3.5
+D08,MAYF,2018,11,young of year,Percina nigrofasciata,species,PERNIG,2,0.6
+D08,MAYF,2018,11,NA,Ichthyomyzon gagei,species,ICHGAG,1,0.7
+D08,MAYF,2018,11,NA,Lampetra aepyptera,species,LAMAEP,1,3.1
+D08,MAYF,2018,11,NA,Notropis baileyi,species,NOTBAI,1,2
+D08,MAYF,2019,3,adult,Ameiurus natalis,species,AMENAT,3,131.5
+D08,MAYF,2019,3,adult,Etheostoma lachneri,species,ETHLAC,1,1.3
+D08,MAYF,2019,3,adult,Etheostoma stigmaeum,species,ETHSTI,4,3.6999999999999997
+D08,MAYF,2019,3,adult,Fundulus olivaceus,species,FUNOLI,18,53.800000000000004
+D08,MAYF,2019,3,adult,Hypentelium etowanum,species,HYPETO,2,123.80000000000001
+D08,MAYF,2019,3,adult,Ichthyomyzon gagei,species,ICHGAG,20,54.80000000000001
+D08,MAYF,2019,3,adult,Lampetra aepyptera,species,LAMAEP,17,59.500000000000014
+D08,MAYF,2019,3,adult,Minytrema melanops,species,MINMEL,2,968.8
+D08,MAYF,2019,3,adult,Moxostoma carinatum,species,MOXCAR,10,4446.5
+D08,MAYF,2019,3,adult,Moxostoma poecilurum,species,MOXPOE,3,1708.4
+D08,MAYF,2019,3,adult,Nocomis leptocephalus,species,NOCLEP,2,72.9
+D08,MAYF,2019,3,adult,Notropis baileyi,species,NOTBAI,112,232.39999999999995
+D08,MAYF,2019,3,adult,Notropis texanus,species,NOTTEX,3,3.5999999999999996
+D08,MAYF,2019,3,adult,Noturus funebris,species,NOTFUN,4,62.199999999999996
+D08,MAYF,2019,3,adult,Noturus leptacanthus,species,NOTLEP,5,117.2
+D08,MAYF,2019,3,adult,Percina nigrofasciata,species,PERNIG,7,12.700000000000003
+D08,MAYF,2019,3,gravid female,Notropis baileyi,species,NOTBAI,7,20.7
+D08,MAYF,2019,3,gravid female,Noturus funebris,species,NOTFUN,2,67.3
+D08,MAYF,2019,3,juvenile,Etheostoma stigmaeum,species,ETHSTI,4,2.1
+D08,MAYF,2019,3,juvenile,Fundulus olivaceus,species,FUNOLI,14,16.200000000000003
+D08,MAYF,2019,3,juvenile,Ichthyomyzon gagei,species,ICHGAG,8,15
+D08,MAYF,2019,3,juvenile,Lampetra aepyptera,species,LAMAEP,26,44.599999999999994
+D08,MAYF,2019,3,juvenile,Lepomis megalotis,species,LEPMEG,1,5.3
+D08,MAYF,2019,3,juvenile,Notropis ammophilus,species,NOTAMM,1,1
+D08,MAYF,2019,3,juvenile,Notropis baileyi,species,NOTBAI,20,12.8
+D08,MAYF,2019,3,juvenile,Noturus funebris,species,NOTFUN,2,9.9
+D08,MAYF,2019,3,juvenile,Noturus leptacanthus,species,NOTLEP,4,30.4
+D08,MAYF,2019,3,juvenile,Percina nigrofasciata,species,PERNIG,4,3.1
+D08,MAYF,2019,3,young of year,Fundulus olivaceus,species,FUNOLI,3,0.8999999999999999
+D08,MAYF,2019,3,young of year,Lampetra aepyptera,species,LAMAEP,1,1.8
+D08,MAYF,2019,3,young of year,Notropis baileyi,species,NOTBAI,1,0.3
+D08,MAYF,2019,3,young of year,Noturus funebris,species,NOTFUN,1,2
+D08,MAYF,2019,3,young of year,Noturus leptacanthus,species,NOTLEP,2,0.8
+D08,MAYF,2019,11,adult,Aphredoderus sayanus,species,APHSAY,1,4.6
+D08,MAYF,2019,11,adult,Elassoma sp.,genus,ELASP,1,0.3
+D08,MAYF,2019,11,adult,Elassoma zonatum,species,ELAZON,1,2.4
+D08,MAYF,2019,11,adult,Esox americanus,species,ESOAME2,3,61
+D08,MAYF,2019,11,adult,Etheostoma lachneri,species,ETHLAC,50,27.700000000000006
+D08,MAYF,2019,11,adult,Fundulus notatus,species,FUNNOT,13,20.700000000000003
+D08,MAYF,2019,11,adult,Fundulus olivaceus,species,FUNOLI,15,28.900000000000002
+D08,MAYF,2019,11,adult,Hypentelium etowanum,species,HYPETO,5,204
+D08,MAYF,2019,11,adult,Ichthyomyzon gagei,species,ICHGAG,19,52.3
+D08,MAYF,2019,11,adult,Lampetra aepyptera,species,LAMAEP,44,150.1
+D08,MAYF,2019,11,adult,Lepomis gulosus,species,LEPGUL,1,30.4
+D08,MAYF,2019,11,adult,Lepomis megalotis,species,LEPMEG,2,35.6
+D08,MAYF,2019,11,adult,Lepomis miniatus,species,LEPMIN,1,29.2
+D08,MAYF,2019,11,adult,Luxilus chrysocephalus,species,LUXCHR,6,43.400000000000006
+D08,MAYF,2019,11,adult,Lythrurus bellus,species,LYTBEL,2,3.4000000000000004
+D08,MAYF,2019,11,adult,Micropterus henshalli,species,MICHEN,1,120.2
+D08,MAYF,2019,11,adult,Nocomis leptocephalus,species,NOCLEP,10,118.6
+D08,MAYF,2019,11,adult,Notropis ammophilus,species,NOTAMM,3,2.1
+D08,MAYF,2019,11,adult,Notropis baileyi,species,NOTBAI,292,521.6000000000004
+D08,MAYF,2019,11,adult,Notropis sp.,genus,NOTSP,1,0.3
+D08,MAYF,2019,11,adult,Notropis stilbius,species,NOTSTI,17,12.4
+D08,MAYF,2019,11,adult,Notropis texanus,species,NOTTEX,10,10.799999999999999
+D08,MAYF,2019,11,adult,Noturus funebris,species,NOTFUN,20,280.8
+D08,MAYF,2019,11,adult,Noturus leptacanthus,species,NOTLEP,2,11.7
+D08,MAYF,2019,11,adult,Percina nigrofasciata,species,PERNIG,11,15.1
+D08,MAYF,2019,11,adult,Semotilus thoreauianus,species,SEMTHO,1,24.6
+D08,MAYF,2019,11,juvenile,Etheostoma lachneri,species,ETHLAC,2,0.6
+D08,MAYF,2019,11,juvenile,Fundulus notatus,species,FUNNOT,2,0.6
+D08,MAYF,2019,11,juvenile,Fundulus olivaceus,species,FUNOLI,3,1.1
+D08,MAYF,2019,11,juvenile,Fundulus sp.,genus,FUNSP,3,0.8999999999999999
+D08,MAYF,2019,11,juvenile,Ichthyomyzon gagei,species,ICHGAG,28,50.699999999999996
+D08,MAYF,2019,11,juvenile,Lampetra aepyptera,species,LAMAEP,3,9.3
+D08,MAYF,2019,11,juvenile,Lepomis sp.,genus,LEPSP4,1,2.5
+D08,MAYF,2019,11,juvenile,Nocomis leptocephalus,species,NOCLEP,2,1
+D08,MAYF,2019,11,juvenile,Notropis baileyi,species,NOTBAI,5,1.5
+D08,MAYF,2019,11,juvenile,Notropis sp.,genus,NOTSP,3,0.8999999999999999
+D08,MAYF,2019,11,juvenile,Noturus funebris,species,NOTFUN,13,6.999999999999999
+D08,MAYF,2019,11,juvenile,Percina nigrofasciata,species,PERNIG,4,1.5
+D08,MAYF,2019,11,juvenile,Semotilus sp.,genus,SEMSP,2,0.6
+D08,MAYF,2019,11,juvenile,Semotilus thoreauianus,species,SEMTHO,3,1.4000000000000001
+D08,MAYF,2019,11,young of year,Fundulus sp.,genus,FUNSP,1,0.3
+D08,MAYF,2019,11,NA,Etheostoma lachneri,species,ETHLAC,1,0.3
+D08,MAYF,2019,11,NA,Ichthyomyzon gagei,species,ICHGAG,2,1.9000000000000001
+D08,MAYF,2019,11,NA,Notropis baileyi,species,NOTBAI,5,6.7
+D08,MAYF,2019,11,NA,Notropis texanus,species,NOTTEX,1,1.3
+D08,MAYF,2019,11,NA,Noturus funebris,species,NOTFUN,1,0.3
+D08,MAYF,2020,12,adult,Esox americanus,species,ESOAME2,1,25.8
+D08,MAYF,2020,12,adult,Fundulus notatus,species,FUNNOT,3,5.7
+D08,MAYF,2020,12,adult,Fundulus olivaceus,species,FUNOLI,2,4.5
+D08,MAYF,2020,12,adult,Ichthyomyzon gagei,species,ICHGAG,3,5.3999999999999995
+D08,MAYF,2020,12,adult,Lampetra aepyptera,species,LAMAEP,6,13.599999999999998
+D08,MAYF,2020,12,adult,Micropterus sp.,genus,MICSP1,1,252.5
+D08,MAYF,2020,12,adult,Notropis baileyi,species,NOTBAI,22,26.800000000000004
+D08,MAYF,2020,12,adult,Notropis stilbius,species,NOTSTI,1,0.8
+D08,MAYF,2020,12,adult,Noturus funebris,species,NOTFUN,1,26.2
+D08,MAYF,2020,12,adult,Semotilus atromaculatus,species,SEMATR,1,2.3
+D08,MAYF,2020,12,juvenile,Etheostoma lachneri,species,ETHLAC,1,0.3
+D08,MAYF,2020,12,juvenile,Notropis baileyi,species,NOTBAI,11,4.8999999999999995
+D08,MAYF,2020,12,juvenile,Percina nigrofasciata,species,PERNIG,1,0.3
+D08,MAYF,2020,12,young of year,Notropis baileyi,species,NOTBAI,5,1.5
+D08,MAYF,2020,12,young of year,Notropis volucellus,species,NOTVOL,1,0.3
+D08,MAYF,2020,12,young of year,Noturus funebris,species,NOTFUN,1,0.3
+D08,MAYF,2020,12,young of year,Percina spp.,genus,PERSPP1,1,0.3
+D08,MAYF,2020,12,NA,Etheostoma lachneri,species,ETHLAC,1,0.3
+D08,MAYF,2020,12,NA,Etheostoma nigrum,species,ETHNIG1,1,0.3
+D08,MAYF,2020,12,NA,Etheostoma sp.,genus,ETHSP,2,0.6
+D08,MAYF,2020,12,NA,Fundulus notatus,species,FUNNOT,1,0.3
+D08,MAYF,2020,12,NA,Fundulus sp.,genus,FUNSP,1,0.9
+D08,MAYF,2020,12,NA,Notropis baileyi,species,NOTBAI,10,4.299999999999999
+D08,MAYF,2020,12,NA,Notropis sp.,genus,NOTSP,1,0.3
+D08,MAYF,2020,12,NA,Noturus funebris,species,NOTFUN,3,3.2
+D08,MAYF,2020,12,NA,Semotilus atromaculatus,species,SEMATR,2,2.4
+D08,MAYF,2021,3,adult,Cyprinella spp.,genus,CYPSPP1,1,6.3
+D08,MAYF,2021,3,adult,Etheostoma chlorosomum,species,ETHCHL1,1,0.6
+D08,MAYF,2021,3,adult,Fundulus notatus,species,FUNNOT,3,5.7
+D08,MAYF,2021,3,adult,Fundulus olivaceus,species,FUNOLI,4,10.2
+D08,MAYF,2021,3,adult,Ichthyomyzon gagei,species,ICHGAG,13,44.199999999999996
+D08,MAYF,2021,3,adult,Lampetra aepyptera,species,LAMAEP,2,6
+D08,MAYF,2021,3,adult,Moxostoma carinatum,species,MOXCAR,2,799.8
+D08,MAYF,2021,3,adult,Notropis baileyi,species,NOTBAI,60,94.40000000000002
+D08,MAYF,2021,3,adult,Notropis spp.,genus,NOTSPP,1,1.6
+D08,MAYF,2021,3,adult,Noturus funebris,species,NOTFUN,2,96.4
+D08,MAYF,2021,3,adult,Percina nigrofasciata,species,PERNIG,2,7.3
+D08,MAYF,2021,3,gravid female,Moxostoma carinatum,species,MOXCAR,1,827.6
+D08,MAYF,2021,3,juvenile,Etheostoma lachneri,species,ETHLAC,2,1.1
+D08,MAYF,2021,3,juvenile,Etheostoma nigrum,species,ETHNIG1,1,0.3
+D08,MAYF,2021,3,juvenile,Etheostoma stigmaeum,species,ETHSTI,2,1
+D08,MAYF,2021,3,juvenile,Etheostoma swaini,species,ETHSWA,1,0.3
+D08,MAYF,2021,3,juvenile,Fundulus notatus,species,FUNNOT,3,0.8999999999999999
+D08,MAYF,2021,3,juvenile,Ichthyomyzon gagei,species,ICHGAG,1,1.9
+D08,MAYF,2021,3,juvenile,Micropterus sp.,genus,MICSP1,1,15.4
+D08,MAYF,2021,3,juvenile,Notropis baileyi,species,NOTBAI,31,15.600000000000003
+D08,MAYF,2021,3,juvenile,Notropis sp.,genus,NOTSP,1,0.3
+D08,MAYF,2021,3,juvenile,Notropis texanus,species,NOTTEX,1,0.3
+D08,MAYF,2021,3,juvenile,Notropis volucellus,species,NOTVOL,6,1.8
+D08,MAYF,2021,3,juvenile,Noturus funebris,species,NOTFUN,1,0.3
+D08,MAYF,2021,3,juvenile,Percina nigrofasciata,species,PERNIG,1,0.3
+D08,MAYF,2021,3,young of year,Esox americanus,species,ESOAME2,1,0.3
+D08,MAYF,2021,3,young of year,Fundulidae sp.,family,FUNSP1,1,0.3
+D08,MAYF,2021,3,young of year,Ichthyomyzon gagei,species,ICHGAG,1,0.3
+D08,MAYF,2021,3,young of year,Notropis baileyi,species,NOTBAI,5,1.5
+D08,MAYF,2021,3,NA,Etheostoma nigrum,species,ETHNIG1,2,0.6
+D08,MAYF,2021,3,NA,Notropis baileyi,species,NOTBAI,1,1.9
+D08,MAYF,2021,4,adult,Aphredoderus sayanus,species,APHSAY,1,2.6
+D08,MAYF,2021,4,adult,Etheostoma histrio,species,ETHHIS,1,1
+D08,MAYF,2021,4,adult,Etheostoma lachneri,species,ETHLAC,5,2.4
+D08,MAYF,2021,4,adult,Etheostoma nigrum,species,ETHNIG1,1,1.4
+D08,MAYF,2021,4,adult,Etheostoma sp.,genus,ETHSP,1,1.9
+D08,MAYF,2021,4,adult,Etheostoma swaini,species,ETHSWA,1,0.6
+D08,MAYF,2021,4,adult,Fundulus notatus,species,FUNNOT,15,24.499999999999996
+D08,MAYF,2021,4,adult,Ichthyomyzon gagei,species,ICHGAG,7,15.600000000000001
+D08,MAYF,2021,4,adult,Lampetra aepyptera,species,LAMAEP,1,1.2
+D08,MAYF,2021,4,adult,Lepomis auritus,species,LEPAUR,1,145.3
+D08,MAYF,2021,4,adult,Luxilus chrysocephalus,species,LUXCHR,4,60.900000000000006
+D08,MAYF,2021,4,adult,Moxostoma carinatum,species,MOXCAR,2,568
+D08,MAYF,2021,4,adult,Notropis baileyi,species,NOTBAI,99,137.5
+D08,MAYF,2021,4,adult,Noturus funebris,species,NOTFUN,3,78.8
+D08,MAYF,2021,4,adult,Percina nigrofasciata,species,PERNIG,1,1.6
+D08,MAYF,2021,4,adult,Pteronotropis hypselopterus,species,PTEHYP,1,2.1
+D08,MAYF,2021,4,adult,Semotilus thoreauianus,species,SEMTHO,1,33.9
+D08,MAYF,2021,4,juvenile,Esox sp.,genus,ESOSP,1,0.6
+D08,MAYF,2021,4,juvenile,Etheostoma lachneri,species,ETHLAC,1,0.3
+D08,MAYF,2021,4,juvenile,Etheostoma nigrum,species,ETHNIG1,2,1
+D08,MAYF,2021,4,juvenile,Etheostoma stigmaeum,species,ETHSTI,2,0.6
+D08,MAYF,2021,4,juvenile,Fundulus notatus,species,FUNNOT,11,4.1
+D08,MAYF,2021,4,juvenile,Ichthyomyzon gagei,species,ICHGAG,22,42.400000000000006
+D08,MAYF,2021,4,juvenile,Lampetra aepyptera,species,LAMAEP,4,11.8
+D08,MAYF,2021,4,juvenile,Lepomis gulosus,species,LEPGUL,1,22.4
+D08,MAYF,2021,4,juvenile,Lepomis macrochirus,species,LEPMAC,3,1.7
+D08,MAYF,2021,4,juvenile,Lepomis megalotis,species,LEPMEG,1,15.9
+D08,MAYF,2021,4,juvenile,Notropis baileyi,species,NOTBAI,33,11.000000000000002
+D08,MAYF,2021,4,juvenile,Notropis volucellus,species,NOTVOL,5,1.8
+D08,MAYF,2021,4,juvenile,Noturus funebris,species,NOTFUN,8,9.600000000000001
+D08,MAYF,2021,4,juvenile,Percina nigrofasciata,species,PERNIG,1,0.3
+D08,MAYF,2021,4,NA,Micropterus spp.,genus,MICSPP1,1,52.4
+D08,MAYF,2021,10,adult,Aphredoderus sayanus,species,APHSAY,1,2.5
+D08,MAYF,2021,10,adult,Etheostoma lachneri,species,ETHLAC,22,14.100000000000001
+D08,MAYF,2021,10,adult,Fundulus notatus,species,FUNNOT,27,57.300000000000004
+D08,MAYF,2021,10,adult,Hypentelium etowanum,species,HYPETO,2,129.8
+D08,MAYF,2021,10,adult,Luxilus chrysocephalus,species,LUXCHR,8,165.10000000000002
+D08,MAYF,2021,10,adult,Moxostoma carinatum,species,MOXCAR,3,310.6
+D08,MAYF,2021,10,adult,Notropis baileyi,species,NOTBAI,229,295.8000000000001
+D08,MAYF,2021,10,adult,Notropis sp.,genus,NOTSP,1,3
+D08,MAYF,2021,10,adult,Notropis volucellus,species,NOTVOL,7,8.3
+D08,MAYF,2021,10,adult,Noturus funebris,species,NOTFUN,11,325.1
+D08,MAYF,2021,10,adult,Percina nigrofasciata,species,PERNIG,14,9.8
+D08,MAYF,2021,10,adult,Semotilus atromaculatus,species,SEMATR,4,73.50000000000001
+D08,MAYF,2021,10,adult,Semotilus thoreauianus,species,SEMTHO,2,49.1
+D08,MAYF,2021,10,juvenile,Etheostoma lachneri,species,ETHLAC,7,2.4
+D08,MAYF,2021,10,juvenile,Fundulus notatus,species,FUNNOT,3,1.5999999999999999
+D08,MAYF,2021,10,juvenile,Ichthyomyzon gagei,species,ICHGAG,18,32.1
+D08,MAYF,2021,10,juvenile,Lampetra aepyptera,species,LAMAEP,6,17.4
+D08,MAYF,2021,10,juvenile,Lepomis miniatus,species,LEPMIN,1,19
+D08,MAYF,2021,10,juvenile,Luxilus chrysocephalus,species,LUXCHR,1,2.5
+D08,MAYF,2021,10,juvenile,Micropterus sp.,genus,MICSP1,1,117.7
+D08,MAYF,2021,10,juvenile,Notropis baileyi,species,NOTBAI,37,13.000000000000007
+D08,MAYF,2021,10,juvenile,Notropis sp.,genus,NOTSP,1,0.7
+D08,MAYF,2021,10,juvenile,Notropis texanus,species,NOTTEX,1,0.6
+D08,MAYF,2021,10,juvenile,Notropis volucellus,species,NOTVOL,10,2.9999999999999996
+D08,MAYF,2021,10,juvenile,Noturus funebris,species,NOTFUN,8,19.800000000000004
+D08,MAYF,2021,10,juvenile,Percina nigrofasciata,species,PERNIG,4,1.2
+D08,MAYF,2021,10,juvenile,Semotilus atromaculatus,species,SEMATR,3,3.1999999999999997
+D08,MAYF,2021,10,young of year,Noturus funebris,species,NOTFUN,1,0.3
+D08,MAYF,2021,10,NA,Notropis sp.,genus,NOTSP,1,1.2
+D08,MAYF,2021,10,NA,Noturus funebris,species,NOTFUN,1,0.3
+D08,MAYF,2022,4,adult,Ameiurus natalis,species,AMENAT,2,128.39999999999998
+D08,MAYF,2022,4,adult,Fundulus notatus,species,FUNNOT,1,2.3
+D08,MAYF,2022,4,adult,Ichthyomyzon gagei,species,ICHGAG,7,22.299999999999997
+D08,MAYF,2022,4,adult,Lampetra aepyptera,species,LAMAEP,1,2.6
+D08,MAYF,2022,4,adult,Lepomis cyanellus,species,LEPCYA,1,77.1
+D08,MAYF,2022,4,adult,Moxostoma poecilurum,species,MOXPOE,3,1145.3
+D08,MAYF,2022,4,adult,Notropis baileyi,species,NOTBAI,20,38.400000000000006
+D08,MAYF,2022,4,adult,Notropis texanus,species,NOTTEX,2,1.4000000000000001
+D08,MAYF,2022,4,adult,Noturus funebris,species,NOTFUN,4,107.80000000000001
+D08,MAYF,2022,4,adult,Percina nigrofasciata,species,PERNIG,1,1.4
+D08,MAYF,2022,4,gravid female,Notropis baileyi,species,NOTBAI,1,1.3
+D08,MAYF,2022,4,juvenile,Etheostoma lachneri,species,ETHLAC,2,0.8999999999999999
+D08,MAYF,2022,4,juvenile,Fundulus notatus,species,FUNNOT,3,2.5
+D08,MAYF,2022,4,juvenile,Ichthyomyzon gagei,species,ICHGAG,8,134
+D08,MAYF,2022,4,juvenile,Lepomis miniatus,species,LEPMIN,1,13.8
+D08,MAYF,2022,4,juvenile,Moxostoma poecilurum,species,MOXPOE,1,59.5
+D08,MAYF,2022,4,juvenile,Notropis baileyi,species,NOTBAI,14,5.699999999999998
+D08,MAYF,2022,4,juvenile,Notropis texanus,species,NOTTEX,4,2
+D08,MAYF,2022,4,juvenile,Noturus funebris,species,NOTFUN,2,29.5
+D08,MAYF,2022,4,juvenile,Noturus leptacanthus,species,NOTLEP,1,0.6
+D08,MAYF,2022,4,NA,Etheostoma lachneri,species,ETHLAC,2,0.8999999999999999
+D08,MAYF,2022,4,NA,Fundulus notatus,species,FUNNOT,1,1.8
+D08,MAYF,2022,4,NA,Ichthyomyzon gagei,species,ICHGAG,5,12.3
+D08,MAYF,2022,4,NA,Moxostoma poecilurum,species,MOXPOE,3,944.3
+D08,MAYF,2022,4,NA,Notropis baileyi,species,NOTBAI,14,17.599999999999998
+D08,MAYF,2022,4,NA,Notropis texanus,species,NOTTEX,1,1.9
+D08,MAYF,2022,4,NA,Noturus funebris,species,NOTFUN,2,16.400000000000002
+D08,MAYF,2022,4,NA,Percina nigrofasciata,species,PERNIG,1,1.6
+D08,MAYF,2022,11,adult,Ameiurus natalis,species,AMENAT,2,109
+D08,MAYF,2022,11,adult,Erimyzon oblongus,species,ERIOBL,2,19.2
+D08,MAYF,2022,11,adult,Etheostoma chlorosomum,species,ETHCHL1,1,1.2
+D08,MAYF,2022,11,adult,Etheostoma lachneri,species,ETHLAC,47,20.300000000000008
+D08,MAYF,2022,11,adult,Etheostoma sp.,genus,ETHSP,1,1
+D08,MAYF,2022,11,adult,Etheostoma stigmaeum,species,ETHSTI,9,3.2999999999999994
+D08,MAYF,2022,11,adult,Etheostoma swaini,species,ETHSWA,1,0.8
+D08,MAYF,2022,11,adult,Fundulus notatus,species,FUNNOT,20,31.299999999999997
+D08,MAYF,2022,11,adult,Fundulus olivaceus,species,FUNOLI,17,20.300000000000004
+D08,MAYF,2022,11,adult,Hypentelium etowanum,species,HYPETO,2,24.5
+D08,MAYF,2022,11,adult,Ichthyomyzon gagei,species,ICHGAG,56,111.10000000000002
+D08,MAYF,2022,11,adult,Lampetra aepyptera,species,LAMAEP,49,155.29999999999998
+D08,MAYF,2022,11,adult,Lepomis megalotis,species,LEPMEG,3,54.400000000000006
+D08,MAYF,2022,11,adult,Lepomis miniatus,species,LEPMIN,1,8.2
+D08,MAYF,2022,11,adult,Luxilus chrysocephalus,species,LUXCHR,9,132.9
+D08,MAYF,2022,11,adult,Micropterus henshalli,species,MICHEN,2,318.3
+D08,MAYF,2022,11,adult,Moxostoma poecilurum,species,MOXPOE,1,40.4
+D08,MAYF,2022,11,adult,Nocomis leptocephalus,species,NOCLEP,10,281.4
+D08,MAYF,2022,11,adult,Notropis baileyi,species,NOTBAI,312,307.20000000000067
+D08,MAYF,2022,11,adult,Notropis stilbius,species,NOTSTI,43,50.300000000000004
+D08,MAYF,2022,11,adult,Notropis texanus,species,NOTTEX,48,32.60000000000001
+D08,MAYF,2022,11,adult,Notropis volucellus,species,NOTVOL,1,0.3
+D08,MAYF,2022,11,adult,Noturus funebris,species,NOTFUN,34,585.3
+D08,MAYF,2022,11,adult,Noturus leptacanthus,species,NOTLEP,5,36.900000000000006
+D08,MAYF,2022,11,adult,Percina nigrofasciata,species,PERNIG,37,44.09999999999999
+D08,MAYF,2022,11,adult,Semotilus atromaculatus,species,SEMATR,9,60.99999999999998
+D08,MAYF,2022,11,adult,Semotilus thoreauianus,species,SEMTHO,11,85.69999999999999
+D08,MAYF,2022,11,juvenile,Aphredoderus sayanus,species,APHSAY,1,5.2
+D08,MAYF,2022,11,juvenile,Hypentelium etowanum,species,HYPETO,1,2.5
+D08,MAYF,2022,11,juvenile,Ichthyomyzon gagei,species,ICHGAG,1,0.5
+D08,MAYF,2022,11,juvenile,Lepomis megalotis,species,LEPMEG,1,0.6
+D08,MAYF,2022,11,juvenile,Micropterus henshalli,species,MICHEN,1,14.8
+D08,MAYF,2022,11,juvenile,Micropterus warriorensis,species,MICWAR,1,11.6
+D08,MAYF,2022,11,juvenile,Notropis baileyi,species,NOTBAI,1,0.3
+D08,MAYF,2022,11,juvenile,Noturus funebris,species,NOTFUN,4,1.5999999999999999
+D08,MAYF,2022,11,juvenile,Noturus leptacanthus,species,NOTLEP,1,1.8
+D08,MAYF,2022,11,juvenile,Semotilus atromaculatus,species,SEMATR,5,1.7
+D08,MAYF,2022,11,juvenile,Semotilus thoreauianus,species,SEMTHO,3,2.6
+D08,MAYF,2022,11,NA,Etheostoma lachneri,species,ETHLAC,1,0.3
+D08,MAYF,2022,11,NA,Fundulus notatus,species,FUNNOT,2,6.1
+D08,MAYF,2022,11,NA,Fundulus olivaceus,species,FUNOLI,1,0.3
+D08,MAYF,2022,11,NA,Ichthyomyzon gagei,species,ICHGAG,3,7.6000000000000005
+D08,MAYF,2022,11,NA,Notropis baileyi,species,NOTBAI,10,2.9999999999999996
+D08,MAYF,2022,11,NA,Notropis stilbius,species,NOTSTI,2,2.2
+D08,MAYF,2022,11,NA,Notropis texanus,species,NOTTEX,1,0.3
+D08,MAYF,2022,11,NA,Semotilus thoreauianus,species,SEMTHO,1,3.7
+D14,SYCA,2019,2,adult,Pimephales promelas,species,PIMPRO,4,6.2
+D14,SYCA,2019,2,gravid female,Pimephales promelas,species,PIMPRO,1,2.7
+D14,SYCA,2019,2,young of year,Agosia chrysogaster,species,AGOCHR,1,0.3
+D14,SYCA,2019,6,adult,Agosia chrysogaster,species,AGOCHR,11,16.3
+D14,SYCA,2019,6,adult,Cyprinidae spp.,family,CYPSPP3,131,190.30000000000007
+D14,SYCA,2019,6,adult,Pimephales promelas,species,PIMPRO,5,11.7
+D14,SYCA,2019,6,juvenile,Agosia chrysogaster,species,AGOCHR,3,2.2
+D14,SYCA,2019,6,juvenile,Cyprinidae spp.,family,CYPSPP3,227,154.49999999999991
+D14,SYCA,2019,6,young of year,Agosia chrysogaster,species,AGOCHR,14,4.199999999999999
+D14,SYCA,2019,6,young of year,Cyprinidae spp.,family,CYPSPP3,184,55.19999999999983
+D14,SYCA,2019,6,young of year,Pimephales promelas,species,PIMPRO,1,0.3
+D14,SYCA,2019,6,NA,Cyprinidae spp.,family,CYPSPP3,3,5.699999999999999
+D14,SYCA,2020,2,adult,Agosia chrysogaster,species,AGOCHR,55,165.69999999999996
+D14,SYCA,2020,2,adult,Pimephales promelas,species,PIMPRO,34,73
+D14,SYCA,2020,2,gravid female,Agosia chrysogaster,species,AGOCHR,8,38.300000000000004
+D14,SYCA,2020,2,gravid female,Pimephales promelas,species,PIMPRO,2,10.899999999999999
+D14,SYCA,2020,2,juvenile,Agosia chrysogaster,species,AGOCHR,11,8.1
+D14,SYCA,2020,2,juvenile,Cyprinidae spp.,family,CYPSPP3,1,0.3
+D14,SYCA,2020,2,juvenile,Pimephales promelas,species,PIMPRO,13,11.000000000000002
+D14,SYCA,2020,2,larval,Cyprinidae spp.,family,CYPSPP3,5,1.5
+D14,SYCA,2020,2,young of year,Cyprinidae spp.,family,CYPSPP3,458,140.79999999999967
+D14,SYCA,2020,10,adult,Agosia chrysogaster,species,AGOCHR,28,66
+D14,SYCA,2020,10,adult,Pimephales promelas,species,PIMPRO,10,19.5
+D14,SYCA,2020,10,juvenile,Agosia chrysogaster,species,AGOCHR,56,33.70000000000002
+D14,SYCA,2020,10,juvenile,Pimephales promelas,species,PIMPRO,1,1
+D14,SYCA,2020,10,young of year,Agosia chrysogaster,species,AGOCHR,73,26.80000000000002
+D14,SYCA,2020,10,NA,Pimephales promelas,species,PIMPRO,1,1.2
+D14,SYCA,2022,1,NA,Agosia chrysogaster,species,AGOCHR,50,62.89999999999996
+D14,SYCA,2022,2,adult,Agosia chrysogaster,species,AGOCHR,4,14.500000000000002
+D14,SYCA,2022,2,young of year,Agosia chrysogaster,species,AGOCHR,21,6.299999999999998
+D14,SYCA,2022,2,NA,Agosia chrysogaster,species,AGOCHR,426,367.00000000000176
+D14,SYCA,2022,6,adult,Agosia chrysogaster,species,AGOCHR,18,25.6
+D14,SYCA,2022,6,gravid female,Agosia chrysogaster,species,AGOCHR,1,4
+D14,SYCA,2022,6,young of year,Agosia chrysogaster,species,AGOCHR,9,2.6999999999999997
+D14,SYCA,2022,6,NA,Agosia chrysogaster,species,AGOCHR,224,141.79999999999995
+D15,REDB,2016,10,NA,Oncorhynchus clarkii utah,subspecies,ONCCLA6,211,4173.5
+D15,REDB,2017,4,NA,Oncorhynchus clarkii utah,subspecies,ONCCLA6,15,382.30000000000007
+D15,REDB,2017,10,adult,Oncorhynchus clarkii utah,subspecies,ONCCLA6,5,122
+D15,REDB,2017,10,NA,Oncorhynchus clarkii utah,subspecies,ONCCLA6,122,6397.699999999997
+D15,REDB,2018,4,adult,Oncorhynchus clarkii utah,subspecies,ONCCLA6,6,128.4
+D15,REDB,2018,4,juvenile,Oncorhynchus clarkii utah,subspecies,ONCCLA6,9,102.90000000000002
+D15,REDB,2018,4,young of year,Oncorhynchus clarkii utah,subspecies,ONCCLA6,2,4.800000000000001
+D15,REDB,2018,10,adult,Oncorhynchus clarkii utah,subspecies,ONCCLA6,18,564.4000000000001
+D15,REDB,2018,10,gravid female,Oncorhynchus clarkii utah,subspecies,ONCCLA6,1,77.3
+D15,REDB,2018,10,juvenile,Oncorhynchus clarkii utah,subspecies,ONCCLA6,9,286.5
+D15,REDB,2018,10,young of year,Oncorhynchus clarkii utah,subspecies,ONCCLA6,1,0.8
+D15,REDB,2018,10,NA,Oncorhynchus clarkii utah,subspecies,ONCCLA6,1,29
+D15,REDB,2019,10,adult,Oncorhynchus clarkii utah,subspecies,ONCCLA6,15,1447.7999999999997
+D15,REDB,2019,10,juvenile,Oncorhynchus clarkii utah,subspecies,ONCCLA6,18,500.59999999999997
+D15,REDB,2019,10,young of year,Oncorhynchus clarkii utah,subspecies,ONCCLA6,19,28.000000000000004
+D15,REDB,2022,10,juvenile,Oncorhynchus clarkii utah,subspecies,ONCCLA6,1,1.1
+D15,REDB,2022,10,NA,Oncorhynchus clarkii utah,subspecies,ONCCLA6,20,1002.5999999999999
+D17,BIGC,2018,5,adult,Salmonidae sp.,family,SALSP2,79,5602
+D17,BIGC,2018,5,juvenile,Chordata sp.,phylum,OTHE,159,70.59999999999978
+D17,BIGC,2018,5,juvenile,Salmonidae sp.,family,SALSP2,34,1228.3
+D17,BIGC,2018,5,juvenile,Salmonidae spp.,family,SALSPP2,1,1
+D17,BIGC,2018,5,young of year,Chordata sp.,phylum,OTHE,106,50.49999999999994
+D17,BIGC,2018,10,adult,Salmo trutta,species,SALTRU,36,3233
+D17,BIGC,2018,10,juvenile,Salmo trutta,species,SALTRU,300,3481
+D17,BIGC,2018,10,juvenile,Salmonidae sp.,family,SALSP2,55,383
+D17,BIGC,2018,10,young of year,Salmo trutta,species,SALTRU,6,10.3
+D17,BIGC,2019,4,adult,Salmo trutta,species,SALTRU,54,4345
+D17,BIGC,2019,4,adult,Salmonidae sp.,family,SALSP2,2,157
+D17,BIGC,2019,4,juvenile,Salmo trutta,species,SALTRU,140,2098
+D17,BIGC,2019,4,juvenile,Salmonidae sp.,family,SALSP2,22,324
+D17,BIGC,2019,4,young of year,Chordata sp.,phylum,OTHE,47,14.100000000000012
+D17,BIGC,2019,10,adult,Salmo trutta,species,SALTRU,93,5850
+D17,BIGC,2019,10,adult,Salmonidae sp.,family,SALSP2,5,147
+D17,BIGC,2019,10,juvenile,Salmo trutta,species,SALTRU,169,3415
+D17,BIGC,2019,10,juvenile,Salmonidae sp.,family,SALSP2,10,168
+D17,BIGC,2019,10,young of year,Salmo trutta,species,SALTRU,125,606
+D17,BIGC,2019,10,young of year,Salmonidae sp.,family,SALSP2,5,22
+D17,BIGC,2021,4,adult,Salmo trutta,species,SALTRU,55,3387
+D17,BIGC,2021,4,adult,Salmonidae sp.,family,SALSP2,1,36
+D17,BIGC,2021,4,juvenile,Salmo trutta,species,SALTRU,206,4008
+D17,BIGC,2021,4,juvenile,Salmonidae sp.,family,SALSP2,13,154
+D17,BIGC,2021,4,young of year,Chordata sp.,phylum,OTHE,13,3.899999999999999
+D17,BIGC,2022,4,adult,Salmo trutta,species,SALTRU,97,4678.699999999998
+D17,BIGC,2022,4,adult,Salmonidae sp.,family,SALSP2,2,56.2
+D17,BIGC,2022,4,juvenile,Salmo trutta,species,SALTRU,158,1896.4999999999995
+D17,BIGC,2022,4,juvenile,Salmonidae sp.,family,SALSP2,6,90
+D17,BIGC,2022,4,young of year,Salmo trutta,species,SALTRU,2,10.8
+D17,BIGC,2022,4,young of year,Salmonidae sp.,family,SALSP2,14,4.199999999999999
+D17,BIGC,2022,4,NA,Salmo trutta,species,SALTRU,1,15.9
+D17,BIGC,2022,10,adult,Salmo trutta,species,SALTRU,16,552
+D17,BIGC,2022,10,juvenile,Salmo trutta,species,SALTRU,5,24
+D17,BIGC,2022,10,NA,Salmo trutta,species,SALTRU,1,1
+D17,TECR,2019,10,adult,Salvelinus fontinalis,species,SALFON,138,6743
+D17,TECR,2019,10,gravid female,Salvelinus fontinalis,species,SALFON,4,185
+D17,TECR,2019,10,juvenile,Salvelinus fontinalis,species,SALFON,158,908
+D17,TECR,2019,10,young of year,Salvelinus fontinalis,species,SALFON,125,244.60000000000008
+D17,TECR,2021,6,adult,Salvelinus fontinalis,species,SALFON,62,4558
+D17,TECR,2021,6,juvenile,Salvelinus fontinalis,species,SALFON,229,5294.2
+D17,TECR,2021,6,young of year,Salvelinus fontinalis,species,SALFON,30,55.699999999999974
+D17,TECR,2022,5,adult,Salvelinus fontinalis,species,SALFON,69,2994
+D17,TECR,2022,5,gravid female,Salvelinus fontinalis,species,SALFON,1,25
+D17,TECR,2022,5,juvenile,Salvelinus fontinalis,species,SALFON,97,1724
+D17,TECR,2022,5,young of year,Salvelinus fontinalis,species,SALFON,55,221
+D17,TECR,2022,5,NA,Salvelinus fontinalis,species,SALFON,1,0
+D17,TECR,2022,10,adult,Salvelinus fontinalis,species,SALFON,14,393
+D17,TECR,2022,10,juvenile,Salvelinus fontinalis,species,SALFON,7,29
+D17,TECR,2022,10,young of year,Salvelinus fontinalis,species,SALFON,1,0.3
