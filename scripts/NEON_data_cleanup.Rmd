@@ -116,7 +116,7 @@ plant <- plant_raw %>%
 
 In this chunk we further cleaned our data to group the data points into various groups such as domain ID, the site ID, the year and month, as well as the fishes life stage within our fish data set. We also created new columns for monthly measurements. This further cleaning of our data allows for a smoother join of the three data sets for analysis.
 ```{r}
-fish <- fish %>% 
+fish_means <- fish %>% 
   group_by(domainID, siteID, year, month, fishLifeStage,
            scientificName, taxonRank, taxonID) %>% 
   summarise(fish_month_tally = n(),
@@ -156,6 +156,9 @@ plant %>%
 
 fish %>% 
   write_csv(here("data", "processed", "fish_processed.csv"))
+
+fish_means %>% 
+  write_csv(here("data", "processed", "fish_means_processed.csv"))
 
 discharge_fish %>% 
   write_csv(here("data", "processed", "discharge_fish_join_processed.csv"))
