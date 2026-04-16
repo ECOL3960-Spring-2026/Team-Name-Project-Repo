@@ -72,7 +72,7 @@ discharge_fish_na_rm <- discharge_fish %>%
 ```
 
 ```{r}
-discharge_richness <- full_join(discharge, fish_richness, 
+discharge_richness <- full_join(discharge_processed, fish_richness, 
                                 by = c("siteID", "month", "year"))
 discharge_richness <- discharge_richness %>% 
   drop_na("richness", "discharge_month_min") %>% 
