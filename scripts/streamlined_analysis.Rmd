@@ -171,3 +171,35 @@ ggplot(fish_monthly_plot,
 ```
 
 ## Assess fish ~ discharge relationships
+
+### Fish richness = count data, need to use poisson regression
+
+```{r}
+mod <- glm(richness ~ discharge_month_mean_L_sec, 
+           data = monthly_data, 
+           family = poisson)
+
+# Check for overdisperson
+mod$deviance / mod$df.residual
+
+# Overdispersed! Pivot to negative binomial model
+mod_nb <- glm.nb(richness ~ discharge_month_mean_L_sec, 
+           data = monthly_data)
+
+summary(mod_nb)
+
+```
+
+```{r}
+
+ggplot(data = monthly_data,
+       aes(x = discharge_month_mean_L_sec,
+           y = richness,
+           col = siteID)) +
+  geom_point(size = 3, alpha = 0.5) +
+  geom_line(aes(y = fitted(mod_nb), group = 1), 
+            color = "black") +
+  theme_minimal()
+
+```
+
