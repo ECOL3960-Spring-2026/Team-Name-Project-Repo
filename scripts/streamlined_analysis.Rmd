@@ -1,0 +1,173 @@
+---
+title: "NEON_data_cleanup"
+Authors: Dr. F
+output: html_document
+---
+
+## Import raw fish and discharge data
+
+```{r, message = FALSE}
+# Load packages
+#install.packages("pacman")
+pacman::p_load(tidyverse, here, car, rstatix, multcompView)
+
+# Import raw data files 
+discharge_raw <- read_csv(here("data", "raw", "csd_15_min.csv"))
+
+fish_raw <- read_csv(here("data", "raw", "fsh_perFish.csv"))
+
+```
+
+## Discharge data wrangling
+
+Goal: Summarize 15-minute discharge data into monthly summary values per site
+
+```{r, message = FALSE}
+
+discharge <- discharge_raw %>% 
+  mutate(year = year(startDateTime),
+         month = month(startDateTime)) %>% 
+  drop_na(dischargeContinuous) %>% 
+  group_by(domainID, siteID, year, month) %>% 
+  summarise(discharge_month_mean_L_sec = mean(dischargeContinuous),
+            discharge_month_max = max(dischargeContinuous),
+            discharge_month_min = min(dischargeContinuous))
+
+```
+
+## Fish data wrangling
+
+Goals:
+
+-   Keep fish that are ID'd to species/subspecies level.
+
+-   Keep life stages that are big enough to measure (juvenile, gravid female, adult).
+
+-   Exclude individuals with missing body mass.
+
+```{r}
+
+fish <- fish_raw %>% 
+  mutate(year = year(passStartTime),
+         month = month(passStartTime)) %>%  
+  select(domainID, siteID, year, month,
+         taxonID, taxonRank, fishLifeStage, scientificName,
+         fishWeight) %>% 
+  filter(!is.na(fishWeight),
+         taxonRank %in% c("species", "subspecies"),
+         fishLifeStage %in% c("adult", "juvenile", "gravid female"))
+
+```
+
+Calculate monthly site-level metrics for fish:
+
+-   Abundance (total individuals)
+
+-   Species richness (number of unique species)
+
+-   Mean biomass (g)
+
+-   Total biomass (sum; g)
+
+```{r, message = FALSE}
+
+fish_monthly <- fish %>% 
+  group_by(domainID, siteID, year, month) %>% 
+  summarize(abundance = n(),
+            richness  = n_distinct(taxonID), 
+            mean_biomass_g = mean(fishWeight, na.rm = T),
+            total_biomass_g = sum(fishWeight, na.rm = T))
+
+head(fish_monthly)
+
+```
+
+## Join monthly discharge and fish
+Use inner_join to only retain complete cases (discharge + fish data)
+
+```{r, message = FALSE}
+
+monthly_data <- inner_join(discharge, fish_monthly)
+
+head(monthly_data)
+
+```
+
+## Compare fish and discharge metrics among sites
+
+### Monthly fish
+
+```{r}
+
+fish_mean_biomass_aov <- aov(mean_biomass_g ~ siteID, data = fish_monthly)
+
+par(mfrow = c(1, 3))
+
+plot(fish_mean_biomass_aov, which = c(1:3))
+
+shapiro.test(fish_mean_biomass_aov$residuals)
+
+leveneTest(mean_biomass_g ~ siteID, data = fish_monthly)
+
+```
+Mean biomass data do not meet assumption for normality or homogeneity of variance
+
+```{r}
+
+# Log transform data to improve normality
+fish_monthly <- fish_monthly %>% 
+  mutate(log_mean_biomass = log(mean_biomass_g))
+
+# Welch ANOVA (for non-homogeneous data)
+welch <- oneway.test(log_mean_biomass ~ siteID, data = fish_monthly, 
+            var.equal = FALSE)
+
+print(welch)
+
+# Post-hoc test
+biomass_post_hoc <- fish_monthly %>%
+  ungroup() %>% 
+  games_howell_test(log_mean_biomass ~ siteID)
+
+```
+
+
+```{r}
+
+# Asssign letter groups based on sites that are sig. diff.
+pvals <- biomass_post_hoc %>%
+  mutate(comparison = paste(group1, group2, sep = "-")) %>%
+  select(comparison, p.adj) %>%
+  tibble::deframe()
+
+letters <- multcompView::multcompLetters(pvals)$Letters
+
+letters_df <- tibble(siteID = names(letters),
+                     letters = letters) %>%
+  arrange(siteID)
+
+```
+
+Plot of these data
+```{r}
+
+# Force siteID to list alphabetically
+fish_monthly_plot <- fish_monthly %>% 
+  mutate(siteID = factor(siteID, levels = c("BIGC", "LECO", "MAYF",
+                                            "REDB", "SYCA", "TECR", "WALK")))
+
+# Plot! 
+ggplot(fish_monthly_plot, 
+       aes(x = siteID, 
+           y = mean_biomass_g,
+           col = siteID)) +
+  geom_jitter(width = 0.1, height = 0,
+              size = 3, alpha = 0.5) +
+  geom_boxplot(fill = NA, col = "black") +
+  geom_text(data = label_pos,
+            aes(x = siteID, y = exp(y) + 1, label = letters),
+            vjust = 0, color = "black") +
+  theme_minimal()
+```
+
+## Assess fish ~ discharge relationships
