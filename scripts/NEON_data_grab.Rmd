@@ -10,110 +10,83 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 In this chunk, we loaded the scripts 'tidyverse', 'here', and 'neonUtilities'. Tidyverse will be used to clean our data products, and the here package will be used to direct our markdown files to the proper working directory. NeonUtilities will be used to download and access the NEON data that we will be using as the basis of our project. 
+
 ```{r library}
 library(tidyverse)
 library(here)
 library(neonUtilities)
 ```
 
-Hey this is a test on 2/17/2026!
-
-We then pulled data from the NEON data product entitled 'Continuous Discharge' at all 7 sites from 2018-2022. With this data product, we plan to compare discharge between the west and east coast of the United States to see if there is a correlation between flow and fish biomass at each site.   
+# Set NEON data products, sites, dates
+  
 ```{r}
-discharge <- "DP4.00130.001"
 
-#Select sites and dates *DATES SHOULD BE REEVALUATED
-my_sites <- c("BIGC", "TECR", "REDB", "SYCA", "LECO", "WALK", "MAYF")
+discharge <- "DP4.00130.001"
+fish <- "DP1.20107.001"
+water_temp <- "DP1.20288.001"
+
 start_date <- "2018-11"
-end_date <- "2022-12"
+end_date <- "2024-12"
+
+# Set sites and dates 
+my_sites <- c("BIGC", "TECR", "REDB", "SYCA", "LECO", "WALK", "MAYF")
+
+```
+
+## Download raw discharge data
+
+We pulled data from the NEON data product entitled 'Continuous Discharge' at all 7 sites from 2018-2022. With this data product, we plan to compare discharge between the west and east coast of the United States to see if there is a correlation between flow and fish biomass at each site. 
+```{r}
 
 list2env((loadByProduct(dpID = discharge, 
                         site = my_sites, 
-                        include.provisional = FALSE,
-                        startdate = start_date,
-                        enddate = end_date)),
+                        include.provisional = T)),
          .GlobalEnv)
+
 ```
+
 Here, we wrote in the variables needed to begin data wrangling and analysis for discharge. The first csv is the metadata table which contains useful descriptions of the variables NEON provides in the data product. The second csv is the file containing our continuous discharge data.  
 ```{r}
 
+# Save variables metadata
 variables_00130 %>% 
   write_csv(here("data", "raw", "variables_00130.csv"))
 
+# Save 15-min continuous discharge data
 csd_15_min %>% 
   write_csv(here("data", "raw", "csd_15_min.csv"))
 
 ```
-We pulled the NEON data product entitled "Fish electrofishing, gill netting, and fyke netting counts" at all 7 sites from 2012-2022. This data will allow us to find fish biomass and life stage data that we can use in our analysis.  
-```{r}
-fish <- "DP1.20107.001"
 
-#Select sites and dates 
-my_sites <- c("BIGC", "TECR", "REDB", "SYCA", "LECO", "WALK", "MAYF")
-start_date <- "2012-01"
-end_date <- "2022-12"
+## Download raw fish data
+We pulled the NEON data product "Fish electrofishing, gill netting, and fyke netting counts" for the same dates and sites. 
+
+This data will allow us to find fish biomass and life stage data that we can use in our analysis.  
+
+```{r}
 
 list2env((loadByProduct(dpID = fish, 
                         site = my_sites, 
-                        include.provisional = FALSE,
-                        startdate = start_date,
-                        enddate = end_date)),
+                        include.provisional = FALSE)),
          .GlobalEnv)
 ```
+
 We saved the raw data from "Fish electrofishing, gill netting, and fyke netting counts" here. The first csv is the metadata table which contains useful descriptions of the variables NEON provides in the data product. The second csv file contains the fish taxon id and weight data which are potentially usefull variables for our data analysis. 
 ```{r}
 
+# Save variables metadata
 variables_20107 %>% 
   write_csv(here("data", "raw", "variables_20107.csv"))
 
+# Save raw fish data
 fsh_perFish %>% 
   write_csv(here("data", "raw", "fsh_perFish.csv"))
 
 ```
-Pulling NEON Data from the 'Aquatic Plants' product in order to do data analysis to find a potential correlation between aquatic plant biomass and discharge at each of our sites.  
-```{r}
-plants <- "DP1.20072.001"
-
-#Select sites and dates
-my_sites <- c("BIGC", "TECR", "REDB", "SYCA", "LECO", "WALK", "MAYF")
-start_date <- "2012-01"
-end_date <- "2022-12"
-
-list2env((loadByProduct(dpID = plants, 
-                        site = my_sites, 
-                        include.provisional = FALSE,
-                        startdate = start_date,
-                        enddate = end_date)),
-         .GlobalEnv)   
-```
-Here we save the raw data variables we will be using from the 'Aquatic Plants' product. The first csv is the metadata table which contains useful descriptions of the variables NEON provides in the data product. The second csv is the file containing our aquatic plant taxon data which we will use in our data analysis. 
-```{r}
-variables_20072 %>% 
-  write_csv(here("data", "raw", "variables_20072.csv"))
-
-apc_perTaxon %>% 
-  write_csv(here("data", "raw", "apc_perTaxon.csv"))
-
-```
-Here we saved the raw data variables we will be using from the 'Discharge' product.The first csv is the metadata table which contains useful descriptions of the variables NEON provides in the data product.The second csv file contains the continuous discharge data we will be using in our data analysis. 
-```{r}
-variables_20086 %>% 
-  write_csv(here("data", "raw", "variables_20086.csv"))
-
-csd_15_min %>% 
-  write_csv(here("data", "raw", "csd_15_min.csv"))
-```
 
 ## Water temperature 
-
+Not currently run/used
 ```{r}
-water_temp <- "DP1.20288.001"
-
-#Select sites and dates
-my_sites <- c("BIGC", "TECR", "REDB", "SYCA", "LECO", "WALK", "MAYF")
-
-start_date <- "2012-01"
-end_date <- "2022-12"
 
 list2env((loadByProduct(dpID = water_temp, 
                         site = my_sites, 
@@ -122,4 +95,3 @@ list2env((loadByProduct(dpID = water_temp,
                         enddate = end_date)),
          .GlobalEnv)   
 ```
-
