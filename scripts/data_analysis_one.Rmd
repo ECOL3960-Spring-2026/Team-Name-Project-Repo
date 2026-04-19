@@ -98,7 +98,7 @@ richness_aov <- aov(richness ~ siteID, data = fish_richness_genera)
 summary(richness_aov)
 tukey1 <- TukeyHSD(richness_aov)
 
-discharge_genera <- full_join(discharge, fish_richness_genera, 
+discharge_genera <- full_join(discharge_processed, fish_richness_genera, 
                                 by = c("siteID", "month", "year"))
 
 discharge_genera <- discharge_genera %>% 
@@ -614,5 +614,34 @@ discharge_richness %>%
   theme_bw()
 
 #Need to find a way to include time
+```
+
+```{r}
+ discharge_genera <- discharge_genera %>% 
+  mutate(location = case_when(
+         siteID == "BIGC" ~ "west",
+         siteID == "TECR" ~ "west",
+         siteID == "REDB" ~ "west",
+         siteID == "SYCA" ~ "west",
+         siteID == "LECO" ~ "east",
+         siteID == "WALK" ~ "east",
+         siteID == "MAYF" ~ "east"))
+
+str(discharge_genera)
+discharge_genera <- discharge_genera %>% 
+  mutate(location = as.factor(location))
+
+glm_location <- glm(richness ~ discharge_month_mean_L_sec*location, 
+                    data = discharge_genera)
+summary(aov_location)
+#TukeyHSD(aov_location)
+
+discharge_genera %>% 
+  ggplot(aes(x = discharge_month_mean_L_sec, y = richness, color = location)) + 
+  geom_point() + 
+  stat_smooth(method = "lm") +
+  scale_y_continuous("Richness") +
+  scale_x_continuous("Discharge (L/sec/month)") +
+  theme_bw()
 ```
 
