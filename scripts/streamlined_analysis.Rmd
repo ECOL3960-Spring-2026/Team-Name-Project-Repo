@@ -9,10 +9,7 @@ output: html_document
 ```{r, message = FALSE}
 # Load packages
 install.packages("pacman")
-pacman::p_load(tidyverse, here, car, rstatix, multcompView)
-
-#install.packages("MASS")
-library(MASS)
+pacman::p_load(tidyverse, here, car, rstatix, multcompView, MASS)
 
 # Import raw data files 
 discharge_raw <- read_csv(here("data", "raw", "csd_15_min.csv"))
@@ -53,7 +50,7 @@ Goals:
 fish <- fish_raw %>% 
   mutate(year = year(passStartTime),
          month = month(passStartTime)) %>%  
-  select(domainID, siteID, year, month,
+  dplyr::select(domainID, siteID, year, month,
          taxonID, taxonRank, fishLifeStage, scientificName,
          fishWeight) %>% 
   filter(!is.na(fishWeight),
@@ -140,7 +137,7 @@ biomass_post_hoc <- fish_monthly %>%
 # Asssign letter groups based on sites that are sig. diff.
 pvals <- biomass_post_hoc %>%
   mutate(comparison = paste(group1, group2, sep = "-")) %>%
-  select(comparison, p.adj) %>%
+  dplyr::select(comparison, p.adj) %>%
   tibble::deframe()
 
 letters <- multcompView::multcompLetters(pvals)$Letters
@@ -159,17 +156,25 @@ fish_monthly_plot <- fish_monthly %>%
   mutate(siteID = factor(siteID, levels = c("BIGC", "LECO", "MAYF",
                                             "REDB", "SYCA", "TECR", "WALK")))
 
+label_pos <- fish_monthly_plot %>%
+  group_by(siteID) %>%
+  summarise(y = max(log_mean_biomass, na.rm = TRUE), .groups = "drop") %>%
+  left_join(letters_df, by = "siteID")
+
 # Plot! 
 ggplot(fish_monthly_plot, 
        aes(x = siteID, 
            y = mean_biomass_g,
-           col = siteID)) +
-  geom_jitter(width = 0.1, height = 0,
-              size = 3, alpha = 0.5) +
-  geom_boxplot(fill = NA, col = "black") +
+           fill = siteID)) +
+  geom_point(shape = 21, size = 3, alpha = 0.5,
+               show.legend = FALSE) +
+  geom_boxplot(fill = NA, col = "black",
+               outliers = FALSE) +
   geom_text(data = label_pos,
             aes(x = siteID, y = exp(y) + 1, label = letters),
             vjust = 0, color = "black") +
+  labs(x = "Site", 
+       y = "Mean fish biomass (g)") +
   theme_minimal()
 ```
 
