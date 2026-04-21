@@ -8,7 +8,7 @@ output: html_document
 
 ```{r, message = FALSE}
 # Load packages
-install.packages("pacman")
+#install.packages("pacman")
 pacman::p_load(tidyverse, here, car, rstatix, multcompView, MASS)
 
 # Import raw data files 
@@ -76,7 +76,8 @@ fish_monthly <- fish %>%
   summarize(abundance = n(),
             richness  = n_distinct(taxonID), 
             mean_biomass_g = mean(fishWeight, na.rm = T),
-            total_biomass_g = sum(fishWeight, na.rm = T))
+            total_biomass_g = sum(fishWeight, na.rm = T),
+            log_mean_biomass = log(mean_biomass_g))
 
 head(fish_monthly)
 
@@ -110,13 +111,9 @@ shapiro.test(fish_mean_biomass_aov$residuals)
 leveneTest(mean_biomass_g ~ siteID, data = fish_monthly)
 
 ```
-Mean biomass data do not meet assumption for normality or homogeneity of variance
+Mean biomass data do not meet assumption for normality or homogeneity of variance. Use log-transformed mean biomass to improve normality
 
 ```{r}
-
-# Log transform data to improve normality
-fish_monthly <- fish_monthly %>% 
-  mutate(log_mean_biomass = log(mean_biomass_g))
 
 # Welch ANOVA (for non-homogeneous data)
 welch <- oneway.test(log_mean_biomass ~ siteID, data = fish_monthly, 
@@ -219,4 +216,3 @@ ggplot(data = monthly_data,
   theme_minimal()
 
 ```
-
