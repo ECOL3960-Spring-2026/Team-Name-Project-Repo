@@ -8,8 +8,11 @@ output: html_document
 
 ```{r, message = FALSE}
 # Load packages
-#install.packages("pacman")
+install.packages("pacman")
 pacman::p_load(tidyverse, here, car, rstatix, multcompView)
+
+#install.packages("MASS")
+library(MASS)
 
 # Import raw data files 
 discharge_raw <- read_csv(here("data", "raw", "csd_15_min.csv"))
@@ -199,6 +202,10 @@ ggplot(data = monthly_data,
   geom_point(size = 3, alpha = 0.5) +
   geom_line(aes(y = fitted(mod_nb), group = 1), 
             color = "black") +
+  labs(x = "Mean Monthly Discharge", y = "Mean Species Richness")+
+  #scale_y_continuous(expand = expansion(c(0, 0)),
+                   #  limits = c(0, 35),
+                    # breaks = seq(0, 35, 5))+
   theme_minimal()
 
 ```
